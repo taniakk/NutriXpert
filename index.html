@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NutriXpert</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            poppins: ['Poppins', 'sans-serif'],
+            playfair: ['Playfair Display', 'serif'],
+          },
+          colors: {
+            primary: '#2a9d8f',
+            secondary: '#e76f51',
+            dark: '#264653'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="font-poppins text-gray-700 overflow-x-hidden">
+
+<!-- HEADER -->
+<header class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
+  <div class="max-w-7xl mx-auto px-5">
+    <nav class="flex justify-between items-center py-5">
+      <!-- <a href="#" class="text-2xl font-playfair font-bold text-primary">
+        Nutri<span class="text-secondary">Xpert</span>
+      </a> -->
+       <img src="" alt="" srcset="/images/nutrixpert1.png" class="h-[70px]">
+      <ul class="hidden md:flex space-x-8 font-medium text-dark">
+        <li><a href="#home" class="hover:text-primary">Home</a></li>
+        <li><a href="#about" class="hover:text-primary">About</a></li>
+        <li><a href="#services" class="hover:text-primary">Services</a></li>
+        <li><a href="#experience" class="hover:text-primary">Experience</a></li>
+        <li><a href="#contact" class="hover:text-primary">Contact</a></li>
+        <li>
+          <a href="#contact"
+            class="bg-primary text-white px-5 py-2 rounded-full hover:bg-transparent hover:text-primary border-2 border-primary transition">
+            Book Consultation
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="home"
+  class="min-h-screen flex items-center text-center text-white pt-40 pb-20 bg-cover bg-center"
+  style="background-image: linear-gradient(rgba(42,157,143,0.85),rgba(42,157,143,0.9)), url('https://images.unsplash.com/photo-1490818387583-1baba5e638af?auto=format&fit=crop&w=1600&q=80');">
+
+  <div class="max-w-4xl mx-auto px-5">
+    <h1 class="font-playfair text-4xl md:text-5xl font-semibold mb-6">
+      Evidence-Based Nutrition for Prevention, Recovery & Wellness
+    </h1>
+
+    <p class="mb-8 text-lg">
+      At our Clinical Nutrition Practice, we believe food is not just nourishment—it is powerful therapy.
+    </p>
+
+    <div class="flex flex-col md:flex-row justify-center gap-4">
+      <a href="#services"
+        class="bg-primary px-8 py-3 rounded-full hover:bg-transparent border-2 border-primary transition">
+        Explore Services
+      </a>
+      <a href="#contact"
+        class="bg-secondary px-8 py-3 rounded-full hover:bg-transparent border-2 border-secondary transition">
+        Book a Consultation
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<!-- <section id="about" class="py-20">
+  <div class="max-w-7xl mx-auto px-5">
+
+    <h2 class="text-center text-3xl font-playfair font-semibold text-dark mb-12">
+      Meet Your Clinical Dietitian
+    </h2>
+
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <img src="https://ik.imagekit.io/referindia/drketaki.jpeg"
+        class="rounded-xl shadow-xl hover:scale-105 transition duration-300">
+
+      <div>
+        <h3 class="text-2xl text-primary font-semibold mb-4">
+          Dt. Ketaki Manke
+        </h3>
+
+        <p class="mb-4">
+           A highly skilled and experienced Clinical Dietition with a strong background
+                in hospital-based nutrition, therapeutic diet planning, and medical research,
+                dedicated to delivering evidence-based and patient-centric nutritional care.
+        </p>
+
+        <p class="leading-relaxed mb-6">
+                Currently practicing as a Clinical Dietition at Oskar Hospital, Kasarvadavali. Her professional training includes clinical internships 
+                at Kokilaben Dhirubhai Ambani Hospital and specialized exposure at Aastha Bariatric Centre.
+            </p> 
+
+        <div class="grid sm:grid-cols-2 gap-6 mt-6">
+          <div class="bg-teal-50 p-5 rounded-lg shadow hover:-translate-y-2 transition">
+            <h4 class="font-semibold">Master's in Integrative Nutrition</h4>
+            <p class="text-sm">Bombay College of Pharmacy</p>
+          </div>
+
+          <div class="bg-teal-50 p-5 rounded-lg shadow hover:-translate-y-2 transition">
+            <h4 class="font-semibold">Master's in Biochemistry</h4>
+            <p class="text-sm">Gujrat University, M.G Science Institute, Ahmedabad, India</p>
+          </div>
+           
+          <div class="bg-teal-50 p-5 rounded-lg shadow hover:-translate-y-2 transition">
+            <h4 class="font-semibold">Bachelor of Science in Biochemistry(with vocational Biotechnology)</h4>
+            <p class="text-sm">Gujrat University, M.G Science Institute, Ahmedabad, India</p>
+          </div>
+
+          <div class="bg-teal-50 p-5 rounded-lg shadow hover:-translate-y-2 transition">
+            <h4 class="font-semibold">Diploma in Nutrition and Health Education</h4>
+            <p class="text-sm">IGNOU, Delhi</p>
+          </div>
+
+          <div class="bg-teal-50 p-5 rounded-lg shadow hover:-translate-y-2 transition">
+            <h4 class="font-semibold">Certified Diabetes Educator</h4>
+            <p class="text-sm">Dt. Mohan's Academy</p>
+          </div>
+           <div class="bg-teal-50 p-5 rounded-lg shadow hover:-translate-y-2 transition">
+                    <h1 class="font-semibold">
+                        Certified Cancer Nutritionist
+                    </h1>
+                    <p class="text-sm">
+                        Novast Institute of Nutrition and Dietetics
+                    </p>
+                </div>
+
+                <div class="grid sm:grid-cols-2 gap-6 mt-6">
+          
+        </div>
+
+        <a href="#contact"
+          class="inline-block mt-5 bg-primary text-white px-5 py-3  text-center rounded-full hover:bg-transparent hover:text-primary border-2 border-primary
+           transition">
+          Schedule Consultation
+        </a>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<section id="about" class="py-16 md:py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- Heading -->
+    <h2 class="text-center text-3xl md:text-4xl font-playfair font-semibold text-dark mb-12">
+      Meet Your Clinical Dietitian
+    </h2>
+
+    <!-- Main Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 items-center">
+
+      <!-- Image -->
+      <div class="flex justify-center">
+        <img src="https://ik.imagekit.io/referindia/drketaki.jpeg"
+          alt="Dt. Ketaki Manke"
+          class="w-full max-w-md md:max-w-full rounded-2xl shadow-xl hover:scale-105 transition duration-300">
+      </div>
+
+      <!-- Content -->
+      <div>
+
+        <h3 class="text-2xl md:text-3xl text-primary font-semibold mb-4">
+          Dt. Ketaki Manke
+        </h3>
+
+        <p class="text-gray-600 mb-4 leading-relaxed">
+          A highly skilled and experienced Clinical Dietitian with a strong background
+          in hospital-based nutrition, therapeutic diet planning, and medical research,
+          dedicated to delivering evidence-based and patient-centric nutritional care.
+        </p>
+
+        <p class="text-gray-600 leading-relaxed mb-6">
+          Currently practicing as a Clinical Dietitian at Oskar Hospital, Kasarvadavali.
+          Her professional training includes clinical internships at Kokilaben Dhirubhai Ambani Hospital
+          and specialized exposure at Aastha Bariatric Centre.
+        </p>
+
+        <!-- Qualifications Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 mt-6">
+
+          <div class="bg-teal-50 p-5 rounded-xl shadow-md hover:-translate-y-2 hover:shadow-lg transition duration-300">
+            <h4 class="font-semibold">Master's in Integrative Nutrition</h4>
+            <p class="text-sm text-gray-600">Bombay College of Pharmacy</p>
+          </div>
+
+          <div class="bg-teal-50 p-5 rounded-xl shadow-md hover:-translate-y-2 hover:shadow-lg transition duration-300">
+            <h4 class="font-semibold">Master's in Biochemistry</h4>
+            <p class="text-sm text-gray-600">Gujarat University, M.G. Science Institute, Ahmedabad, India</p>
+          </div>
+
+          <div class="bg-teal-50 p-5 rounded-xl shadow-md hover:-translate-y-2 hover:shadow-lg transition duration-300">
+            <h4 class="font-semibold">Bachelor of Science in Biochemistry (Biotechnology)</h4>
+            <p class="text-sm text-gray-600">Gujarat University, M.G. Science Institute, Ahmedabad, India</p>
+          </div>
+
+          <div class="bg-teal-50 p-5 rounded-xl shadow-md hover:-translate-y-2 hover:shadow-lg transition duration-300">
+            <h4 class="font-semibold">Diploma in Nutrition & Health Education</h4>
+            <p class="text-sm text-gray-600">IGNOU, Delhi</p>
+          </div>
+
+          <div class="bg-teal-50 p-5 rounded-xl shadow-md hover:-translate-y-2 hover:shadow-lg transition duration-300">
+            <h4 class="font-semibold">Certified Diabetes Educator</h4>
+            <p class="text-sm text-gray-600">Dr. Mohan's Academy</p>
+          </div>
+
+          <div class="bg-teal-50 p-5 rounded-xl shadow-md hover:-translate-y-2 hover:shadow-lg transition duration-300">
+            <h4 class="font-semibold">Certified Cancer Nutritionist</h4>
+            <p class="text-sm text-gray-600">Novast Institute of Nutrition and Dietetics</p>
+          </div>
+
+        </div>
+
+        <!-- Button -->
+        <a href="#contact"
+          class="inline-block mt-8 bg-primary text-white px-6 py-3 rounded-full border-2 border-primary 
+          hover:bg-transparent hover:text-primary transition duration-300">
+          Schedule Consultation
+        </a>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- SERVICES -->
+<!-- <section id="services" class="bg-gray-100 py-20">
+  <div class="max-w-7xl mx-auto px-5 text-center">
+    <h2 class="text-3xl font-playfair font-semibold text-dark mb-6">
+      Our Services
+    </h2>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
+      <div class="bg-white p-8 rounded-lg shadow hover:shadow-xl hover:-translate-y-3 transition">
+        <i class="fas fa-heartbeat text-3xl text-primary mb-4"></i>
+        <h3 class="font-semibold mb-3">Clinical Nutrition</h3>
+        <p>Therapeutic nutrition for diabetes, thyroid, kidney and cardiac conditions.</p>
+      </div>
+
+      <div class="bg-white p-8 rounded-lg shadow hover:shadow-xl hover:-translate-y-3 transition">
+        <i class="fas fa-user-md text-3xl text-primary mb-4"></i>
+        <h3 class="font-semibold mb-3">Cancer Nutrition</h3>
+        <p>Supportive nutrition during cancer treatment and recovery.</p>
+      </div>
+
+      <div class="bg-white p-8 rounded-lg shadow hover:shadow-xl hover:-translate-y-3 transition">
+        <i class="fas fa-weight text-3xl text-primary mb-4"></i>
+        <h3 class="font-semibold mb-3">Weight Management</h3>
+        <p>Sustainable plans for healthy weight loss or gain.</p>
+      </div>
+
+      <div class="bg-white p-8 rounded-lg shadow hover:shadow-xl hover:-translate-y-3 transition">
+        <i class="fas fa-procedures text-3xl text-primary mb-4"></i>
+        <h3 class="font-semibold mb-3">Post-Surgical Care</h3>
+        <p>Nutrition support after bariatric & GI surgeries.</p>
+      </div>
+
+      <div class="bg-white p-8 rounded-lg shadow hover:shadow-xl hover:-translate-y-3 transition">
+        <i class="fas fa-heartbeat text-3xl text-primary mb-4"></i>
+        <h3 class="font-semibold mb-3">Research</h3>
+        <p class="text-center">Expertise inassessment, planning, and monitoring of the tube feeding for medical,
+          surgical,ICU, and oncology patients.Skilled in NG, NJ, PEG, PEJ, and Ryle's tube
+        feeding, individualized formula selection(commercial & blenderized),feeding
+      schedules</p>
+      </div>
+
+      <div class="bg-white p-8 rounded-lg shadow hover:shadow-xl hover:-translate-y-3 transition">
+        <i class="fas fa-heartbeat text-3xl text-primary mb-4"></i>
+        <h3 class="font-semibold mb-3">Training Program</h3>
+        <p>The basic Recombinant DNA Techniques
+          DNA Research Centre, Hyderabad, India
+          'ELSA'
+          R&D Department of Cadila Pharma, Ahmedabad, India
+        </p>
+      </div>
+
+      <div class="bg-white p-8 rounded-lg shadow hover:shadow-xl hover:-translate-y-3 transition">
+        <i class="fas fa-heartbeat text-3xl text-primary mb-4"></i>
+        <h3 class="font-semibold mb-3">Clinical Nutrition</h3>
+        <p>Therapeutic nutrition for diabetes, thyroid, kidney and cardiac conditions.</p>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<section id="services" class="bg-gray-100 py-16 md:py-20">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    
+    <h2 class="text-3xl md:text-4xl font-playfair font-semibold text-dark mb-10">
+      Our Services
+    </h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+
+      <!-- Card -->
+      <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 flex flex-col items-center text-center">
+        <div class="w-16 h-16 flex items-center justify-center rounded-full bg-gray-100 mb-4">
+          <i class="fas fa-heartbeat text-2xl text-primary"></i>
+        </div>
+        <h3 class="font-semibold text-lg mb-3">Clinical Nutrition</h3>
+        <p class="text-sm text-gray-600">
+          Therapeutic nutrition for diabetes, thyroid, kidney and cardiac conditions.
+        </p>
+      </div>
+
+      <!-- Card -->
+      <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 flex flex-col items-center text-center">
+        <div class="w-16 h-16 flex items-center justify-center rounded-full bg-gray-100 mb-4">
+          <i class="fas fa-user-md text-2xl text-primary"></i>
+        </div>
+        <h3 class="font-semibold text-lg mb-3">Cancer Nutrition</h3>
+        <p class="text-sm text-gray-600">
+          Supportive nutrition during cancer treatment and recovery.
+        </p>
+      </div>
+
+      <!-- Card -->
+      <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 flex flex-col items-center text-center">
+        <div class="w-16 h-16 flex items-center justify-center rounded-full bg-gray-100 mb-4">
+          <i class="fas fa-weight text-2xl text-primary"></i>
+        </div>
+        <h3 class="font-semibold text-lg mb-3">Weight Management</h3>
+        <p class="text-sm text-gray-600">
+          Sustainable plans for healthy weight loss or gain.
+        </p>
+      </div>
+
+      <!-- Card -->
+      <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 flex flex-col items-center text-center">
+        <div class="w-16 h-16 flex items-center justify-center rounded-full bg-gray-100 mb-4">
+          <i class="fas fa-procedures text-2xl text-primary"></i>
+        </div>
+        <h3 class="font-semibold text-lg mb-3">Post-Surgical Care</h3>
+        <p class="text-sm text-gray-600">
+          Nutrition support after bariatric & GI surgeries.
+        </p>
+      </div>
+
+      <!-- Card -->
+      <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 flex flex-col items-center text-center">
+        <div class="w-16 h-16 flex items-center justify-center rounded-full bg-gray-100 mb-4">
+          <i class="fas fa-flask text-2xl text-primary"></i>
+        </div>
+        <h3 class="font-semibold text-lg mb-3">Research</h3>
+        <p class="text-sm text-gray-600">
+          Expertise in assessment, planning & monitoring of tube feeding for ICU, surgical and oncology patients.
+        </p>
+      </div>
+
+      <!-- Card -->
+      <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 flex flex-col items-center text-center">
+        <div class="w-16 h-16 flex items-center justify-center rounded-full bg-gray-100 mb-4">
+          <i class="fas fa-graduation-cap text-2xl text-primary"></i>
+        </div>
+        <h3 class="font-semibold text-lg mb-3">Training Program</h3>
+        <p class="text-sm text-gray-600">
+          Training in Recombinant DNA Techniques and clinical research programs across leading institutes in India.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- CTA -->
+<section class="py-20 text-center text-white bg-primary">
+  <div class="max-w-3xl mx-auto px-5">
+    <h2 class="text-3xl font-playfair mb-6">
+      Ready to Transform Your Health?
+    </h2>
+    <p class="mb-8">
+      Safe, practical, and personalized diet plans tailored to your body.
+    </p>
+    <a href="#contact"
+      class="bg-secondary px-8 py-3 rounded-full hover:bg-transparent border-2 border-secondary transition">
+      Book Consultation
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="contact" class="bg-dark text-white py-16">
+  <div class="max-w-7xl mx-auto px-5 grid md:grid-cols-3 gap-10">
+
+    <div>
+      <h3 class="text-2xl font-playfair mb-4">
+        Nutri<span class="text-secondary">Xpert</span>
+      </h3>
+      <p>Evidence-based personalized nutrition therapy.</p>
+    </div>
+
+    <div>
+      <h4 class="font-semibold mb-4">Quick Links</h4>
+      <ul class="space-y-2">
+        <li><a href="#home" class="hover:text-primary">Home</a></li>
+        <li><a href="#about" class="hover:text-primary">About</a></li>
+        <li><a href="#services" class="hover:text-primary">Services</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4 class="font-semibold mb-4">Contact</h4>
+      <p>Thane, Maharashtra</p>
+      <p>9834809686</p>
+      <p>care@nutri-xpert.com</p>
+    </div>
+  </div>
+
+  <div class="text-center mt-10 border-t border-gray-600 pt-6 text-sm">
+    © 2025 Nutri-Xpert. All rights reserved.
+  </div>
+</footer>
+
+</body>
+</html>
