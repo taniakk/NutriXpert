@@ -38,12 +38,10 @@
 <body class="font-poppins text-gray-700 overflow-x-hidden">
 
 <!-- HEADER -->
-<header class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
+<!-- <header class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
   <div class="max-w-7xl mx-auto px-5">
     <nav class="flex justify-between items-center py-5">
-      <!-- <a href="#" class="text-2xl font-playfair font-bold text-primary">
-        Nutri<span class="text-secondary">Xpert</span>
-      </a> -->
+   
        <img src="" alt="" srcset="/images/nutrixpert1.png" class="h-[70px]">
       <ul class="hidden md:flex space-x-8 font-medium text-dark">
         <li><a href="#home" class="hover:text-primary">Home</a></li>
@@ -60,7 +58,47 @@
       </ul>
     </nav>
   </div>
+</header> -->
+
+<header class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
+  <div class="max-w-7xl mx-auto px-5">
+    <nav class="flex justify-between items-center py-4">
+
+      <!-- Logo -->
+      <img src="/images/nutrixpert1.png" alt="NutriXpert Logo" class="h-[60px]">
+
+      <!-- Desktop Menu -->
+      <ul class="hidden md:flex space-x-8 font-medium text-gray-800 items-center">
+        <li><a href="#home" class="hover:text-primary">Home</a></li>
+        <li><a href="#about" class="hover:text-primary">About</a></li>
+        <li><a href="#services" class="hover:text-primary">Services</a></li>
+        <li><a href="#experience" class="hover:text-primary">Experience</a></li>
+        <li><a href="#contact" class="hover:text-primary">Contact</a></li>
+      </ul>
+
+      <!-- Mobile Menu Button -->
+      <button id="menuBtn" class="md:hidden text-3xl text-gray-800">
+        ☰
+      </button>
+
+    </nav>
+  </div>
+
+  <!-- Mobile Dropdown Menu -->
+  <div id="mobileMenu"
+    class="md:hidden overflow-hidden max-h-0 bg-white transition-all duration-500 ease-in-out shadow-lg">
+
+    <div class="flex flex-col px-6 py-5 space-y-4 font-medium text-gray-800">
+      <a href="#home" class="mobile-link">Home</a>
+      <a href="#about" class="mobile-link">About</a>
+      <a href="#services" class="mobile-link">Services</a>
+      <a href="#experience" class="mobile-link">Experience</a>
+      <a href="#contact" class="mobile-link">Contact</a>
+    </div>
+
+  </div>
 </header>
+
 
 <!-- HERO -->
 <section id="home"
@@ -90,80 +128,6 @@
 </section>
 
 <!-- ABOUT -->
-<!-- <section id="about" class="py-20">
-  <div class="max-w-7xl mx-auto px-5">
-
-    <h2 class="text-center text-3xl font-playfair font-semibold text-dark mb-12">
-      Meet Your Clinical Dietitian
-    </h2>
-
-    <div class="grid md:grid-cols-2 gap-12 items-center">
-      <img src="https://ik.imagekit.io/referindia/drketaki.jpeg"
-        class="rounded-xl shadow-xl hover:scale-105 transition duration-300">
-
-      <div>
-        <h3 class="text-2xl text-primary font-semibold mb-4">
-          Dt. Ketaki Manke
-        </h3>
-
-        <p class="mb-4">
-           A highly skilled and experienced Clinical Dietition with a strong background
-                in hospital-based nutrition, therapeutic diet planning, and medical research,
-                dedicated to delivering evidence-based and patient-centric nutritional care.
-        </p>
-
-        <p class="leading-relaxed mb-6">
-                Currently practicing as a Clinical Dietition at Oskar Hospital, Kasarvadavali. Her professional training includes clinical internships 
-                at Kokilaben Dhirubhai Ambani Hospital and specialized exposure at Aastha Bariatric Centre.
-            </p> 
-
-        <div class="grid sm:grid-cols-2 gap-6 mt-6">
-          <div class="bg-teal-50 p-5 rounded-lg shadow hover:-translate-y-2 transition">
-            <h4 class="font-semibold">Master's in Integrative Nutrition</h4>
-            <p class="text-sm">Bombay College of Pharmacy</p>
-          </div>
-
-          <div class="bg-teal-50 p-5 rounded-lg shadow hover:-translate-y-2 transition">
-            <h4 class="font-semibold">Master's in Biochemistry</h4>
-            <p class="text-sm">Gujrat University, M.G Science Institute, Ahmedabad, India</p>
-          </div>
-           
-          <div class="bg-teal-50 p-5 rounded-lg shadow hover:-translate-y-2 transition">
-            <h4 class="font-semibold">Bachelor of Science in Biochemistry(with vocational Biotechnology)</h4>
-            <p class="text-sm">Gujrat University, M.G Science Institute, Ahmedabad, India</p>
-          </div>
-
-          <div class="bg-teal-50 p-5 rounded-lg shadow hover:-translate-y-2 transition">
-            <h4 class="font-semibold">Diploma in Nutrition and Health Education</h4>
-            <p class="text-sm">IGNOU, Delhi</p>
-          </div>
-
-          <div class="bg-teal-50 p-5 rounded-lg shadow hover:-translate-y-2 transition">
-            <h4 class="font-semibold">Certified Diabetes Educator</h4>
-            <p class="text-sm">Dt. Mohan's Academy</p>
-          </div>
-           <div class="bg-teal-50 p-5 rounded-lg shadow hover:-translate-y-2 transition">
-                    <h1 class="font-semibold">
-                        Certified Cancer Nutritionist
-                    </h1>
-                    <p class="text-sm">
-                        Novast Institute of Nutrition and Dietetics
-                    </p>
-                </div>
-
-                <div class="grid sm:grid-cols-2 gap-6 mt-6">
-          
-        </div>
-
-        <a href="#contact"
-          class="inline-block mt-5 bg-primary text-white px-5 py-3  text-center rounded-full hover:bg-transparent hover:text-primary border-2 border-primary
-           transition">
-          Schedule Consultation
-        </a>
-      </div>
-    </div>
-  </div>
-</section> -->
 
 <section id="about" class="py-16 md:py-20 bg-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -251,64 +215,6 @@
 
 
 <!-- SERVICES -->
-<!-- <section id="services" class="bg-gray-100 py-20">
-  <div class="max-w-7xl mx-auto px-5 text-center">
-    <h2 class="text-3xl font-playfair font-semibold text-dark mb-6">
-      Our Services
-    </h2>
-
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
-      <div class="bg-white p-8 rounded-lg shadow hover:shadow-xl hover:-translate-y-3 transition">
-        <i class="fas fa-heartbeat text-3xl text-primary mb-4"></i>
-        <h3 class="font-semibold mb-3">Clinical Nutrition</h3>
-        <p>Therapeutic nutrition for diabetes, thyroid, kidney and cardiac conditions.</p>
-      </div>
-
-      <div class="bg-white p-8 rounded-lg shadow hover:shadow-xl hover:-translate-y-3 transition">
-        <i class="fas fa-user-md text-3xl text-primary mb-4"></i>
-        <h3 class="font-semibold mb-3">Cancer Nutrition</h3>
-        <p>Supportive nutrition during cancer treatment and recovery.</p>
-      </div>
-
-      <div class="bg-white p-8 rounded-lg shadow hover:shadow-xl hover:-translate-y-3 transition">
-        <i class="fas fa-weight text-3xl text-primary mb-4"></i>
-        <h3 class="font-semibold mb-3">Weight Management</h3>
-        <p>Sustainable plans for healthy weight loss or gain.</p>
-      </div>
-
-      <div class="bg-white p-8 rounded-lg shadow hover:shadow-xl hover:-translate-y-3 transition">
-        <i class="fas fa-procedures text-3xl text-primary mb-4"></i>
-        <h3 class="font-semibold mb-3">Post-Surgical Care</h3>
-        <p>Nutrition support after bariatric & GI surgeries.</p>
-      </div>
-
-      <div class="bg-white p-8 rounded-lg shadow hover:shadow-xl hover:-translate-y-3 transition">
-        <i class="fas fa-heartbeat text-3xl text-primary mb-4"></i>
-        <h3 class="font-semibold mb-3">Research</h3>
-        <p class="text-center">Expertise inassessment, planning, and monitoring of the tube feeding for medical,
-          surgical,ICU, and oncology patients.Skilled in NG, NJ, PEG, PEJ, and Ryle's tube
-        feeding, individualized formula selection(commercial & blenderized),feeding
-      schedules</p>
-      </div>
-
-      <div class="bg-white p-8 rounded-lg shadow hover:shadow-xl hover:-translate-y-3 transition">
-        <i class="fas fa-heartbeat text-3xl text-primary mb-4"></i>
-        <h3 class="font-semibold mb-3">Training Program</h3>
-        <p>The basic Recombinant DNA Techniques
-          DNA Research Centre, Hyderabad, India
-          'ELSA'
-          R&D Department of Cadila Pharma, Ahmedabad, India
-        </p>
-      </div>
-
-      <div class="bg-white p-8 rounded-lg shadow hover:shadow-xl hover:-translate-y-3 transition">
-        <i class="fas fa-heartbeat text-3xl text-primary mb-4"></i>
-        <h3 class="font-semibold mb-3">Clinical Nutrition</h3>
-        <p>Therapeutic nutrition for diabetes, thyroid, kidney and cardiac conditions.</p>
-      </div>
-    </div>
-  </div>
-</section> -->
 
 <section id="services" class="bg-gray-100 py-16 md:py-20">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -316,6 +222,10 @@
     <h2 class="text-3xl md:text-4xl font-playfair font-semibold text-dark mb-10">
       Our Services
     </h2>
+    <p class="pb-10 m-w-[80%] text-[18px]">Expertise in assessment, planning, and monitoring of tube feeding for medical, surgical, ICU, and oncology patients.
+      Skilled in NG, NJ, PEG, PEJ, and Ryle's tube feeding, individualized formula selection (commercial & blenderized), 
+      feeding schedules.
+    </p>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
 
@@ -370,7 +280,8 @@
         </div>
         <h3 class="font-semibold text-lg mb-3">Research</h3>
         <p class="text-sm text-gray-600">
-          Expertise in assessment, planning & monitoring of tube feeding for ICU, surgical and oncology patients.
+         Nutritional Assessment and Survey on Barriers to Dietary Intake and supplement consumption in Head and Neck Cancer
+         Patients undergoing Chemoradiation Therapy.
         </p>
       </div>
 
@@ -438,6 +349,48 @@
     © 2025 Nutri-Xpert. All rights reserved.
   </div>
 </footer>
+
+
+
+<script>
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  let isOpen = false;
+
+  function openMenu() {
+    mobileMenu.classList.remove("max-h-0");
+    mobileMenu.classList.add("max-h-96");
+    isOpen = true;
+  }
+
+  function closeMenu() {
+    mobileMenu.classList.remove("max-h-96");
+    mobileMenu.classList.add("max-h-0");
+    isOpen = false;
+  }
+
+  // Toggle on button click
+  menuBtn.addEventListener("click", () => {
+    if (isOpen) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  });
+
+  // Close when clicking any mobile link
+  document.querySelectorAll(".mobile-link").forEach(link => {
+    link.addEventListener("click", closeMenu);
+  });
+
+  // ✅ Smooth close on scroll (only mobile)
+  window.addEventListener("scroll", () => {
+    if (window.innerWidth < 768 && isOpen) {
+      closeMenu();
+    }
+  });
+</script>
 
 </body>
 </html>
