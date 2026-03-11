@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<script>
+
+const menuBtn = document.getElementById("menuBtn");
+const mobileMenu = document.getElementById("mobileMenu");
+
+menuBtn.addEventListener("click", () => {
+
+  if (mobileMenu.classList.contains("max-h-0")) {
+    
+    mobileMenu.classList.remove("max-h-0");
+    mobileMenu.classList.add("max-h-[500px]");
+
+  } else {
+
+    mobileMenu.classList.remove("max-h-[500px]");
+    mobileMenu.classList.add("max-h-0");
+
+  }
+
+});
+
+</script>
+<body>
+
+<!-- NAVBAR -->
+<!-- NAVBAR -->
+<header class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
+
+  <div class="max-w-7xl mx-auto px-5">
+
+    <nav class="flex justify-between items-center py-4">
+
+      <!-- Logo -->
+      <a href="/index.html">
+        <img src="/images/nutriexpertlogo.jpeg"
+             alt="NutriXpert Logo"
+             class="h-14 md:h-16">
+      </a>
+
+      <!-- Desktop Menu -->
+      <ul class="hidden md:flex items-center space-x-8 font-medium text-[#E67E22]">
+
+        <li><a href="/index.html" class="hover:text-[#6AA84F]">Home</a></li>
+        <li><a href="#about" class="hover:text-[#6AA84F]">About</a></li>
+        <li><a href="#services" class="hover:text-[#6AA84F]">Services</a></li>
+        <li><a href="/experience.html" class="hover:text-[#6AA84F]">Experience</a></li>
+        <li><a href="/blog.html" class="hover:text-[#6AA84F]">Blog</a></li>
+        <li><a href="#contact" class="hover:text-[#6AA84F]">Contact</a></li>
+
+        <li>
+          <a href="#contact"
+             class="bg-[#6AA84F] text-white px-5 py-2 rounded-full border-2 border-[#6AA84F]
+             hover:bg-transparent hover:text-[#6AA84F] transition">
+            Book Consultation
+          </a>
+        </li>
+
+      </ul>
+
+      <!-- Mobile Button -->
+      <button id="menuBtn"
+              class="md:hidden text-3xl text-gray-700">
+        ☰
+      </button>
+
+    </nav>
+
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu"
+       class="hidden md:hidden bg-white border-t shadow-md">
+
+    <div class="flex flex-col px-6 py-6 space-y-4 text-[#E67E22] font-medium">
+
+      <a href="/index.html" class="hover:text-[#6AA84F]">Home</a>
+      <a href="#about" class="hover:text-[#6AA84F]">About</a>
+      <a href="#services" class="hover:text-[#6AA84F]">Services</a>
+      <a href="/experience.html" class="hover:text-[#6AA84F]">Experience</a>
+      <a href="/blog.html" class="hover:text-[#6AA84F]">Blog</a>
+      <a href="#contact" class="hover:text-[#6AA84F]">Contact</a>
+
+      <a href="#contact"
+         class="text-center bg-[#6AA84F] text-white py-2 rounded-full border-2 border-[#6AA84F]
+         hover:bg-transparent hover:text-[#6AA84F] transition">
+        Book Consultation
+      </a>
+
+    </div>
+
+  </div>
+
+</header>
+    <!-- BLOG SECTION -->
+<section id="blog" class="pt-32 pb-20 bg-gradient-to-b from-white to-green-50">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <!-- Heading -->
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-playfair font-semibold text-gray-800">
+        Nutrition Insights & Health Blog
+      </h2>
+      <p class="mt-4 text-gray-600 max-w-2xl mx-auto">
+        Practical nutrition knowledge, expert advice, and evidence-based tips to help you make healthier food choices every day.
+      </p>
+      <div class="w-24 h-1 bg-[#6AA84F] mx-auto mt-5 rounded-full"></div>
+    </div>
+
+    <!-- Blog Grid -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- Blog Card 1 -->
+      <div class="bg-white rounded-2xl shadow-md hover:shadow-2xl transition duration-300 overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061" class="w-full h-52 object-cover">
+        <div class="p-6">
+          <h3 class="font-semibold text-xl mb-3 text-[#6AA84F]">
+            When Should You Consult a Clinical Dietitian?
+          </h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            A clinical dietitian can help manage health conditions through personalized nutrition therapy.
+            If you are dealing with diabetes, thyroid disorders, digestive problems, weight issues,
+            or recovering from surgery, consulting a dietitian ensures you receive safe and
+            evidence-based dietary guidance.
+          </p>
+        </div>
+      </div>
+
+      <!-- Blog Card 2 -->
+      <div class="bg-white rounded-2xl shadow-md hover:shadow-2xl transition duration-300 overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528" class="w-full h-52 object-cover">
+        <div class="p-6">
+          <h3 class="font-semibold text-xl mb-3 text-[#6AA84F]">
+            Patient Success Stories
+          </h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Real-life success stories inspire confidence and motivation.
+            Many patients have successfully managed diabetes, improved heart health,
+            and achieved sustainable weight goals through structured nutrition plans
+            and professional dietary counseling.
+          </p>
+        </div>
+      </div>
+
+      <!-- Blog Card 3 -->
+      <div class="bg-white rounded-2xl shadow-md hover:shadow-2xl transition duration-300 overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd" class="w-full h-52 object-cover">
+        <div class="p-6">
+          <h3 class="font-semibold text-xl mb-3 text-[#6AA84F]">
+            Myth vs Fact in Nutrition
+          </h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Nutrition is surrounded by myths such as “carbs cause weight gain” or
+            “skipping meals helps weight loss.” Evidence-based nutrition clarifies
+            these misconceptions and encourages balanced, sustainable eating habits.
+          </p>
+        </div>
+      </div>
+
+      <!-- Blog Card 4 -->
+      <div class="bg-white rounded-2xl shadow-md hover:shadow-2xl transition duration-300 overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1542838132-92c53300491e" class="w-full h-52 object-cover">
+        <div class="p-6">
+          <h3 class="font-semibold text-xl mb-3 text-[#6AA84F]">
+            Grocery Shopping Guide for Healthy Eating
+          </h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Smart grocery shopping helps build healthy eating habits.
+            Focus on whole grains, fresh vegetables, lean proteins,
+            healthy fats, and minimally processed foods to create
+            balanced meals at home.
+          </p>
+        </div>
+      </div>
+
+      <!-- Blog Card 5 -->
+      <div class="bg-white rounded-2xl shadow-md hover:shadow-2xl transition duration-300 overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1484981138541-3d074aa97716" class="w-full h-52 object-cover">
+        <div class="p-6">
+          <h3 class="font-semibold text-xl mb-3 text-[#6AA84F]">
+            Micronutrients: Vitamins & Minerals Explained
+          </h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Micronutrients such as vitamins and minerals are essential for
+            immunity, metabolism, and overall health. Deficiencies can lead
+            to fatigue, weakened immunity, and various health complications.
+          </p>
+        </div>
+      </div>
+
+      <!-- Blog Card 6 -->
+      <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transition overflow-hidden">
+
+  <!-- Image -->
+  <img 
+    src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=800&q=80"
+    alt="Calories Protein Carbs Fats"
+    class="w-full h-48 object-cover">
+
+  <!-- Content -->
+  <div class="p-6">
+
+    <h3 class="text-xl font-semibold mb-3 text-[#6AA84F]">
+      Understanding Calories, Protein, Carbs & Fats
+    </h3>
+
+    <p class="text-gray-600 text-sm leading-relaxed">
+      Calories provide energy for the body to function. Macronutrients
+      including protein, carbohydrates, and fats each play a specific role.
+      Protein helps build and repair tissues, carbohydrates provide quick
+      energy, and healthy fats support hormone production and brain
+      function. Understanding these nutrients helps individuals create
+      balanced meals that support both health and performance.
+    </p>
+
+  </div>
+
+</div>
+
+      <!-- Blog Card 7 -->
+      <div class="bg-white rounded-2xl shadow-md hover:shadow-2xl transition duration-300 overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f" class="w-full h-52 object-cover">
+        <div class="p-6">
+          <h3 class="font-semibold text-xl mb-3 text-[#6AA84F]">
+            Reading Food Labels Correctly
+          </h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Learning how to read food labels helps you make healthier
+            choices. Pay attention to serving sizes, sugar content,
+            sodium levels, and ingredient lists to avoid hidden
+            unhealthy additives.
+          </p>
+        </div>
+      </div>
+
+      <!-- Blog Card 8 -->
+      <div class="bg-white rounded-2xl shadow-md hover:shadow-2xl transition duration-300 overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1523362628745-0c100150b504" class="w-full h-52 object-cover">
+        <div class="p-6">
+          <h3 class="font-semibold text-xl mb-3 text-[#6AA84F]">
+            Importance of Hydration
+          </h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Staying hydrated is essential for digestion, temperature
+            regulation, and maintaining energy levels. Drinking adequate
+            water daily supports overall health and improves physical
+            and mental performance.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+</body>
+</html>
