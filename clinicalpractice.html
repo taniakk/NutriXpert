@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+
+  <!-- HEADER (no animation changes, just sticky) -->
+<header class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
+  <div class="max-w-7xl mx-auto px-5">
+    <nav class="flex justify-between items-center py-4">
+
+      <!-- Logo (tiny pulse on hover) -->
+      <a href="./index.html" class="transition-transform hover:scale-105 duration-200">
+        <img src="/images/nutriexpertlogo.jpeg" loading="lazy" alt="NutriXpert Logo" class="h-[60px] cursor-pointer">
+      </a>
+
+      <!-- Desktop Menu -->
+      <ul class="hidden md:flex space-x-8 font-medium text-[#E67E22] items-center">
+        <li><a href="./index.html" class="hover:text-[#6AA84F] transition-colors duration-200">Home</a></li>
+        <li><a href="#about" class="hover:text-[#6AA84F] transition-colors">About</a></li>
+        <li><a href="/blog.html" class="hover:text-[#6AA84F] transition-colors">Blog</a></li>
+        <li><a href="/clinicalpractice.html" class="hover:text-[#6AA84F] transition-colors">Clinical Practice</a></li>
+        <li><a href="#services" class="hover:text-[#6AA84F] transition-colors">Services</a></li>
+        <li><a href="/experience.html" class="hover:text-[#6AA84F] transition-colors">Experience</a></li>
+        <li><a href="#footer" class="hover:text-[#6AA84F] transition-colors">Contact</a></li>
+
+        <!-- Book Button (Desktop) -->
+        <li>
+          <a href="#contact"
+            class="bg-[#6AA84F] text-white px-5 py-2 rounded-full hover:bg-transparent 
+            hover:text-[#6AA84F] border-2 border-[#6AA84F] transition-all duration-200 hover:scale-105 inline-block">
+            Book Consultation
+          </a>
+        </li>
+      </ul>
+
+      <!-- Mobile Menu Button -->
+      <button id="menuBtn" class="md:hidden text-3xl text-gray-800 transition-transform active:scale-90">
+        ☰
+      </button>
+
+    </nav>
+  </div>
+
+  <!-- Mobile Dropdown Menu (same) -->
+  <div id="mobileMenu"
+    class="md:hidden overflow-hidden max-h-0 bg-white transition-all duration-500 ease-in-out shadow-lg">
+
+    <div class="flex flex-col px-6 py-6 space-y-5 font-medium text-[#E67E22]">
+      <a href="/index.html" class="mobile-link hover:translate-x-2 transition-transform">Home</a>
+      <a href="#about" class="mobile-link hover:translate-x-2 transition-transform">About</a>
+      <a href="/blog.html" class="mobile-link hover:translate-x-2">Blog</a>
+      <a href="#services" class="mobile-link hover:translate-x-2">Services</a>
+      <a href="/experience.html" class="mobile-link hover:translate-x-2">Experience</a>
+      <a href="#contact" class="mobile-link hover:translate-x-2">Contact</a>
+
+      <a href="#contact"
+  class="mobile-link inline-block w-fit mx-auto px-6 py-2 text-sm font-semibold 
+         bg-[#E67E22] hover:bg-transparent hover:text-primary border-2 border-primary
+         text-white rounded-full 
+         shadow-md hover:shadow-lg 
+         hover:scale-105 
+         transition duration-300 ease-in-out">
+  Book Consultation
+</a>
+    </div>
+  </div>
+</header>
+
+  <!-- Clinical Practice Section -->
+<section id="clinical-practice" class="py-20 bg-gradient-to-b from-green-50 to-white">
+
+  <div class="max-w-7xl mx-auto px-6">
+
+    <!-- Heading -->
+    <div class="text-center mb-14">
+      <h2 class="text-4xl font-bold text-green-800 mt-6 mb-4">
+        Clinical Practice
+      </h2>
+      <p class="text-gray-600 max-w-2xl mx-auto">
+        Providing evidence-based medical nutrition therapy and personalized diet
+        counselling to support patient recovery and long-term wellness.
+      </p>
+    </div>
+
+    <!-- Flex Container -->
+    <div class="flex flex-col md:flex-row items-center gap-12">
+
+      <!-- Image Section -->
+      <div class="flex-1 group">
+        <img src="images/vrindavanHospital.jpg" loading="lazy"
+          alt="Vrindavan Hospital"
+          class="rounded-2xl shadow-2xl w-full object-cover 
+          transform group-hover:scale-105 transition duration-500">
+      </div>
+
+      <!-- Text Section -->
+      <div class="flex-1">
+
+        <h3 class="text-2xl font-semibold text-green-700 mb-4">
+          Consulting at Vrindavan Hospital
+        </h3>
+
+        <p class="text-gray-700 mb-4 leading-relaxed">
+          I am currently practicing as a <span class="font-semibold">Clinical Dietitian</span>
+          at Vrindavan Hospital, collaborating with doctors and healthcare professionals
+          to deliver personalized medical nutrition therapy.
+        </p>
+
+        <p class="text-gray-700 mb-4 leading-relaxed">
+          My work focuses on diet planning and nutritional management for
+          conditions such as diabetes, cardiac diseases, weight management,
+          digestive disorders, and metabolic health.
+        </p>
+
+        <p class="text-gray-700 mb-6 leading-relaxed">
+          Through continuous monitoring, patient education, and structured
+          dietary guidance, my goal is to help patients achieve sustainable
+          and healthy lifestyle changes.
+        </p>
+
+        <!-- Address Card -->
+        <div class="flex items-start gap-4 bg-white p-5 rounded-xl shadow-md border border-green-100 hover:shadow-lg transition">
+
+          <div class="text-green-600 text-2xl">
+            📍
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-gray-800">
+              Vrindavan Hospital
+            </h4>
+            <p class="text-gray-600 text-sm">
+              A Multispeciality Hospital <br>
+              Thane, Maharashtra, India
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- Mahalaxmi Hospital Clinical Practice -->
+<section id="mahalaxmi-hospital" class="py-20 bg-white">
+
+  <div class="max-w-7xl mx-auto px-6">
+
+    <!-- Heading -->
+    <div class="text-center mb-14">
+      <h2 class="text-4xl font-bold text-green-800 mb-4">
+        Previous Clinical Practice
+      </h2>
+      <p class="text-gray-600 max-w-2xl mx-auto">
+        Professional experience as a Clinical Dietitian at Shree Mahalaxmi Hospital,
+        where I provided medical nutrition therapy and dietary counselling for
+        patients with various health conditions.
+      </p>
+    </div>
+
+    <!-- Flexbox Layout -->
+    <div class="flex flex-col md:flex-row items-center gap-12">
+
+      <!-- Text Section -->
+      <div class="flex-1">
+
+        <h3 class="text-2xl font-semibold text-green-700 mb-4">
+          Clinical Dietitian at Shree Mahalaxmi Hospital
+        </h3>
+
+        <p class="text-gray-700 mb-4 leading-relaxed">
+          I previously worked as a Clinical Dietitian at Shree Mahalaxmi Hospital,
+          where I collaborated with doctors and healthcare professionals to
+          develop evidence-based diet plans for patients.
+        </p>
+
+        <p class="text-gray-700 mb-4 leading-relaxed">
+          My responsibilities included nutritional assessment, therapeutic
+          diet planning, and counseling patients suffering from diabetes,
+          hypertension, digestive disorders, and other medical conditions.
+        </p>
+
+        <p class="text-gray-700 mb-6 leading-relaxed">
+          Through personalized nutrition guidance and patient education,
+          I helped individuals adopt healthier eating habits to support
+          treatment, recovery, and long-term wellness.
+        </p>
+
+        <!-- Address Card -->
+        <div class="flex items-start gap-4 bg-green-50 p-5 rounded-xl shadow-md border border-green-100">
+
+          <div class="text-green-600 text-2xl">
+            📍
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-gray-800">
+              Shree Mahalaxmi Hospital
+            </h4>
+            <p class="text-gray-600 text-sm">
+              ICU • Maternity • Surgical Care <br>
+              Mira Road, Thane, Maharashtra, India
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Image Section -->
+      <div class="flex-1 group">
+        <img src="images/mahalaxmihospital.jpg" loading="lazy"
+          alt="Shree Mahalaxmi Hospital"
+          class="rounded-2xl shadow-2xl w-full object-cover 
+          transform group-hover:scale-105 transition duration-500">
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- Kokilaben Hospital Internship Section -->
+<section id="kokilaben-internship" class="py-20 bg-green-50">
+
+  <div class="max-w-7xl mx-auto px-6">
+
+    <!-- Heading -->
+    <div class="text-center mb-14">
+      <h2 class="text-4xl font-bold text-green-800 mb-4">
+        Clinical Nutrition Internship
+      </h2>
+      <p class="text-gray-600 max-w-2xl mx-auto">
+        Practical clinical training in hospital dietetics and patient care
+        through intensive internship rotations.
+      </p>
+    </div>
+
+    <!-- Flex Layout -->
+    <div class="flex flex-col md:flex-row items-center gap-12">
+
+      <!-- Image -->
+      <div class="flex-1 group">
+        <img src="images/kokilabenhospital.jpg" loading="lazy"
+          alt="Kokilaben Hospital Mumbai"
+          class="rounded-2xl shadow-2xl w-full object-cover
+          transform group-hover:scale-105 transition duration-500">
+      </div>
+
+      <!-- Content -->
+      <div class="flex-1">
+
+        <h3 class="text-2xl font-semibold text-green-700 mb-4">
+          Clinical Nutrition Internship
+        </h3>
+
+        <p class="text-gray-700 mb-4 leading-relaxed">
+          Completed <span class="font-semibold">three intensive clinical rotations</span>
+          at Kokilaben Hospital, gaining practical exposure to hospital dietetics,
+          therapeutic nutrition, and patient dietary management.
+        </p>
+
+        <p class="text-gray-700 mb-4 leading-relaxed">
+          During this internship, I worked under experienced clinical dietitians
+          and healthcare professionals to understand the nutritional needs of
+          hospitalized patients across various departments.
+        </p>
+
+        <p class="text-gray-700 mb-6 leading-relaxed">
+          My responsibilities included assisting in diet planning, patient
+          counselling, nutritional assessment, and learning evidence-based
+          clinical nutrition practices.
+        </p>
+
+        <!-- Address Card -->
+        <div class="flex items-start gap-4 bg-white p-5 rounded-xl shadow-md border border-green-100">
+
+          <div class="text-green-600 text-2xl">
+            📍
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-gray-800">
+              Kokilaben Dhirubhai Ambani Hospital
+            </h4>
+            <p class="text-gray-600 text-sm">
+              Four Bungalows, Andheri West <br>
+              Mumbai, Maharashtra, India
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- Aastha Bariatric Centre Internship -->
+<section id="aastha-internship" class="py-20 bg-white">
+
+  <div class="max-w-7xl mx-auto px-6">
+
+    <!-- Heading -->
+    <div class="text-center mb-14">
+      <h2 class="text-4xl font-bold text-green-800 mb-4">
+        Bariatric Nutrition Internship
+      </h2>
+      <p class="text-gray-600 max-w-2xl mx-auto">
+        Specialized internship focused on bariatric nutrition and metabolic
+        health management.
+      </p>
+    </div>
+
+    <!-- Flexbox Layout -->
+    <div class="flex flex-col md:flex-row items-center gap-12">
+
+      <!-- Text Content -->
+      <div class="flex-1">
+
+        <h3 class="text-2xl font-semibold text-green-700 mb-4">
+          Internship at Aastha Bariatric Centre
+        </h3>
+
+        <p class="text-gray-700 mb-4 leading-relaxed">
+          Completed an internship at Aastha Bariatric Centre, where I gained
+          practical experience in <span class="font-semibold">bariatric and
+          metabolic nutrition therapy</span>.
+        </p>
+
+        <p class="text-gray-700 mb-4 leading-relaxed">
+          The training focused on weight management strategies, dietary
+          planning for obesity treatment, and nutritional guidance for
+          patients undergoing bariatric surgery.
+        </p>
+
+        <p class="text-gray-700 mb-6 leading-relaxed">
+          I assisted in designing <span class="font-semibold">pre- and
+          post-bariatric diet plans</span>, monitored patient progress, and
+          learned specialized nutritional protocols to support metabolic
+          health and long-term lifestyle changes.
+        </p>
+
+        <!-- Address Card -->
+        <div class="flex items-start gap-4 bg-green-50 p-5 rounded-xl shadow-md border border-green-100">
+
+          <div class="text-green-600 text-2xl">
+            📍
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-gray-800">
+              Aastha Bariatric Centre
+            </h4>
+            <p class="text-gray-600 text-sm">
+              Mulund, Mumbai <br>
+              Maharashtra, India
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Image -->
+      <div class="flex-1 group">
+        <img src="images/aasthahospital.jpg" loading="lazy"
+          alt="Kokilaben Hospital Mumbai"
+          class="rounded-2xl h-[300px] shadow-2xl w-full object-cover
+          transform group-hover:scale-105 transition duration-500">
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- Zydus Research Centre Experience -->
+<section id="zydus-experience" class="py-20 bg-green-50">
+
+  <div class="max-w-7xl mx-auto px-6">
+
+    <!-- Heading -->
+    <div class="text-center mb-14">
+      <h2 class="text-4xl font-bold text-green-800 mb-4">
+        Research Experience
+      </h2>
+      <p class="text-gray-600 max-w-2xl mx-auto">
+        Experience in pharmaceutical research and laboratory operations,
+        supporting scientific analysis and research development processes.
+      </p>
+    </div>
+
+    <!-- Flexbox Layout -->
+    <div class="flex flex-col md:flex-row items-center gap-12">
+
+      <!-- Image (optional placeholder) -->
+      <div class="flex-1">
+        <img src="images/zydushospital.jpg" loading="lazy"
+          alt="Zydus Research Centre"
+          class="rounded-2xl shadow-2xl w-full object-cover hover:scale-105 transition duration-500">
+      </div>
+
+      <!-- Content -->
+      <div class="flex-1">
+
+        <h3 class="text-2xl font-semibold text-green-700 mb-4">
+          Senior Scientific Assistant
+        </h3>
+
+        <p class="text-gray-700 mb-4 leading-relaxed">
+          Worked as a <span class="font-semibold">Senior Scientific Assistant</span>
+          at Zydus Research Centre, contributing to pharmaceutical research
+          and scientific laboratory processes.
+        </p>
+
+        <p class="text-gray-700 mb-4 leading-relaxed">
+          My responsibilities included supporting research teams with
+          scientific analysis, assisting in laboratory operations,
+          and ensuring accurate documentation of research procedures.
+        </p>
+
+        <p class="text-gray-700 mb-6 leading-relaxed">
+          This experience strengthened my understanding of pharmaceutical
+          research methodologies, laboratory protocols, and quality
+          standards used in scientific research environments.
+        </p>
+
+        <!-- Address Card -->
+        <div class="flex items-start gap-4 bg-white p-5 rounded-xl shadow-md border border-green-100">
+
+          <div class="text-green-600 text-2xl">
+            📍
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-gray-800">
+              Zydus Research Centre
+            </h4>
+            <p class="text-gray-600 text-sm">
+              Ahmedabad <br>
+              Gujarat, India
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+      
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- INTAS Biopharma Experience -->
+<section id="intas-experience" class="py-20 bg-white">
+
+  <div class="max-w-7xl mx-auto px-6">
+
+    <!-- Heading -->
+    <div class="text-center mb-14">
+      <h2 class="text-4xl font-bold text-green-800 mb-4">
+        Pharmaceutical Research Experience
+      </h2>
+      <p class="text-gray-600 max-w-2xl mx-auto">
+        Practical experience in pharmaceutical analytical development,
+        laboratory research, and scientific testing processes.
+      </p>
+    </div>
+
+    <!-- Flexbox Layout -->
+    <div class="flex flex-col md:flex-row items-center gap-12">
+
+      <!-- Content -->
+      <div class="flex-1">
+
+        <h3 class="text-2xl font-semibold text-green-700 mb-4">
+          Trainee Research Associate
+        </h3>
+
+        <p class="text-gray-700 mb-4 leading-relaxed">
+          Worked as a <span class="font-semibold">Trainee Research Associate</span>
+          in the Analytical Development Laboratory at INTAS Biopharma Ltd,
+          gaining practical exposure to pharmaceutical research and
+          analytical testing procedures.
+        </p>
+
+        <p class="text-gray-700 mb-4 leading-relaxed">
+          My responsibilities included assisting in analytical method
+          development, supporting pharmaceutical testing, and maintaining
+          laboratory documentation according to research protocols.
+        </p>
+
+        <p class="text-gray-700 mb-6 leading-relaxed">
+          This role provided valuable experience in research laboratory
+          practices, analytical instrumentation, and pharmaceutical
+          quality testing standards.
+        </p>
+
+        <!-- Address Card -->
+        <div class="flex items-start gap-4 bg-green-50 p-5 rounded-xl shadow-md border border-green-100">
+
+          <div class="text-green-600 text-2xl">
+            📍
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-gray-800">
+              INTAS Biopharma Ltd
+            </h4>
+            <p class="text-gray-600 text-sm">
+              Analytical Development Lab – R&D <br>
+              Ahmedabad, Gujarat, India
+            </p>
+          </div>
+
+      
+
+        </div>
+
+      </div>
+
+            <!-- Image -->
+      <div class="flex-1">
+        <img src="images/intas.jpg" loading="lazy"
+          alt="INTAS Biopharma Ltd"
+          class="rounded-2xl shadow-2xl w-full object-cover hover:scale-105 transition duration-500">
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- Pharmalink Ltd Experience -->
+<section id="pharmalink-experience" class="py-20 bg-green-50">
+
+  <div class="max-w-7xl mx-auto px-6">
+
+    <!-- Heading -->
+    <div class="text-center mb-14">
+      <h2 class="text-4xl font-bold text-green-800 mb-4">
+        Industry Experience
+      </h2>
+      <p class="text-gray-600 max-w-2xl mx-auto">
+        Experience in operational excellence and process optimization
+        within the pharmaceutical industry.
+      </p>
+    </div>
+
+    <!-- Flexbox Layout -->
+    <div class="flex flex-col md:flex-row items-center gap-12">
+
+      <!-- Image (optional placeholder) -->
+      <div class="flex-1">
+        <img src="images/pharmalink.jpg"
+        loading="lazy"  alt="Pharmalink Ltd"
+          class="rounded-2xl shadow-2xl w-full h-[250px] lg:h-[330px] object-cover hover:scale-105 transition duration-500">
+      </div>
+
+      <!-- Content -->
+      <div class="flex-1">
+
+        <h3 class="text-2xl font-semibold text-green-700 mb-4">
+          Operational Excellence Executive
+        </h3>
+
+        <p class="text-gray-700 mb-4 leading-relaxed">
+          Worked as an <span class="font-semibold">Operational Excellence Executive</span>
+          at Pharmalink Ltd, focusing on improving operational efficiency
+          and strengthening quality-driven processes across departments.
+        </p>
+
+        <p class="text-gray-700 mb-4 leading-relaxed">
+          My role involved supporting cross-functional teams, monitoring
+          operational workflows, and implementing process improvements to
+          enhance productivity and maintain quality standards.
+        </p>
+
+        <p class="text-gray-700 mb-6 leading-relaxed">
+          This experience helped develop strong skills in process management,
+          team collaboration, and operational strategy within the
+          pharmaceutical industry.
+        </p>
+
+        <!-- Address Card -->
+        <div class="flex items-start gap-4 bg-white p-5 rounded-xl shadow-md border border-green-100">
+
+          <div class="text-green-600 text-2xl">
+            📍
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-gray-800">
+              Pharmalink Ltd
+            </h4>
+            <p class="text-gray-600 text-sm">
+              Ahmedabad <br>
+              Gujarat, India
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+      
+
+    </div>
+
+  </div>
+
+</section>
+
+</body>
+</html>

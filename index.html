@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NutriXpert</title>
+  <title>NutriXpert – animated</title>
 
   <!-- Tailwind CDN -->
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
@@ -16,6 +16,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
     rel="stylesheet">
 
+  <!-- AOS (Animate on Scroll) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
   <script>
     tailwind.config = {
       theme: {
@@ -25,65 +28,107 @@
             playfair: ['Playfair Display', 'serif'],
           },
           colors: {
-
             dark: '#264653'
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-8px)' },
+            },
+            gentlePulse: {
+              '0%, 100%': { opacity: 1 },
+              '50%': { opacity: 0.9 },
+            }
+          },
+          animation: {
+            float: 'float 4s ease-in-out infinite',
+            gentlePulse: 'gentlePulse 3s ease-in-out infinite',
           }
         }
       }
     }
   </script>
+  <style>
+    /* fade-up base (used with AOS fallback) */
+    [data-aos] {
+      opacity: 0;
+      transition-property: opacity, transform;
+    }
+    [data-aos].aos-animate {
+      opacity: 1;
+    }
+    body {
+      animation: none; /* no global flicker */
+    }
+    /* micro-interactions */
+    .hover-lift {
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .hover-lift:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
+    }
+    .social-icon {
+      transition: all 0.2s ease;
+    }
+    .social-icon:hover {
+      color: #E67E22;
+      transform: scale(1.15);
+    }
+  </style>
 </head>
 <body id="top" class="font-poppins text-gray-700 overflow-x-hidden">
 
-<!-- HEADER -->
+<!-- HEADER (no animation changes, just sticky) -->
 <header class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
   <div class="max-w-7xl mx-auto px-5">
     <nav class="flex justify-between items-center py-4">
 
-      <!-- Logo -->
-      <a href="./index.html">
-  <img src="/images/nutriexpertlogo.jpeg" loading="lazy" alt="NutriXpert Logo" class="h-[60px] cursor-pointer">
-</a>
+      <!-- Logo (tiny pulse on hover) -->
+      <a href="./index.html" class="transition-transform hover:scale-105 duration-200">
+        <img src="/images/nutriexpertlogo.jpeg" loading="lazy" alt="NutriXpert Logo" class="h-[60px] cursor-pointer">
+      </a>
+
       <!-- Desktop Menu -->
       <ul class="hidden md:flex space-x-8 font-medium text-[#E67E22] items-center">
-        <li><a href="./index.html" class="hover:text-[#6AA84F]">Home</a></li>
-        <li><a href="#about" class="hover:text-[#6AA84F]">About</a></li>
-        <li><a href="/blog.html" class="hover:text-[#6AA84F]">Blog</a></li>
-        <li><a href="#services" class="hover:text-[#6AA84F]">Services</a></li>
-        <li><a href="/experience.html" class="hover:text-[#6AA84F]">Experience</a></li>
-        <li><a href="#footer" class="hover:text-[#6AA84F]">Contact</a></li>
+        <li><a href="./index.html" class="hover:text-[#6AA84F] transition-colors duration-200">Home</a></li>
+        <li><a href="#about" class="hover:text-[#6AA84F] transition-colors">About</a></li>
+        <li><a href="/blog.html" class="hover:text-[#6AA84F] transition-colors">Blog</a></li>
+        <li><a href="/clinicalpractice.html" class="hover:text-[#6AA84F] transition-colors">Clinical Practice</a></li>
+        <li><a href="#services" class="hover:text-[#6AA84F] transition-colors">Services</a></li>
+        <li><a href="/experience.html" class="hover:text-[#6AA84F] transition-colors">Experience</a></li>
+        <li><a href="#footer" class="hover:text-[#6AA84F] transition-colors">Contact</a></li>
 
         <!-- Book Button (Desktop) -->
         <li>
           <a href="#contact"
             class="bg-[#6AA84F] text-white px-5 py-2 rounded-full hover:bg-transparent 
-            hover:text-[#6AA84F] border-2 border-[#6AA84F] transition">
+            hover:text-[#6AA84F] border-2 border-[#6AA84F] transition-all duration-200 hover:scale-105 inline-block">
             Book Consultation
           </a>
         </li>
       </ul>
 
       <!-- Mobile Menu Button -->
-      <button id="menuBtn" class="md:hidden text-3xl text-gray-800">
+      <button id="menuBtn" class="md:hidden text-3xl text-gray-800 transition-transform active:scale-90">
         ☰
       </button>
 
     </nav>
   </div>
 
-  <!-- Mobile Dropdown Menu -->
+  <!-- Mobile Dropdown Menu (same) -->
   <div id="mobileMenu"
     class="md:hidden overflow-hidden max-h-0 bg-white transition-all duration-500 ease-in-out shadow-lg">
 
     <div class="flex flex-col px-6 py-6 space-y-5 font-medium text-[#E67E22]">
-      <a href="/index.html" class="mobile-link">Home</a>
-      <a href="#about" class="mobile-link">About</a>
-      <a href="/blog.html" class="hover:text-[#6AA84F]">Blog</a>
-      <a href="#services" class="mobile-link">Services</a>
-      <a href="/experience.html" class="mobile-link">Experience</a>
-      <a href="#contact" class="mobile-link">Contact</a>
+      <a href="/index.html" class="mobile-link hover:translate-x-2 transition-transform">Home</a>
+      <a href="#about" class="mobile-link hover:translate-x-2 transition-transform">About</a>
+      <a href="/blog.html" class="mobile-link hover:translate-x-2">Blog</a>
+      <a href="#services" class="mobile-link hover:translate-x-2">Services</a>
+      <a href="/experience.html" class="mobile-link hover:translate-x-2">Experience</a>
+      <a href="#contact" class="mobile-link hover:translate-x-2">Contact</a>
 
-      <!-- Book Button (Mobile Dropdown) -->
       <a href="#contact"
   class="mobile-link inline-block w-fit mx-auto px-6 py-2 text-sm font-semibold 
          bg-[#E67E22] hover:bg-transparent hover:text-primary border-2 border-primary
@@ -94,499 +139,362 @@
   Book Consultation
 </a>
     </div>
-
   </div>
 </header>
 
-
-<!-- HERO -->
+<!-- HERO (animated gradient + floating effect) -->
 <section id="home"
-  class="min-h-screen flex items-center text-center text-white pt-40 pb-20 bg-cover bg-center"
- style="background-image: linear-gradient(
+  class="min-h-screen flex items-center text-center text-white pt-40 pb-20 bg-cover bg-center relative"
+  style="background-image: linear-gradient(
 rgba(106, 168, 79, 0.85),
 rgba(106, 168, 79, 0.65)
 ),
-url('https://images.unsplash.com/photo-1490818387583-1baba5e638af?auto=format&fit=crop&w=1600&q=80');">
+url('https://images.unsplash.com/photo-1490818387583-1baba5e638af?auto=format&fit=crop&w=1600&q=80');"
+  data-aos="fade-down" data-aos-duration="1000">
 
   <div class="max-w-4xl mx-auto px-5">
-    <h1 class="font-playfair text-4xl md:text-5xl font-semibold mb-6">
+    <h1 class="font-playfair text-4xl md:text-5xl font-semibold mb-6 drop-shadow-lg" 
+        data-aos="zoom-in" data-aos-delay="200">
       Evidence-Based Nutrition for Prevention, Recovery & Wellness
     </h1>
 
-    <p class="mb-8 text-lg">
+    <p class="mb-8 text-lg drop-shadow" data-aos="fade-up" data-aos-delay="400">
       At our Clinical Nutrition Practice, we believe food is not just nourishment—it is powerful therapy.
     </p>
 
-    <div class="flex flex-col md:flex-row justify-center gap-4">
+    <div class="flex flex-col md:flex-row justify-center gap-4" data-aos="fade-up" data-aos-delay="600">
       <a href="#services"
-        class="bg-[#6AA84F] px-4 lg:px-8 py-3 rounded-full hover:bg-transparent  border-2 border-[#6AA84F] transition">
+        class="bg-[#6AA84F] px-4 lg:px-8 py-3 rounded-full hover:bg-transparent border-2 border-[#6AA84F] transition-all duration-200 hover:scale-105 shadow-lg">
         Explore Services
       </a>
       <a href="#contact"
-        class="bg-[#E67E22] px-4 lg:px-8 py-3 rounded-full hover:bg-transparent hover:text-[#E67E22] border-2 border-[#E67E22] transition">
+        class="bg-[#E67E22] px-4 lg:px-8 py-3 rounded-full hover:bg-transparent hover:text-[#E67E22] border-2 border-[#E67E22] transition-all duration-200 hover:scale-105 shadow-lg">
         Book a Consultation
       </a>
     </div>
   </div>
 </section>
 
-<!-- ABOUT -->
-
+<!-- ABOUT (with staggered cards animation) -->
 <section id="about" class="py-16 md:py-20 bg-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-    <!-- Heading -->
-    <h2 class="text-center text-3xl md:text-4xl font-playfair font-semibold text-dark mb-12">
+    <h2 class="text-center text-3xl md:text-4xl font-playfair font-semibold text-dark mb-12"
+        data-aos="fade-down">
       Meet Your Clinical Dietitian
     </h2>
 
-    <!-- Main Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 items-center">
-
-      <!-- Image -->
-      <div class="flex justify-center">
+      <div class="flex justify-center" data-aos="fade-right" data-aos-duration="700">
         <img src="https://ik.imagekit.io/referindia/drketaki.jpeg"
           alt="Dt. Ketaki Manke"
-          class="w-full max-w-md md:max-w-full rounded-2xl shadow-xl hover:scale-105 transition duration-300">
+          class="w-full max-w-md md:max-w-full rounded-2xl shadow-xl transition-all duration-500 hover:scale-105 hover:shadow-2xl">
       </div>
 
-      <!-- Content -->
-      <div>
-
+      <div data-aos="fade-left" data-aos-duration="700">
         <h3 class="text-2xl md:text-3xl text-[#6AA84F] font-semibold mb-4">
           Dt. Ketaki Manke
         </h3>
-
         <p class="text-gray-600 mb-4 leading-relaxed">
           A highly skilled and experienced Clinical Dietitian with a strong background
           in hospital-based nutrition, therapeutic diet planning, and medical research,
           dedicated to delivering evidence-based and patient-centric nutritional care.
         </p>
-
         <p class="text-gray-600 leading-relaxed mb-6">
           Currently practicing as a Clinical Dietitian at Oskar Hospital, Kasarvadavali.
           Her professional training includes clinical internships at Kokilaben Dhirubhai Ambani Hospital
           and specialized exposure at Aastha Bariatric Centre.
         </p>
 
-        <!-- Qualifications Grid -->
+        <!-- Qualifications Grid (animated cards staggered) -->
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 mt-6">
-
-          <div class="bg-teal-50 p-5 rounded-xl shadow-md hover:-translate-y-2 hover:shadow-lg transition duration-300">
+          <div class="bg-teal-50 p-5 rounded-xl shadow-md hover:-translate-y-2 hover:shadow-lg transition duration-300"
+               data-aos="flip-left" data-aos-delay="100">
             <h4 class="font-semibold">Master's in Integrative Nutrition & Dietetics</h4>
             <p class="text-sm text-gray-600">Bombay College of Pharmacy</p>
           </div>
-
-          <div class="bg-teal-50 p-5 rounded-xl shadow-md hover:-translate-y-2 hover:shadow-lg transition duration-300">
+          <div class="bg-teal-50 p-5 rounded-xl shadow-md hover:-translate-y-2 hover:shadow-lg transition duration-300"
+               data-aos="flip-left" data-aos-delay="200">
             <h4 class="font-semibold">Master's in Biochemistry</h4>
-            <p class="text-sm text-gray-600">Gujarat University, M.G. Science Institute, Ahmedabad, India</p>
+            <p class="text-sm text-gray-600">Gujarat University, Ahmedabad</p>
           </div>
-
-          <div class="bg-teal-50 p-5 rounded-xl shadow-md hover:-translate-y-2 hover:shadow-lg transition duration-300">
-            <h4 class="font-semibold">Bachelor of Science in Biochemistry with Vocational Biotechnology</h4>
-            <p class="text-sm text-gray-600">Gujarat University, M.G. Science Institute, Ahmedabad, India</p>
+          <div class="bg-teal-50 p-5 rounded-xl shadow-md hover:-translate-y-2 hover:shadow-lg transition duration-300"
+               data-aos="flip-left" data-aos-delay="300">
+            <h4 class="font-semibold">BSc Biochemistry with Biotechnology</h4>
+            <p class="text-sm text-gray-600">Gujarat University</p>
           </div>
-
-          <div class="bg-teal-50 p-5 rounded-xl shadow-md hover:-translate-y-2 hover:shadow-lg transition duration-300">
+          <div class="bg-teal-50 p-5 rounded-xl shadow-md hover:-translate-y-2 hover:shadow-lg transition duration-300"
+               data-aos="flip-left" data-aos-delay="400">
             <h4 class="font-semibold">Diploma in Nutrition & Health Education</h4>
             <p class="text-sm text-gray-600">IGNOU, Delhi</p>
           </div>
-
-          <div class="bg-teal-50 p-5 rounded-xl shadow-md hover:-translate-y-2 hover:shadow-lg transition duration-300">
+          <div class="bg-teal-50 p-5 rounded-xl shadow-md hover:-translate-y-2 hover:shadow-lg transition duration-300"
+               data-aos="flip-left" data-aos-delay="500">
             <h4 class="font-semibold">Certified Diabetes Educator</h4>
             <p class="text-sm text-gray-600">Dr. Mohan's Academy</p>
           </div>
-
-          <div class="bg-teal-50 p-5 rounded-xl shadow-md hover:-translate-y-2 hover:shadow-lg transition duration-300">
+          <div class="bg-teal-50 p-5 rounded-xl shadow-md hover:-translate-y-2 hover:shadow-lg transition duration-300"
+               data-aos="flip-left" data-aos-delay="600">
             <h4 class="font-semibold">Certified Cancer Nutritionist</h4>
-            <p class="text-sm text-gray-600">Novast Institute of Nutrition and Dietetics</p>
+            <p class="text-sm text-gray-600">Novast Institute</p>
           </div>
-
         </div>
 
-        <!-- Button -->
         <a href="#contact"
           class="inline-block mt-8 bg-[#6AA84F] text-white px-6 py-3 rounded-full border-2 border-[#6AA84F] 
-          hover:bg-transparent hover:text-[#6AA84F] transition duration-300">
+          hover:bg-transparent hover:text-[#6AA84F] transition-all duration-300 hover:scale-105 shadow-md">
           Schedule Consultation
         </a>
-
       </div>
     </div>
   </div>
 </section>
 
 <!-- Training -->
- <section id="training" class="bg-white py-16 md:py-20">
+<section id="training" class="bg-white py-16 md:py-20">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
-    <!-- Heading -->
-    <h2 class="text-3xl md:text-4xl font-playfair font-semibold text-center mb-12">
+    <h2 class="text-3xl md:text-4xl font-playfair font-semibold text-center mb-12"
+        data-aos="fade-down">
       Training & Research
     </h2>
 
     <div class="space-y-10">
-
-      <!-- Training Programs -->
-      <div>
+      <div data-aos="fade-right">
         <h3 class="text-xl font-semibold text-[#6AA84F] mb-4 flex items-center">
           <i class="fas fa-graduation-cap mr-3"></i> Training Programs
         </h3>
-
-        <p class="text-gray-600 mb-4">
-          Completed specialized laboratory training programs focusing on modern 
-          molecular biology techniques and immunological diagnostic methods.
-        </p>
-
+        <p class="text-gray-600 mb-4">Completed specialized laboratory training programs focusing on modern molecular biology techniques and immunological diagnostic methods.</p>
         <ul class="list-disc pl-6 text-gray-600 space-y-3">
-          <li>
-            <strong>The Basic Recombinant DNA Techniques</strong> – DNA Research Centre, Hyderabad, India.  
-            Training covered fundamental molecular biology techniques including DNA isolation, 
-            gel electrophoresis, PCR basics, and recombinant DNA applications in research.
-          </li>
-
-          <li>
-            <strong>ELISA (Enzyme-Linked Immunosorbent Assay)</strong> – R&D Department, Cadila Pharma, Ahmedabad, India.  
-            Hands-on training in ELISA techniques used for antigen–antibody detection, 
-            diagnostic testing, and biomedical research applications.
-          </li>
+          <li><strong>The Basic Recombinant DNA Techniques</strong> – DNA Research Centre, Hyderabad. Training covered fundamental molecular biology techniques including DNA isolation, gel electrophoresis, PCR basics, and recombinant DNA applications in research.</li>
+          <li><strong>ELISA (Enzyme-Linked Immunosorbent Assay)</strong> – R&D Department, Cadila Pharma, Ahmedabad. Hands-on training in ELISA techniques used for antigen–antibody detection, diagnostic testing, and biomedical research applications.</li>
         </ul>
       </div>
 
-      <!-- Dissertation Project -->
-      <div>
+      <div data-aos="fade-left" data-aos-delay="100">
         <h3 class="text-xl font-semibold text-[#6AA84F] mb-4 flex items-center">
           <i class="fas fa-flask mr-3"></i> Dissertation Project
         </h3>
-
         <p class="text-gray-600 leading-relaxed">
-          Completed a six-month dissertation project titled 
+          Completed a six-month dissertation project titled
           <strong>“Combination System for Removal of Reactive Black 5 from Textile Effluent.”</strong>
-          The research focused on developing an effective treatment system for textile wastewater 
-          by integrating different removal techniques to reduce dye pollution. The study evaluated 
-          treatment efficiency and environmental impact, contributing to sustainable wastewater 
+          The research focused on developing an effective treatment system for textile wastewater
+          by integrating different removal techniques to reduce dye pollution. The study evaluated
+          treatment efficiency and environmental impact, contributing to sustainable wastewater
           management approaches in the textile industry.
         </p>
-
       </div>
-
     </div>
-
   </div>
 </section>
 
 <!-- publication -->
-
 <section id="publications" class="py-24 bg-gradient-to-br from-white via-[#f6fbf7] to-[#e9f5ec]">
-
   <div class="max-w-7xl mx-auto px-6">
 
-    <!-- Section Heading -->
-    <div class="text-center mb-20">
+    <div class="text-center mb-20" data-aos="zoom-in">
       <h2 class="text-4xl md:text-5xl font-playfair font-semibold text-gray-800">
         Research & Clinical Practice
       </h2>
       <div class="w-24 h-1 bg-[#6AA84F] mx-auto mt-4 rounded-full"></div>
     </div>
 
-    <!-- Main Layout -->
     <div class="grid lg:grid-cols-2 gap-14 items-center">
+      <div class="relative max-w-md mx-auto" data-aos="fade-right" data-aos-duration="800">
+        <img src="/images/publicationimg.jpg"
+          alt="Publication Image"
+          class="rounded-2xl shadow-xl object-cover w-full h-[420px] transition duration-500 hover:scale-105 hover:shadow-2xl">
+      </div>
 
-      <!-- IMAGE SIDE -->
- <div class="relative max-w-md mx-auto">
-
-  <img 
-    src="/images/publicationimg.jpg"
-    alt="Publication Image"
-    class="rounded-2xl shadow-xl object-cover w-full h-[420px] transition duration-500 hover:scale-105"
-  >
-
-</div>
-
-      <!-- CONTENT SIDE -->
-      <div class="bg-white p-10 md:p-12 rounded-3xl shadow-xl border border-gray-100">
-
+      <div class="bg-white p-10 md:p-12 rounded-3xl shadow-xl border border-gray-100" data-aos="fade-left" data-aos-duration="800">
         <span class="text-sm uppercase tracking-widest text-[#6AA84F] font-semibold">
           Featured Publication
         </span>
-
         <h3 class="text-2xl md:text-3xl font-semibold text-gray-800 mt-4 mb-6 leading-relaxed">
           Combinational System for the Treatment of Textile Waste Water:
           A Future Perspective
         </h3>
-
         <div class="space-y-4 text-gray-700 text-[17px]">
-
-          <p>
-            <span class="font-semibold text-gray-900">Journal:</span>
-            Asian Journal of Water, Environment and Pollution
-          </p>
-
-          <p>
-            <span class="font-semibold text-gray-900">Volume:</span>
-            Vol. 8, No. 2 (2011), pp. 127–136
-          </p>
-
-          <p>
-            <span class="font-semibold text-gray-900">Authors:</span>
-            Ketaki Chaudhari <span class="italic">et al.</span>
-          </p>
-
+          <p><span class="font-semibold text-gray-900">Journal:</span> Asian Journal of Water, Environment and Pollution</p>
+          <p><span class="font-semibold text-gray-900">Volume:</span> Vol. 8, No. 2 (2011), pp. 127–136</p>
+          <p><span class="font-semibold text-gray-900">Authors:</span> Ketaki Chaudhari <span class="italic">et al.</span></p>
         </div>
-
-        <!-- Button -->
-       <div class="mt-8">
-
-  <a href="https://accscience.com/journal/AJWEP/8/2/10.3233/AJW-2011-8_2_15"
-     target="_blank"
-     class="bg-[#6AA84F] text-white px-6 py-3 rounded-full 
-            hover:bg-white hover:text-[#6AA84F] 
-            border-2 border-[#6AA84F] transition duration-300">
-    View Publication
-  </a>
-
-</div>
+        <div class="mt-8">
+          <a href="https://accscience.com/journal/AJWEP/8/2/10.3233/AJW-2011-8_2_15"
+             target="_blank"
+             class="bg-[#6AA84F] text-white px-6 py-3 rounded-full 
+                    hover:bg-white hover:text-[#6AA84F] 
+                    border-2 border-[#6AA84F] transition-all duration-300 hover:scale-105 inline-block">
+            View Publication
+          </a>
+        </div>
       </div>
-
     </div>
-
   </div>
-
 </section>
 
-
+<!-- services cards with hover animations and AOS -->
 <section id="services" class="bg-gray-100 py-16 md:py-20">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
     
-    <h2 class="text-3xl md:text-4xl font-playfair font-semibold text-dark mb-10">
+    <h2 class="text-3xl md:text-4xl font-playfair font-semibold text-dark mb-10"
+        data-aos="fade-down">
       Our Services
     </h2>
   
-
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-
-      <!-- card -->
-
-   <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 flex flex-col items-center text-center">
-  
-  <div class="w-16 h-16 flex items-center justify-center rounded-full bg-gray-100 mb-4">
-    <i class="fas fa-syringe text-2xl text-[#6AA84F]"></i>
-  </div>
-
-  <h3 class="font-semibold text-lg mb-3">
-    Enteral & Parenteral Feeding
-  </h3>
-
-  <p class="text-sm text-gray-600">
-    Expert in tube feeding management (NG, NJ, PEG, PEJ, Ryle’s) with personalized formulas and feeding schedules for ICU, surgical, and oncology patients.
-  </p>
-
-</div>
-
-      <!-- Card -->
-      <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 flex flex-col items-center text-center">
+      <!-- card 1 -->
+      <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 flex flex-col items-center text-center"
+           data-aos="flip-up" data-aos-delay="50">
+        <div class="w-16 h-16 flex items-center justify-center rounded-full bg-gray-100 mb-4">
+          <i class="fas fa-syringe text-2xl text-[#6AA84F]"></i>
+        </div>
+        <h3 class="font-semibold text-lg mb-3">Enteral & Parenteral Feeding</h3>
+        <p class="text-sm text-gray-600">Expert in tube feeding management (NG, NJ, PEG, PEJ, Ryle’s) with personalized formulas and feeding schedules for ICU, surgical, and oncology patients.</p>
+      </div>
+      <!-- card 2 -->
+      <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 flex flex-col items-center text-center"
+           data-aos="flip-up" data-aos-delay="100">
         <div class="w-16 h-16 flex items-center justify-center rounded-full bg-gray-100 mb-4">
           <i class="fas fa-heartbeat text-2xl text-[#6AA84F]"></i>
         </div>
         <h3 class="font-semibold text-lg mb-3">Clinical Nutrition</h3>
-        <p class="text-sm text-gray-600">
-          Therapeutic nutrition for diabetes, thyroid, kidney and cardiac conditions.
-        </p>
+        <p class="text-sm text-gray-600">Therapeutic nutrition for diabetes, thyroid, kidney and cardiac conditions.</p>
       </div>
-
-      <!-- Card -->
-      <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 flex flex-col items-center text-center">
+      <!-- card 3 -->
+      <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 flex flex-col items-center text-center"
+           data-aos="flip-up" data-aos-delay="150">
         <div class="w-16 h-16 flex items-center justify-center rounded-full bg-gray-100 mb-4">
           <i class="fas fa-user-md text-2xl text-[#6AA84F]"></i>
         </div>
         <h3 class="font-semibold text-lg mb-3">Cancer Nutrition</h3>
-        <p class="text-sm text-gray-600">
-          Supportive nutrition during cancer treatment and recovery.
-        </p>
+        <p class="text-sm text-gray-600">Supportive nutrition during cancer treatment and recovery.</p>
       </div>
-
-      <!-- Card -->
-      <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 flex flex-col items-center text-center">
+      <!-- card 4 -->
+      <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 flex flex-col items-center text-center"
+           data-aos="flip-up" data-aos-delay="200">
         <div class="w-16 h-16 flex items-center justify-center rounded-full bg-gray-100 mb-4">
           <i class="fas fa-weight text-2xl text-[#6AA84F]"></i>
         </div>
         <h3 class="font-semibold text-lg mb-3">Weight Management</h3>
-        <p class="text-sm text-gray-600">
-          Sustainable plans for healthy weight loss or gain.
-        </p>
+        <p class="text-sm text-gray-600">Sustainable plans for healthy weight loss or gain.</p>
       </div>
-
-      <!-- Card -->
-      <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 flex flex-col items-center text-center">
+      <!-- card 5 -->
+      <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 flex flex-col items-center text-center"
+           data-aos="flip-up" data-aos-delay="250">
         <div class="w-16 h-16 flex items-center justify-center rounded-full bg-gray-100 mb-4">
           <i class="fas fa-procedures text-2xl text-[#6AA84F]"></i>
         </div>
         <h3 class="font-semibold text-lg mb-3">Post-Surgical Care</h3>
-        <p class="text-sm text-gray-600">
-          Nutrition support after bariatric & GI surgeries.
-        </p>
+        <p class="text-sm text-gray-600">Nutrition support after bariatric & GI surgeries.</p>
       </div>
-
-
     </div>
   </div>
 </section>
 
-<!-- CLINIC SECTION -->
-
+<!-- CLINIC SECTION (images with hover scale & AOS) -->
 <section id="clinic" class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-14" data-aos="fade-up">
+      <h2 class="text-3xl md:text-4xl font-playfair font-semibold text-gray-800">Our Clinic</h2>
+      <p class="text-gray-600 mt-3">A comfortable and professional environment for personalized nutrition care</p>
+    </div>
 
-<div class="max-w-7xl mx-auto px-6">
-
-<!-- Heading -->
-
-<div class="text-center mb-14">
-
-<h2 class="text-3xl md:text-4xl font-playfair font-semibold text-gray-800">
-Our Clinic
-</h2>
-
-<p class="text-gray-600 mt-3">
-A comfortable and professional environment for personalized nutrition care
-</p>
-
-</div>
-
-<!-- Images -->
-
-<div class="grid md:grid-cols-2 gap-10">
-
-<!-- Image 1 -->
-
-<div class="overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition duration-500 group">
-
-<img
-src="/images/img1.jpg"
-alt="NutriXpert Clinic Interior"
-class="w-full h-[420px] object-cover group-hover:scale-105 transition duration-500">
-
-</div>
-
-<!-- Image 2 -->
-
-<div class="overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition duration-500 group">
-
-<img
-src="/images/img2.jpg"
-alt="NutriXpert Clinic Entrance"
-class="w-full h-[420px] object-cover group-hover:scale-105 transition duration-500">
-
-</div>
-
-</div>
-
-</div>
-
+    <div class="grid md:grid-cols-2 gap-10">
+      <div class="overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition duration-500 group"
+           data-aos="zoom-in-right">
+        <img src="/images/img1.jpg" alt="NutriXpert Clinic Interior"
+          class="w-full h-[420px] object-cover group-hover:scale-105 transition duration-500">
+      </div>
+      <div class="overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition duration-500 group"
+           data-aos="zoom-in-left">
+        <img src="/images/img2.jpg" alt="NutriXpert Clinic Entrance"
+          class="w-full h-[420px] object-cover group-hover:scale-105 transition duration-500">
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- CTA -->
-<section class="py-20 text-center text-white bg-[#6AA84F]">
-  <div class="max-w-3xl mx-auto px-5">
-    <h2 class="text-3xl font-playfair mb-6">
+<!-- CTA with gentle pulse animation -->
+<section class="py-20 text-center text-white bg-[#6AA84F] relative overflow-hidden"
+         data-aos="zoom-in">
+  <div class="absolute inset-0 bg-black opacity-10"></div>
+  <div class="max-w-3xl mx-auto px-5 relative z-10">
+    <h2 class="text-3xl font-playfair mb-6 animate-gentlePulse">
       Ready to Transform Your Health?
     </h2>
     <p class="mb-8">
       Safe, practical, and personalized diet plans tailored to your body.
     </p>
     <a href="#contact"
-      class="bg-[#E67E22] px-8 py-3 rounded-full hover:bg-transparent border-2 border-[#E67E22] transition">
+      class="bg-[#E67E22] px-8 py-3 rounded-full hover:bg-transparent border-2 border-[#E67E22] transition-all duration-300 hover:scale-110 inline-block shadow-xl">
       Book Consultation
     </a>
   </div>
 </section>
 
-<!-- FOOTER -->
-<footer id="footer" 
-class=" text-white py-16">
-
+<!-- FOOTER (with icons animation) -->
+<footer id="footer" class="text-white py-16 bg-gray-50">
   <div class="max-w-7xl mx-auto px-5 grid md:grid-cols-3 gap-10">
-
-    <!-- Logo Section -->
-    <div>
+    <div data-aos="fade-right">
       <a href="#top">
-  <img src="/images/logo.png" 
-       alt="NutriXpert Logo" 
-       class="h-20 mb-4 cursor-pointer">
-</a>
-
-      <p class="text-gray-700">
-        Evidence-based personalized nutrition therapy.
-      </p>
+        <img src="/images/nutriexpertlogo.jpeg" loading="lazy" alt="NutriXpert Logo" class="h-20 mb-4 cursor-pointer transition-transform hover:scale-110">
+      </a>
+      <p class="text-gray-700">Evidence-based personalized nutrition therapy.</p>
     </div>
-
-    <!-- Quick Links -->
-    <div>
+    <div data-aos="fade-up">
       <h4 class="font-semibold mb-4 text-orange-400">Quick Links</h4>
       <ul class="space-y-2 text-[#6AA84F]">
-        <li><a href="#home" class="hover:text-orange-400 transition">Home</a></li>
-        <li><a href="#about" class="hover:text-orange-400 transition">About</a></li>
-        <li><a href="#services" class="hover:text-orange-400 transition">Services</a></li>
+        <li><a href="#home" class="hover:text-orange-400 transition flex items-center gap-2"><i class="fas fa-chevron-right text-xs"></i>Home</a></li>
+        <li><a href="#about" class="hover:text-orange-400 transition flex items-center gap-2"><i class="fas fa-chevron-right text-xs"></i>About</a></li>
+        <li><a href="#services" class="hover:text-orange-400 transition flex items-center gap-2"><i class="fas fa-chevron-right text-xs"></i>Services</a></li>
       </ul>
     </div>
-
-    <!-- Contact -->
-    <div class="text-[#6AA84F]">
+    <div class="text-[#6AA84F]" data-aos="fade-left">
       <h4 class="font-semibold mb-4 text-orange-400">Contact</h4>
       <p>Thane, Maharashtra</p>
-    <p>
-  <a href="https://wa.me/919834809686" 
-     target="_blank" 
-     class="hover:text-orange-400 transition">
-     9834809686
-  </a>
-</p>
-     <a href="mailto:care@nutri-xpert.com"  class="hover:text-orange-400"> <p>care.nutrixpert@gmail.com</p></a>
+      <p><a href="https://wa.me/919834809686" target="_blank" class="hover:text-orange-400 transition inline-flex items-center gap-2"><i class="fab fa-whatsapp"></i> 9834809686</a></p>
+      <a href="mailto:care.nutrixpert@gmail.com" class="hover:text-orange-400 transition inline-flex items-center gap-2"><i class="far fa-envelope"></i> care.nutrixpert@gmail.com</a>
     </div>
-
   </div>
-
   <div class="text-center mt-10 border-t border-white/20 pt-6 text-sm text-gray-600">
     © 2025 Nutri-Xpert. All rights reserved.
   </div>
-
 </footer>
 
-
-
+<!-- scripts -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
+  AOS.init({
+    duration: 800,
+    once: false,
+    mirror: true,
+    offset: 40
+  });
+
+  // Mobile menu logic (unchanged)
   const menuBtn = document.getElementById("menuBtn");
   const mobileMenu = document.getElementById("mobileMenu");
-
   let isOpen = false;
-
   function openMenu() {
     mobileMenu.classList.remove("max-h-0");
     mobileMenu.classList.add("max-h-[500px]");
     isOpen = true;
   }
-
   function closeMenu() {
     mobileMenu.classList.remove("max-h-[500px]");
     mobileMenu.classList.add("max-h-0");
     isOpen = false;
   }
-
   menuBtn.addEventListener("click", () => {
     isOpen ? closeMenu() : openMenu();
   });
-
-  // Close when link clicked
   document.querySelectorAll(".mobile-link").forEach(link => {
     link.addEventListener("click", closeMenu);
   });
-
-  // Close smoothly when scrolling (only mobile)
   window.addEventListener("scroll", () => {
-    if (window.innerWidth < 768 && isOpen) {
-      closeMenu();
-    }
+    if (window.innerWidth < 768 && isOpen) closeMenu();
   });
 </script>
-
 </body>
 </html>
