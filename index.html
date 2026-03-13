@@ -125,6 +125,7 @@
       <a href="/index.html" class="mobile-link hover:translate-x-2 transition-transform">Home</a>
       <a href="#about" class="mobile-link hover:translate-x-2 transition-transform">About</a>
       <a href="/blog.html" class="mobile-link hover:translate-x-2">Blog</a>
+      <a href="/clinicalpractice.html" class="hover:text-[#6AA84F]">Clinical Practice</a>
       <a href="#services" class="mobile-link hover:translate-x-2">Services</a>
       <a href="/experience.html" class="mobile-link hover:translate-x-2">Experience</a>
       <a href="#contact" class="mobile-link hover:translate-x-2">Contact</a>
@@ -474,24 +475,31 @@ url('https://images.unsplash.com/photo-1490818387583-1baba5e638af?auto=format&fi
 
   // Mobile menu logic (unchanged)
   const menuBtn = document.getElementById("menuBtn");
-  const mobileMenu = document.getElementById("mobileMenu");
-  let isOpen = false;
-  function openMenu() {
-    mobileMenu.classList.remove("max-h-0");
-    mobileMenu.classList.add("max-h-[500px]");
-    isOpen = true;
+const mobileMenu = document.getElementById("mobileMenu");
+
+let isOpen = false;
+
+function openMenu() {
+  mobileMenu.style.maxHeight = mobileMenu.scrollHeight + "px";
+  isOpen = true;
+}
+
+function closeMenu() {
+  mobileMenu.style.maxHeight = "0px";
+  isOpen = false;
+}
+
+menuBtn.addEventListener("click", () => {
+  if (isOpen) {
+    closeMenu();
+  } else {
+    openMenu();
   }
-  function closeMenu() {
-    mobileMenu.classList.remove("max-h-[500px]");
-    mobileMenu.classList.add("max-h-0");
-    isOpen = false;
-  }
-  menuBtn.addEventListener("click", () => {
-    isOpen ? closeMenu() : openMenu();
-  });
-  document.querySelectorAll(".mobile-link").forEach(link => {
-    link.addEventListener("click", closeMenu);
-  });
+});
+
+document.querySelectorAll(".mobile-link").forEach(link => {
+  link.addEventListener("click", closeMenu);
+});
   window.addEventListener("scroll", () => {
     if (window.innerWidth < 768 && isOpen) closeMenu();
   });
