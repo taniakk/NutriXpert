@@ -75,26 +75,50 @@
       color: #E67E22;
       transform: scale(1.15);
     }
+
+    /* Fix for mobile overflow */
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+    width: 100%;
+  }
+  
+  header {
+    width: 100%;
+    overflow-x: hidden;
+  }
+  
+  .max-w-7xl {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .px-5 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
   </style>
 </head>
 <body id="top" class="font-poppins text-gray-700 overflow-x-hidden">
 
-<!-- HEADER (no animation changes, just sticky) -->
+<!-- HEADER (fixed overflow issue) -->
 <header class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
-  <div class="max-w-7xl mx-auto px-5">
-    <nav class="flex justify-between items-center py-4">
+  <div class="max-w-7xl mx-auto px-4 sm:px-5 w-full">
+    <nav class="flex justify-between items-center py-4 w-full">
 
-      <!-- Logo (tiny pulse on hover) -->
-      <a href="./index.html" class="transition-transform hover:scale-105 duration-200">
-        <img src="/images/nutriexpertlogo.jpeg" loading="lazy" alt="NutriXpert Logo" class="h-[60px] cursor-pointer">
+      <!-- Logo -->
+      <a href="./index.html" class="transition-transform hover:scale-105 duration-200 shrink-0">
+        <img src="/images/nutriexpertlogo.jpeg" loading="lazy" alt="NutriXpert Logo" class="h-[50px] sm:h-[60px] cursor-pointer">
       </a>
 
-      <!-- Desktop Menu -->
+      <!-- Desktop Menu (hidden on mobile) -->
       <ul class="hidden md:flex space-x-8 font-medium text-[#E67E22] items-center">
         <li><a href="./index.html" class="hover:text-[#6AA84F] transition-colors duration-200">Home</a></li>
         <li><a href="#about" class="hover:text-[#6AA84F] transition-colors">About</a></li>
         <li><a href="/blog.html" class="hover:text-[#6AA84F] transition-colors">Blog</a></li>
         <li><a href="/clinicalpractice.html" class="hover:text-[#6AA84F] transition-colors">Clinical Practice</a></li>
+        <li><a href="#services" class="hover:text-[#6AA84F] transition-colors">Services</a></li>
         <li><a href="/experience.html" class="hover:text-[#6AA84F] transition-colors">Experience</a></li>
         <li><a href="#footer" class="hover:text-[#6AA84F] transition-colors">Contact</a></li>
 
@@ -109,28 +133,29 @@
       </ul>
 
       <!-- Mobile Menu Button -->
-      <button id="menuBtn" class="md:hidden text-3xl text-gray-800 transition-transform active:scale-90">
+      <button id="menuBtn" class="md:hidden text-3xl text-gray-800 transition-transform active:scale-90 shrink-0">
         ☰
       </button>
 
     </nav>
   </div>
 
-  <!-- Mobile Dropdown Menu (same) -->
+  <!-- Mobile Dropdown Menu -->
   <div id="mobileMenu"
-    class="md:hidden overflow-hidden max-h-0 bg-white transition-all duration-500 ease-in-out shadow-lg">
+    class="md:hidden overflow-hidden max-h-0 bg-white transition-all duration-500 ease-in-out shadow-lg w-full left-0">
 
     <div class="flex flex-col px-6 py-6 space-y-5 font-medium text-[#E67E22]">
       <a href="/index.html" class="mobile-link hover:translate-x-2 transition-transform">Home</a>
       <a href="#about" class="mobile-link hover:translate-x-2 transition-transform">About</a>
       <a href="/blog.html" class="mobile-link hover:translate-x-2">Blog</a>
-      <a href="/clinicalpractice.html" class="hover:text-[#6AA84F]">Clinical Practice</a>
+      <a href="/clinicalpractice.html" class="mobile-link hover:translate-x-2">Clinical Practice</a>
+      <a href="#services" class="mobile-link hover:translate-x-2">Services</a>
       <a href="/experience.html" class="mobile-link hover:translate-x-2">Experience</a>
       <a href="#footer" class="mobile-link hover:translate-x-2">Contact</a>
 
       <a href="#contact"
   class="mobile-link inline-block w-fit mx-auto px-6 py-2 text-sm font-semibold 
-         bg-[#E67E22] hover:bg-transparent hover:text-primary border-2 border-primary
+         bg-[#E67E22] hover:bg-transparent hover:text-[#E67E22] border-2 border-[#E67E22]
          text-white rounded-full 
          shadow-md hover:shadow-lg 
          hover:scale-105 
@@ -140,7 +165,6 @@
     </div>
   </div>
 </header>
-
 <!-- HERO (animated gradient + floating effect) -->
 <section id="home"
   class="min-h-screen flex items-center text-center text-white pt-40 pb-20 bg-cover bg-center relative"
