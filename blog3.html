@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <!-- HEADER (no animation changes, just sticky) -->
+<header class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
+  <div class="max-w-7xl mx-auto px-5">
+    <nav class="flex justify-between items-center py-4">
+
+      <!-- Logo (tiny pulse on hover) -->
+      <a href="./index.html" class="transition-transform hover:scale-105 duration-200">
+        <img src="/images/nutriexpertlogo.jpeg" loading="lazy" alt="NutriXpert Logo" class="h-[60px] cursor-pointer">
+      </a>
+
+      <!-- Desktop Menu -->
+      <ul class="hidden md:flex space-x-8 font-medium text-[#E67E22] items-center">
+        <li><a href="./index.html" class="hover:text-[#6AA84F] transition-colors duration-200">Home</a></li>
+        <li><a href="/index.html" class="hover:text-[#6AA84F] transition-colors">About</a></li>
+        <li><a href="/blog.html" class="hover:text-[#6AA84F] transition-colors">Blog</a></li>
+        <li><a href="/clinicalpractice.html" class="hover:text-[#6AA84F] transition-colors">Clinical Practice</a></li>
+        <li><a href="/experience.html" class="hover:text-[#6AA84F] transition-colors">Experience</a></li>
+        <li><a href="#footer" class="hover:text-[#6AA84F] transition-colors">Contact</a></li>
+
+        <!-- Book Button (Desktop) -->
+        <li>
+          <a href="#contact"
+            class="bg-[#6AA84F] text-white px-5 py-2 rounded-full hover:bg-transparent 
+            hover:text-[#6AA84F] border-2 border-[#6AA84F] transition-all duration-200 hover:scale-105 inline-block">
+            Book Consultation
+          </a>
+        </li>
+      </ul>
+
+      <!-- Mobile Menu Button -->
+      <button id="menuBtn" class="md:hidden text-3xl text-gray-800 transition-transform active:scale-90">
+        ☰
+      </button>
+
+    </nav>
+  </div>
+
+  <!-- Mobile Dropdown Menu (same) -->
+  <div id="mobileMenu"
+    class="md:hidden overflow-hidden max-h-0 bg-white transition-all duration-500 ease-in-out shadow-lg">
+
+    <div class="flex flex-col px-6 py-6 space-y-5 font-medium text-[#E67E22]">
+      <a href="/index.html" class="mobile-link hover:translate-x-2 transition-transform">Home</a>
+      <a href="/index.html" class="mobile-link hover:translate-x-2 transition-transform">About</a>
+      <a href="/blog.html" class="mobile-link hover:translate-x-2">Blog</a>
+      <a href="/clinicalpractice.html" class="hover:text-[#6AA84F]">Clinical Practice</a>
+      <a href="/experience.html" class="mobile-link hover:translate-x-2">Experience</a>
+      <a href="#footer" class="mobile-link hover:translate-x-2">Contact</a>
+
+      <a href="#contact"
+  class="mobile-link inline-block w-fit mx-auto px-6 py-2 text-sm font-semibold 
+         bg-[#E67E22] hover:bg-transparent hover:text-primary border-2 border-primary
+         text-white rounded-full 
+         shadow-md hover:shadow-lg 
+         hover:scale-105 
+         transition duration-300 ease-in-out">
+  Book Consultation
+</a>
+    </div>
+  </div>
+</header>
+
+<!-- section start -->
+
+<section class="py-20 mt-10">
+  <div class="max-w-5xl mx-auto px-6">
+
+    <div class="bg-white rounded-2xl shadow-lg p-8">
+
+      <!-- Title -->
+      <h1 class="text-3xl font-bold text-gray-900 mb-6">
+        🥗 Myth vs Fact in Nutrition
+      </h1>
+
+      <!-- Intro -->
+      <p class="text-gray-700 mb-6 leading-relaxed">
+        Nutrition is often filled with myths and misinformation. These misconceptions can lead to unhealthy habits 
+        and confusion. Understanding the difference between myths and facts helps you make informed dietary choices.
+      </p>
+
+      <!-- Myth 1 -->
+      <div class="mb-6">
+        <h3 class="text-lg font-semibold text-red-500 mb-1">❌ Myth: Carbs cause weight gain</h3>
+        <p class="text-green-600 font-medium mb-1">✅ Fact:</p>
+        <p class="text-gray-600 text-sm leading-relaxed">
+          Carbohydrates are essential for energy. Weight gain happens due to excess calorie intake, not carbs alone. 
+          Choosing whole grains and balanced portions is key.
+        </p>
+      </div>
+
+      <!-- Myth 2 -->
+      <div class="mb-6">
+        <h3 class="text-lg font-semibold text-red-500 mb-1">❌ Myth: Skipping meals helps weight loss</h3>
+        <p class="text-green-600 font-medium mb-1">✅ Fact:</p>
+        <p class="text-gray-600 text-sm leading-relaxed">
+          Skipping meals can slow metabolism and lead to overeating later. Regular, balanced meals support healthy weight management.
+        </p>
+      </div>
+
+      <!-- Myth 3 -->
+      <div class="mb-6">
+        <h3 class="text-lg font-semibold text-red-500 mb-1">❌ Myth: All fats are bad</h3>
+        <p class="text-green-600 font-medium mb-1">✅ Fact:</p>
+        <p class="text-gray-600 text-sm leading-relaxed">
+          Healthy fats (like nuts, seeds, and olive oil) are essential for body functions. Only trans fats and excessive saturated fats should be limited.
+        </p>
+      </div>
+
+      <!-- Myth 4 -->
+      <div class="mb-6">
+        <h3 class="text-lg font-semibold text-red-500 mb-1">❌ Myth: Detox diets are necessary</h3>
+        <p class="text-green-600 font-medium mb-1">✅ Fact:</p>
+        <p class="text-gray-600 text-sm leading-relaxed">
+          Your body naturally detoxifies through the liver and kidneys. A balanced diet and hydration are enough for maintaining health.
+        </p>
+      </div>
+
+      <!-- Myth 5 -->
+      <div class="mb-6">
+        <h3 class="text-lg font-semibold text-red-500 mb-1">❌ Myth: Protein supplements are always required</h3>
+        <p class="text-green-600 font-medium mb-1">✅ Fact:</p>
+        <p class="text-gray-600 text-sm leading-relaxed">
+          Most people can meet their protein needs through natural foods like pulses, dairy, and nuts without supplements.
+        </p>
+      </div>
+
+      <!-- Conclusion -->
+      <div class="mt-10 pt-6 border-t">
+        <p class="text-gray-700 leading-relaxed">
+          Believing in nutrition myths can harm your health journey. Always rely on evidence-based guidance and consult 
+          a professional for personalized advice.
+        </p>
+
+        <p class="mt-4 text-[#6AA84F] font-medium">
+          👉 Eat smart, stay informed, and choose facts over myths!
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER (with icons animation) -->
+<footer id="footer" class="text-white py-16 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-5 grid md:grid-cols-3 gap-10">
+    <div data-aos="fade-right">
+      <a href="#top">
+        <img src="/images/nutriexpertlogo.jpeg" loading="lazy" alt="NutriXpert Logo" class="h-20 mb-4 cursor-pointer transition-transform hover:scale-110">
+      </a>
+      <p class="text-gray-700">Evidence-based personalized nutrition therapy.</p>
+    </div>
+    <div data-aos="fade-up">
+      <h4 class="font-semibold mb-4 text-orange-400">Quick Links</h4>
+      <ul class="space-y-2 text-[#6AA84F]">
+        <li><a href="#home" class="hover:text-orange-400 transition flex items-center gap-2"><i class="fas fa-chevron-right text-xs"></i>Home</a></li>
+        <li><a href="#about" class="hover:text-orange-400 transition flex items-center gap-2"><i class="fas fa-chevron-right text-xs"></i>About</a></li>
+        <li><a href="#services" class="hover:text-orange-400 transition flex items-center gap-2"><i class="fas fa-chevron-right text-xs"></i>Services</a></li>
+      </ul>
+    </div>
+    <div class="text-[#6AA84F]" data-aos="fade-left">
+      <h4 class="font-semibold mb-4 text-orange-400">Contact</h4>
+      <p>Thane, Maharashtra</p>
+      <p><a href="https://wa.me/919834809686" target="_blank" class="hover:text-orange-400 transition inline-flex items-center gap-2"><i class="fab fa-whatsapp"></i> 9834809686</a></p>
+      <a href="mailto:care.nutrixpert@gmail.com" class="hover:text-orange-400 transition inline-flex items-center gap-2"><i class="far fa-envelope"></i> care.nutrixpert@gmail.com</a>
+    </div>
+  </div>
+  <div class="text-center mt-10 border-t border-white/20 pt-6 text-sm text-gray-600">
+    © 2025 Nutri-Xpert. All rights reserved.
+  </div>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 800,
+    once: false,
+    mirror: true,
+    offset: 40
+  });
+
+  // Mobile menu logic (unchanged)
+  const menuBtn = document.getElementById("menuBtn");
+const mobileMenu = document.getElementById("mobileMenu");
+
+let isOpen = false;
+
+function openMenu() {
+  mobileMenu.style.maxHeight = mobileMenu.scrollHeight + "px";
+  isOpen = true;
+}
+
+function closeMenu() {
+  mobileMenu.style.maxHeight = "0px";
+  isOpen = false;
+}
+
+menuBtn.addEventListener("click", () => {
+  if (isOpen) {
+    closeMenu();
+  } else {
+    openMenu();
+  }
+});
+
+document.querySelectorAll(".mobile-link").forEach(link => {
+  link.addEventListener("click", closeMenu);
+});
+  window.addEventListener("scroll", () => {
+    if (window.innerWidth < 768 && isOpen) closeMenu();
+  });
+</script>
+</body>
+</html>

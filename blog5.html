@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+
+    <!-- HEADER (no animation changes, just sticky) -->
+<header class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
+  <div class="max-w-7xl mx-auto px-5">
+    <nav class="flex justify-between items-center py-4">
+
+      <!-- Logo (tiny pulse on hover) -->
+      <a href="./index.html" class="transition-transform hover:scale-105 duration-200">
+        <img src="/images/nutriexpertlogo.jpeg" loading="lazy" alt="NutriXpert Logo" class="h-[60px] cursor-pointer">
+      </a>
+
+      <!-- Desktop Menu -->
+      <ul class="hidden md:flex space-x-8 font-medium text-[#E67E22] items-center">
+        <li><a href="./index.html" class="hover:text-[#6AA84F] transition-colors duration-200">Home</a></li>
+        <li><a href="/index.html" class="hover:text-[#6AA84F] transition-colors">About</a></li>
+        <li><a href="/blog.html" class="hover:text-[#6AA84F] transition-colors">Blog</a></li>
+        <li><a href="/clinicalpractice.html" class="hover:text-[#6AA84F] transition-colors">Clinical Practice</a></li>
+        <li><a href="/experience.html" class="hover:text-[#6AA84F] transition-colors">Experience</a></li>
+        <li><a href="#footer" class="hover:text-[#6AA84F] transition-colors">Contact</a></li>
+
+        <!-- Book Button (Desktop) -->
+        <li>
+          <a href="#contact"
+            class="bg-[#6AA84F] text-white px-5 py-2 rounded-full hover:bg-transparent 
+            hover:text-[#6AA84F] border-2 border-[#6AA84F] transition-all duration-200 hover:scale-105 inline-block">
+            Book Consultation
+          </a>
+        </li>
+      </ul>
+
+      <!-- Mobile Menu Button -->
+      <button id="menuBtn" class="md:hidden text-3xl text-gray-800 transition-transform active:scale-90">
+        ☰
+      </button>
+
+    </nav>
+  </div>
+
+  <!-- Mobile Dropdown Menu (same) -->
+  <div id="mobileMenu"
+    class="md:hidden overflow-hidden max-h-0 bg-white transition-all duration-500 ease-in-out shadow-lg">
+
+    <div class="flex flex-col px-6 py-6 space-y-5 font-medium text-[#E67E22]">
+      <a href="/index.html" class="mobile-link hover:translate-x-2 transition-transform">Home</a>
+      <a href="/index.html" class="mobile-link hover:translate-x-2 transition-transform">About</a>
+      <a href="/blog.html" class="mobile-link hover:translate-x-2">Blog</a>
+      <a href="/clinicalpractice.html" class="hover:text-[#6AA84F]">Clinical Practice</a>
+      <a href="/experience.html" class="mobile-link hover:translate-x-2">Experience</a>
+      <a href="#footer" class="mobile-link hover:translate-x-2">Contact</a>
+
+      <a href="#contact"
+  class="mobile-link inline-block w-fit mx-auto px-6 py-2 text-sm font-semibold 
+         bg-[#E67E22] hover:bg-transparent hover:text-primary border-2 border-primary
+         text-white rounded-full 
+         shadow-md hover:shadow-lg 
+         hover:scale-105 
+         transition duration-300 ease-in-out">
+  Book Consultation
+</a>
+    </div>
+  </div>
+</header>
+
+<!-- section start -->
+<section class="py-20 mt-10">
+  <div class="max-w-5xl mx-auto px-6">
+
+    <div class="bg-white rounded-2xl shadow-lg p-8">
+
+      <!-- Title -->
+      <h1 class="text-3xl font-bold text-gray-900 mb-6">
+        🧬 Micronutrients: Vitamins & Minerals Explained
+      </h1>
+
+      <!-- Intro -->
+      <p class="text-gray-700 mb-6 leading-relaxed">
+        Micronutrients are essential nutrients required in small amounts but play a crucial role in maintaining 
+        overall health. They include vitamins and minerals that support immunity, metabolism, and body functions.
+      </p>
+
+      <p class="text-gray-700 mb-8 leading-relaxed">
+        A deficiency in micronutrients can lead to fatigue, weak immunity, poor growth, and various health problems. 
+        Ensuring a balanced diet helps meet these nutritional needs.
+      </p>
+
+      <!-- Vitamins -->
+      <div class="mb-6">
+        <h3 class="text-lg font-semibold text-[#6AA84F] mb-2">🍊 Vitamins</h3>
+        <p class="text-gray-600 text-sm leading-relaxed">
+          Vitamins are organic compounds that support different body functions:
+        </p>
+        <ul class="list-disc ml-5 text-gray-600 text-sm mt-2">
+          <li><b>Vitamin A:</b> Supports vision and immunity</li>
+          <li><b>Vitamin B complex:</b> Helps in energy production</li>
+          <li><b>Vitamin C:</b> Boosts immunity and skin health</li>
+          <li><b>Vitamin D:</b> Strengthens bones and calcium absorption</li>
+          <li><b>Vitamin E:</b> Acts as an antioxidant</li>
+          <li><b>Vitamin K:</b> Important for blood clotting</li>
+        </ul>
+      </div>
+
+      <!-- Minerals -->
+      <div class="mb-6">
+        <h3 class="text-lg font-semibold text-[#6AA84F] mb-2">⛏️ Minerals</h3>
+        <p class="text-gray-600 text-sm leading-relaxed">
+          Minerals are inorganic elements essential for body structure and function:
+        </p>
+        <ul class="list-disc ml-5 text-gray-600 text-sm mt-2">
+          <li><b>Calcium:</b> Strong bones and teeth</li>
+          <li><b>Iron:</b> Prevents anemia and improves oxygen transport</li>
+          <li><b>Zinc:</b> Supports immunity and healing</li>
+          <li><b>Magnesium:</b> Muscle and nerve function</li>
+          <li><b>Potassium:</b> Maintains fluid balance and heart health</li>
+        </ul>
+      </div>
+
+      <!-- Sources -->
+      <div class="mb-6">
+        <h3 class="text-lg font-semibold text-[#6AA84F] mb-2">🥗 Sources of Micronutrients</h3>
+        <p class="text-gray-600 text-sm leading-relaxed">
+          Include a variety of foods such as fruits, vegetables, whole grains, nuts, seeds, dairy, and lean proteins 
+          to meet your daily micronutrient requirements.
+        </p>
+      </div>
+
+      <!-- Deficiency -->
+      <div class="mb-6">
+        <h3 class="text-lg font-semibold text-[#6AA84F] mb-2">⚠️ Effects of Deficiency</h3>
+        <p class="text-gray-600 text-sm leading-relaxed">
+          Lack of micronutrients can lead to fatigue, weak immunity, poor bone health, anemia, and other complications. 
+          Timely nutritional guidance can help prevent these issues.
+        </p>
+      </div>
+
+      <!-- Conclusion -->
+      <div class="mt-10 pt-6 border-t">
+        <p class="text-gray-700 leading-relaxed">
+          Micronutrients are small but powerful components of a healthy diet. Maintaining a balanced and varied diet 
+          ensures that your body gets all essential vitamins and minerals.
+        </p>
+
+        <p class="mt-4 text-[#6AA84F] font-medium">
+          👉 Eat a colorful diet to stay healthy and energized!
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+    <!-- FOOTER (with icons animation) -->
+<footer id="footer" class="text-white py-16 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-5 grid md:grid-cols-3 gap-10">
+    <div data-aos="fade-right">
+      <a href="#top">
+        <img src="/images/nutriexpertlogo.jpeg" loading="lazy" alt="NutriXpert Logo" class="h-20 mb-4 cursor-pointer transition-transform hover:scale-110">
+      </a>
+      <p class="text-gray-700">Evidence-based personalized nutrition therapy.</p>
+    </div>
+    <div data-aos="fade-up">
+      <h4 class="font-semibold mb-4 text-orange-400">Quick Links</h4>
+      <ul class="space-y-2 text-[#6AA84F]">
+        <li><a href="#home" class="hover:text-orange-400 transition flex items-center gap-2"><i class="fas fa-chevron-right text-xs"></i>Home</a></li>
+        <li><a href="#about" class="hover:text-orange-400 transition flex items-center gap-2"><i class="fas fa-chevron-right text-xs"></i>About</a></li>
+        <li><a href="#services" class="hover:text-orange-400 transition flex items-center gap-2"><i class="fas fa-chevron-right text-xs"></i>Services</a></li>
+      </ul>
+    </div>
+    <div class="text-[#6AA84F]" data-aos="fade-left">
+      <h4 class="font-semibold mb-4 text-orange-400">Contact</h4>
+      <p>Thane, Maharashtra</p>
+      <p><a href="https://wa.me/919834809686" target="_blank" class="hover:text-orange-400 transition inline-flex items-center gap-2"><i class="fab fa-whatsapp"></i> 9834809686</a></p>
+      <a href="mailto:care.nutrixpert@gmail.com" class="hover:text-orange-400 transition inline-flex items-center gap-2"><i class="far fa-envelope"></i> care.nutrixpert@gmail.com</a>
+    </div>
+  </div>
+  <div class="text-center mt-10 border-t border-white/20 pt-6 text-sm text-gray-600">
+    © 2025 Nutri-Xpert. All rights reserved.
+  </div>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 800,
+    once: false,
+    mirror: true,
+    offset: 40
+  });
+
+  // Mobile menu logic (unchanged)
+  const menuBtn = document.getElementById("menuBtn");
+const mobileMenu = document.getElementById("mobileMenu");
+
+let isOpen = false;
+
+function openMenu() {
+  mobileMenu.style.maxHeight = mobileMenu.scrollHeight + "px";
+  isOpen = true;
+}
+
+function closeMenu() {
+  mobileMenu.style.maxHeight = "0px";
+  isOpen = false;
+}
+
+menuBtn.addEventListener("click", () => {
+  if (isOpen) {
+    closeMenu();
+  } else {
+    openMenu();
+  }
+});
+
+document.querySelectorAll(".mobile-link").forEach(link => {
+  link.addEventListener("click", closeMenu);
+});
+  window.addEventListener("scroll", () => {
+    if (window.innerWidth < 768 && isOpen) closeMenu();
+  });
+</script>
+    
+</body>
+</html>
