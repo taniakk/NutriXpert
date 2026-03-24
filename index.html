@@ -350,10 +350,30 @@ url('https://images.unsplash.com/photo-1490818387583-1baba5e638af?auto=format&fi
   
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
       <!-- card 1 -->
-      <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 flex flex-col items-center text-center"
+     <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 flex flex-col items-center text-center"
            data-aos="flip-up" data-aos-delay="50">
         <div class="w-16 h-16 flex items-center justify-center rounded-full bg-gray-100 mb-4">
-          <i class="fas fa-syringe text-2xl text-[#6AA84F]"></i>
+          
+          <!-- Feeding Tube Icon -->
+          <svg viewBox="0 0 64 64" class="w-10 h-10 stroke-[#6AA84F]" fill="none" stroke-width="2.5">
+            
+            <!-- Tube line -->
+            <path d="M12 10v20c0 6 4 10 10 10h6"/>
+            
+            <!-- Tube curve to stomach -->
+            <path d="M28 40c8 0 12 4 12 8s-4 6-8 6-8-2-8-6"/>
+            
+            <!-- Connector (top) -->
+            <rect x="9" y="6" width="6" height="6" rx="1" fill="#6AA84F"/>
+            
+            <!-- Feeding bag -->
+            <rect x="42" y="10" width="10" height="14" rx="2"/>
+            
+            <!-- Tube from bag -->
+            <path d="M47 24v10"/>
+            
+          </svg>
+
         </div>
         <h3 class="font-semibold text-lg mb-3">Enteral & Parenteral Feeding</h3>
         <p class="text-sm text-gray-600">Expert in tube feeding management (NG, NJ, PEG, PEJ, Ryle’s) with personalized formulas and feeding schedules for ICU, surgical, and oncology patients.</p>
@@ -397,13 +417,22 @@ url('https://images.unsplash.com/photo-1490818387583-1baba5e638af?auto=format&fi
       </div>
 
        <!-- card 6 -->
-      <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 
+<div class="bg-white p-6 rounded-xl shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 
       flex flex-col items-center text-center"
      data-aos="flip-up" data-aos-delay="50">
 
   <!-- Icon -->
   <div class="w-16 h-16 flex items-center justify-center rounded-full bg-gray-100 mb-4">
-    <i class="	fas fa-briefcase-medical text-2xl text-[#6AA84F]"></i>
+    <svg viewBox="0 0 64 64" class="w-10 h-10 fill-[#6AA84F]">
+      <!-- Left kidney -->
+      <path d="M20 6c-6 0-10 6-10 14 0 10 6 18 14 18 4 0 6-3 6-7V14c0-4-4-8-10-8z"/>
+      
+      <!-- Right kidney -->
+      <path d="M44 6c6 0 10 6 10 14 0 10-6 18-14 18-4 0-6-3-6-7V14c0-4 4-8 10-8z"/>
+      
+      <!-- Center ureter -->
+      <rect x="30" y="32" width="4" height="18" rx="2"/>
+    </svg>
   </div>
 
   <!-- Title -->
