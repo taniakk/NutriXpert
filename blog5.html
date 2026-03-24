@@ -94,66 +94,92 @@
         Ensuring a balanced diet helps meet these nutritional needs.
       </p>
 
+ 
+    <!-- Button -->
+    <button onclick="toggleMicro(this)" 
+      class="mb-6 px-6 py-2 bg-[#6AA84F] text-white rounded-full hover:bg-green-700 transition">
+      Read More
+    </button>
+
+    <!-- Hidden Content -->
+    <div id="microContent" class="hidden">
+
       <!-- Vitamins -->
       <div class="mb-6">
         <h3 class="text-lg font-semibold text-[#6AA84F] mb-2">🍊 Vitamins</h3>
-        <p class="text-gray-600 text-sm leading-relaxed">
+        <p class="text-gray-600 text-sm">
           Vitamins are organic compounds that support different body functions:
         </p>
         <ul class="list-disc ml-5 text-gray-600 text-sm mt-2">
           <li><b>Vitamin A:</b> Supports vision and immunity</li>
           <li><b>Vitamin B complex:</b> Helps in energy production</li>
           <li><b>Vitamin C:</b> Boosts immunity and skin health</li>
-          <li><b>Vitamin D:</b> Strengthens bones and calcium absorption</li>
-          <li><b>Vitamin E:</b> Acts as an antioxidant</li>
-          <li><b>Vitamin K:</b> Important for blood clotting</li>
+          <li><b>Vitamin D:</b> Strengthens bones</li>
+          <li><b>Vitamin E:</b> Antioxidant</li>
+          <li><b>Vitamin K:</b> Blood clotting</li>
         </ul>
       </div>
 
       <!-- Minerals -->
       <div class="mb-6">
         <h3 class="text-lg font-semibold text-[#6AA84F] mb-2">⛏️ Minerals</h3>
-        <p class="text-gray-600 text-sm leading-relaxed">
-          Minerals are inorganic elements essential for body structure and function:
+        <p class="text-gray-600 text-sm">
+          Minerals are essential for body structure and function:
         </p>
         <ul class="list-disc ml-5 text-gray-600 text-sm mt-2">
-          <li><b>Calcium:</b> Strong bones and teeth</li>
-          <li><b>Iron:</b> Prevents anemia and improves oxygen transport</li>
-          <li><b>Zinc:</b> Supports immunity and healing</li>
-          <li><b>Magnesium:</b> Muscle and nerve function</li>
-          <li><b>Potassium:</b> Maintains fluid balance and heart health</li>
+          <li><b>Calcium:</b> Strong bones</li>
+          <li><b>Iron:</b> Prevents anemia</li>
+          <li><b>Zinc:</b> Immunity</li>
+          <li><b>Magnesium:</b> Muscle function</li>
+          <li><b>Potassium:</b> Heart health</li>
         </ul>
       </div>
 
       <!-- Sources -->
       <div class="mb-6">
-        <h3 class="text-lg font-semibold text-[#6AA84F] mb-2">🥗 Sources of Micronutrients</h3>
-        <p class="text-gray-600 text-sm leading-relaxed">
-          Include a variety of foods such as fruits, vegetables, whole grains, nuts, seeds, dairy, and lean proteins 
-          to meet your daily micronutrient requirements.
+        <h3 class="text-lg font-semibold text-[#6AA84F] mb-2">🥗 Sources</h3>
+        <p class="text-gray-600 text-sm">
+          Fruits, vegetables, grains, nuts, dairy, and proteins provide essential micronutrients.
         </p>
       </div>
 
       <!-- Deficiency -->
       <div class="mb-6">
-        <h3 class="text-lg font-semibold text-[#6AA84F] mb-2">⚠️ Effects of Deficiency</h3>
-        <p class="text-gray-600 text-sm leading-relaxed">
-          Lack of micronutrients can lead to fatigue, weak immunity, poor bone health, anemia, and other complications. 
-          Timely nutritional guidance can help prevent these issues.
+        <h3 class="text-lg font-semibold text-[#6AA84F] mb-2">⚠️ Deficiency Effects</h3>
+        <p class="text-gray-600 text-sm">
+          Can cause fatigue, weak immunity, anemia, and poor bone health.
         </p>
       </div>
 
       <!-- Conclusion -->
       <div class="mt-10 pt-6 border-t">
-        <p class="text-gray-700 leading-relaxed">
-          Micronutrients are small but powerful components of a healthy diet. Maintaining a balanced and varied diet 
-          ensures that your body gets all essential vitamins and minerals.
+        <p class="text-gray-700">
+          Micronutrients are essential for overall health and well-being.
         </p>
 
         <p class="mt-4 text-[#6AA84F] font-medium">
-          👉 Eat a colorful diet to stay healthy and energized!
+          👉 Eat a colorful diet to stay healthy!
         </p>
       </div>
+
+    </div>
+
+  </div>
+
+  <!-- Script -->
+  <script>
+    function toggleMicro(btn) {
+      const content = document.getElementById("microContent");
+
+      if (content.classList.contains("hidden")) {
+        content.classList.remove("hidden");
+        btn.innerText = "Show Less";
+      } else {
+        content.classList.add("hidden");
+        btn.innerText = "Read More";
+      }
+    }
+  </script>
 
     </div>
 

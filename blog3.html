@@ -90,62 +90,85 @@
       </p>
 
       <!-- Myth 1 -->
+       <!-- Button -->
+    <button onclick="toggleMyth(this)" 
+      class="mb-6 px-6 py-2 bg-[#6AA84F] text-white rounded-full hover:bg-green-700 transition">
+      Read More
+    </button>
+
+    <!-- Hidden Content -->
+    <div id="mythContent" class="hidden">
+
       <div class="mb-6">
         <h3 class="text-lg font-semibold text-red-500 mb-1">❌ Myth: Carbs cause weight gain</h3>
         <p class="text-green-600 font-medium mb-1">✅ Fact:</p>
-        <p class="text-gray-600 text-sm leading-relaxed">
-          Carbohydrates are essential for energy. Weight gain happens due to excess calorie intake, not carbs alone. 
-          Choosing whole grains and balanced portions is key.
+        <p class="text-gray-600 text-sm">
+          Carbohydrates are essential for energy. Weight gain happens due to excess calorie intake, not carbs alone.
         </p>
       </div>
 
-      <!-- Myth 2 -->
       <div class="mb-6">
         <h3 class="text-lg font-semibold text-red-500 mb-1">❌ Myth: Skipping meals helps weight loss</h3>
         <p class="text-green-600 font-medium mb-1">✅ Fact:</p>
-        <p class="text-gray-600 text-sm leading-relaxed">
-          Skipping meals can slow metabolism and lead to overeating later. Regular, balanced meals support healthy weight management.
+        <p class="text-gray-600 text-sm">
+          Skipping meals can slow metabolism and lead to overeating later.
         </p>
       </div>
 
-      <!-- Myth 3 -->
       <div class="mb-6">
         <h3 class="text-lg font-semibold text-red-500 mb-1">❌ Myth: All fats are bad</h3>
         <p class="text-green-600 font-medium mb-1">✅ Fact:</p>
-        <p class="text-gray-600 text-sm leading-relaxed">
-          Healthy fats (like nuts, seeds, and olive oil) are essential for body functions. Only trans fats and excessive saturated fats should be limited.
+        <p class="text-gray-600 text-sm">
+          Healthy fats are essential. Only trans fats should be limited.
         </p>
       </div>
 
-      <!-- Myth 4 -->
       <div class="mb-6">
         <h3 class="text-lg font-semibold text-red-500 mb-1">❌ Myth: Detox diets are necessary</h3>
         <p class="text-green-600 font-medium mb-1">✅ Fact:</p>
-        <p class="text-gray-600 text-sm leading-relaxed">
-          Your body naturally detoxifies through the liver and kidneys. A balanced diet and hydration are enough for maintaining health.
+        <p class="text-gray-600 text-sm">
+          Your body detoxifies naturally through liver and kidneys.
         </p>
       </div>
 
-      <!-- Myth 5 -->
       <div class="mb-6">
         <h3 class="text-lg font-semibold text-red-500 mb-1">❌ Myth: Protein supplements are always required</h3>
         <p class="text-green-600 font-medium mb-1">✅ Fact:</p>
-        <p class="text-gray-600 text-sm leading-relaxed">
-          Most people can meet their protein needs through natural foods like pulses, dairy, and nuts without supplements.
+        <p class="text-gray-600 text-sm">
+          Most people can meet protein needs through natural foods.
         </p>
       </div>
 
       <!-- Conclusion -->
       <div class="mt-10 pt-6 border-t">
-        <p class="text-gray-700 leading-relaxed">
-          Believing in nutrition myths can harm your health journey. Always rely on evidence-based guidance and consult 
-          a professional for personalized advice.
+        <p class="text-gray-700">
+          Believing in nutrition myths can harm your health journey. Always rely on evidence-based guidance.
         </p>
 
         <p class="mt-4 text-[#6AA84F] font-medium">
           👉 Eat smart, stay informed, and choose facts over myths!
         </p>
       </div>
+
+    </div>
+
+  </div>
+
+  <!-- Script -->
+  <script>
+    function toggleMyth(btn) {
+      const content = document.getElementById("mythContent");
+
+      if (content.classList.contains("hidden")) {
+        content.classList.remove("hidden");
+        btn.innerText = "Show Less";
+      } else {
+        content.classList.add("hidden");
+        btn.innerText = "Read More";
+      }
+    }
+  </script>
+
 
     </div>
 

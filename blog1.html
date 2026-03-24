@@ -92,7 +92,7 @@
       <!-- Button -->
       <button onclick="toggleContent()" 
         class="mb-6 px-6 py-2 bg-[#6AA84F] text-white rounded-full hover:bg-green-700 transition">
-        Show Points
+        Read More
       </button>
 
       <!-- Hidden Content -->
@@ -185,10 +185,10 @@
 
     if (content.classList.contains("hidden")) {
       content.classList.remove("hidden");
-      button.innerText = "Hide Points";
+      button.innerText = "Show Less";
     } else {
       content.classList.add("hidden");
-      button.innerText = "Show Points";
+      button.innerText = "Read More";
     }
   }
 </script>

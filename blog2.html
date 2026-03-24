@@ -106,6 +106,15 @@
       </p>
 
       <!-- Story 1 -->
+         <!-- Button -->
+    <button onclick="toggleContent(this)" 
+      class="mb-6 px-6 py-2 bg-[#6AA84F] text-white rounded-full hover:bg-green-700 transition">
+      Read More
+    </button>
+
+    <!-- Hidden Content -->
+    <div id="content" class="hidden">
+
       <div class="mb-6">
         <h3 class="text-lg font-semibold text-[#6AA84F] mb-2">💉 Diabetes Management</h3>
         <p class="text-gray-600 text-sm leading-relaxed">
@@ -115,55 +124,62 @@
         </p>
       </div>
 
-      <!-- Story 2 -->
       <div class="mb-6">
         <h3 class="text-lg font-semibold text-[#6AA84F] mb-2">❤️ Heart Health Improvement</h3>
         <p class="text-gray-600 text-sm leading-relaxed">
-          Individuals with high cholesterol and heart-related concerns improved their condition by following 
-          heart-friendly diets rich in fiber, healthy fats, and essential nutrients. This resulted in better 
-          cholesterol levels and improved cardiovascular health.
+          Individuals with high cholesterol improved their condition through heart-friendly diets rich in fiber and healthy fats.
         </p>
       </div>
 
-      <!-- Story 3 -->
       <div class="mb-6">
         <h3 class="text-lg font-semibold text-[#6AA84F] mb-2">⚖️ Weight Transformation</h3>
         <p class="text-gray-600 text-sm leading-relaxed">
-          Many individuals achieved sustainable weight loss and healthy weight gain without relying on crash diets. 
-          By focusing on balanced nutrition, portion control, and consistency, they were able to maintain long-term results.
+          Sustainable weight loss and healthy weight gain achieved through balanced nutrition and consistency.
         </p>
       </div>
 
-      <!-- Story 4 -->
       <div class="mb-6">
         <h3 class="text-lg font-semibold text-[#6AA84F] mb-2">🧘 Lifestyle & Energy Improvement</h3>
         <p class="text-gray-600 text-sm leading-relaxed">
-          Patients reported increased energy levels, improved digestion, and better sleep patterns. 
-          A structured diet combined with healthy habits significantly enhanced their overall well-being.
+          Increased energy levels, improved digestion, and better sleep patterns through structured diet and habits.
         </p>
       </div>
 
-      <!-- Story 5 -->
       <div class="mb-6">
         <h3 class="text-lg font-semibold text-[#6AA84F] mb-2">🧬 Digestive Health Recovery</h3>
         <p class="text-gray-600 text-sm leading-relaxed">
-          Individuals dealing with bloating, acidity, and gut issues experienced relief through personalized 
-          diet modifications. Identifying trigger foods and improving gut health played a key role in recovery.
+          Relief from bloating and gut issues through personalized diet modifications and improved gut health.
         </p>
       </div>
 
-      <!-- Conclusion -->
       <div class="mt-10 pt-6 border-t">
         <p class="text-gray-700 leading-relaxed">
-          These success stories prove that proper nutrition is not just about short-term changes but about building 
-          a healthier lifestyle. With the right guidance and commitment, achieving your health goals becomes realistic 
-          and sustainable.
+          These success stories prove that proper nutrition is about building a healthier lifestyle.
         </p>
 
         <p class="mt-4 text-[#6AA84F] font-medium">
-          👉 Your transformation journey can begin today with the right support and guidance.
+          👉 Your transformation journey can begin today!
         </p>
       </div>
+
+    </div>
+
+  </div>
+
+  <!-- Script -->
+  <script>
+    function toggleContent(btn) {
+      const content = document.getElementById("content");
+
+      if (content.classList.contains("hidden")) {
+        content.classList.remove("hidden");
+        btn.innerText = "Show Less";
+      } else {
+        content.classList.add("hidden");
+        btn.innerText = "Read More";
+      }
+    }
+  </script>
 
     </div>
 

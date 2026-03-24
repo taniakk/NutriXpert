@@ -93,64 +93,85 @@
         Each nutrient has a unique role in supporting body functions, growth, and overall well-being.
       </p>
 
+      <!-- Button -->
+    <button onclick="toggleMacro(this)" 
+      class="mb-6 px-6 py-2 bg-[#6AA84F] text-white rounded-full hover:bg-green-700 transition">
+      Read More
+    </button>
+
+    <!-- Hidden Content -->
+    <div id="macroContent" class="hidden">
+
       <!-- Calories -->
       <div class="mb-6">
         <h3 class="text-lg font-semibold text-[#6AA84F] mb-2">🔥 What Are Calories?</h3>
-        <p class="text-gray-600 text-sm leading-relaxed">
-          Calories are units of energy that your body uses to perform daily activities such as breathing, 
-          moving, and thinking. Consuming the right amount of calories is essential for maintaining a healthy weight.
+        <p class="text-gray-600 text-sm">
+          Calories are units of energy your body uses for daily activities like breathing and movement.
         </p>
       </div>
 
       <!-- Protein -->
       <div class="mb-6">
         <h3 class="text-lg font-semibold text-[#6AA84F] mb-2">💪 Protein</h3>
-        <p class="text-gray-600 text-sm leading-relaxed">
-          Protein helps in building and repairing body tissues, including muscles. It also supports immunity 
-          and hormone production. Good sources include pulses, dairy, eggs, and lean meats.
+        <p class="text-gray-600 text-sm">
+          Protein helps in building and repairing tissues and supports immunity.
         </p>
       </div>
 
       <!-- Carbohydrates -->
       <div class="mb-6">
         <h3 class="text-lg font-semibold text-[#6AA84F] mb-2">🍞 Carbohydrates</h3>
-        <p class="text-gray-600 text-sm leading-relaxed">
-          Carbohydrates are the body’s primary source of energy. Choose complex carbs like whole grains, 
-          fruits, and vegetables for sustained energy.
+        <p class="text-gray-600 text-sm">
+          Carbohydrates are the main energy source. Choose whole grains and fruits.
         </p>
       </div>
 
       <!-- Fats -->
       <div class="mb-6">
         <h3 class="text-lg font-semibold text-[#6AA84F] mb-2">🥑 Fats</h3>
-        <p class="text-gray-600 text-sm leading-relaxed">
-          Healthy fats support brain function, hormone production, and nutrient absorption. Include sources 
-          like nuts, seeds, and healthy oils while limiting unhealthy fats.
+        <p class="text-gray-600 text-sm">
+          Healthy fats support brain and hormone function.
         </p>
       </div>
 
       <!-- Balance -->
       <div class="mb-6">
         <h3 class="text-lg font-semibold text-[#6AA84F] mb-2">⚖️ Importance of Balance</h3>
-        <p class="text-gray-600 text-sm leading-relaxed">
-          A balanced diet includes the right proportions of all macronutrients. Avoid extreme diets and focus 
-          on moderation to achieve long-term health goals.
+        <p class="text-gray-600 text-sm">
+          A balanced diet includes proper proportions of all nutrients.
         </p>
       </div>
 
       <!-- Conclusion -->
       <div class="mt-10 pt-6 border-t">
-        <p class="text-gray-700 leading-relaxed">
-          Understanding calories and macronutrients helps you make smarter food choices. A well-balanced diet 
-          ensures your body gets the energy and nutrients it needs to function effectively.
+        <p class="text-gray-700">
+          Understanding macronutrients helps you make better food choices.
         </p>
 
         <p class="mt-4 text-[#6AA84F] font-medium">
-          👉 Balance your plate for better health and performance!
+          👉 Balance your plate for better health!
         </p>
       </div>
 
     </div>
+
+  </div>
+
+  <!-- Script -->
+  <script>
+    function toggleMacro(btn) {
+      const content = document.getElementById("macroContent");
+
+      if (content.classList.contains("hidden")) {
+        content.classList.remove("hidden");
+        btn.innerText = "Show Less";
+      } else {
+        content.classList.add("hidden");
+        btn.innerText = "Read More";
+      }
+    }
+  </script>
+
 
   </div>
 </section>
