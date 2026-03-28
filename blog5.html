@@ -102,68 +102,174 @@
     </button>
 
     <!-- Hidden Content -->
-    <div id="microContent" class="hidden">
+   <div id="microContent" class="hidden">
 
-      <!-- Vitamins -->
-      <div class="mb-6">
-        <h3 class="text-lg font-semibold text-[#6AA84F] mb-2">🍊 Vitamins</h3>
-        <p class="text-gray-600 text-sm">
-          Vitamins are organic compounds that support different body functions:
-        </p>
-        <ul class="list-disc ml-5 text-gray-600 text-sm mt-2">
-          <li><b>Vitamin A:</b> Supports vision and immunity</li>
-          <li><b>Vitamin B complex:</b> Helps in energy production</li>
-          <li><b>Vitamin C:</b> Boosts immunity and skin health</li>
-          <li><b>Vitamin D:</b> Strengthens bones</li>
-          <li><b>Vitamin E:</b> Antioxidant</li>
-          <li><b>Vitamin K:</b> Blood clotting</li>
-        </ul>
+  <!-- Vitamins -->
+ <div class="mb-6 flex flex-col md:flex-row gap-4 items-start">
+    
+  <img src="/images/vitamins.jpg" 
+       class="w-24 h-24 object-cover rounded-xl shadow-md flex-shrink-0">
+
+  <div class="w-full">
+    <h3 class="text-lg font-semibold text-[#6AA84F] mb-2">🍊 Vitamins</h3>
+    
+    <p class="text-gray-600 text-sm">
+      Vitamins are organic compounds that support different body functions:
+    </p>
+
+    <!-- Vitamins List -->
+    <ul class="list-disc ml-5 text-gray-600 text-sm mt-2 space-y-1">
+      <li><b>Vitamin A:</b> Supports vision and immunity <br>
+          <span class="text-red-500 text-xs">Deficiency: Night blindness</span></li>
+
+      <li><b>Vitamin B complex:</b> Helps in energy production <br>
+          <span class="text-red-500 text-xs">Deficiency: Beriberi, anemia</span></li>
+
+      <li><b>Vitamin C:</b> Boosts immunity and skin health <br>
+          <span class="text-red-500 text-xs">Deficiency: Scurvy</span></li>
+
+      <li><b>Vitamin D:</b> Strengthens bones <br>
+          <span class="text-red-500 text-xs">Deficiency: Rickets, Osteomalacia</span></li>
+
+      <li><b>Vitamin E:</b> Antioxidant <br>
+          <span class="text-red-500 text-xs">Deficiency: Nerve & muscle damage</span></li>
+
+      <li><b>Vitamin K:</b> Blood clotting <br>
+          <span class="text-red-500 text-xs">Deficiency: Excessive bleeding</span></li>
+    </ul>
+
+    <!-- Sources Section (No Images) -->
+    <div class="mt-5">
+      <h4 class="text-sm font-semibold text-[#6AA84F] mb-2">🥗 Sources of Vitamins:</h4>
+
+      <ul class="list-disc ml-5 text-gray-600 text-sm space-y-1">
+        <li><b>Vitamin A:</b> Carrots, spinach, sweet potatoes</li>
+        <li><b>Vitamin B complex:</b> Whole grains, eggs, meat, legumes</li>
+        <li><b>Vitamin C:</b> Citrus fruits, amla, tomatoes</li>
+        <li><b>Vitamin D:</b> Sunlight, milk, fish</li>
+        <li><b>Vitamin E:</b> Nuts, seeds, vegetable oils</li>
+        <li><b>Vitamin K:</b> Green leafy vegetables like spinach & broccoli</li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+  <!-- Minerals -->
+<div class="mb-6 flex flex-col md:flex-row gap-4 items-center md:items-start">
+    
+  <img src="/images/minerals.jpg" 
+       class="w-24 h-24 object-cover rounded-xl shadow-md flex-shrink-0">
+
+  <div>
+    <h3 class="text-lg font-semibold text-[#6AA84F] mb-2">⛏️ Minerals</h3>
+    
+    <p class="text-gray-600 text-sm">
+      Minerals are essential for body structure and function:
+    </p>
+
+    <!-- Minerals List -->
+    <ul class="list-disc ml-5 text-gray-600 text-sm mt-2 space-y-1">
+      <li><b>Calcium:</b> Strong bones <br>
+          <span class="text-red-500 text-xs">Deficiency: Weak bones, osteoporosis</span></li>
+
+      <li><b>Iron:</b> Prevents anemia <br>
+          <span class="text-red-500 text-xs">Deficiency: Anemia, fatigue</span></li>
+
+      <li><b>Zinc:</b> Immunity <br>
+          <span class="text-red-500 text-xs">Deficiency: Weak immunity, slow wound healing</span></li>
+
+      <li><b>Magnesium:</b> Muscle function <br>
+          <span class="text-red-500 text-xs">Deficiency: Muscle cramps, weakness</span></li>
+
+      <li><b>Potassium:</b> Heart health <br>
+          <span class="text-red-500 text-xs">Deficiency: Muscle weakness, irregular heartbeat</span></li>
+    </ul>
+
+    <!-- Sources Section -->
+    <div class="mt-5">
+      <h4 class="text-sm font-semibold text-[#6AA84F] mb-2">🥗 Sources of Minerals:</h4>
+
+      <ul class="list-disc ml-5 text-gray-600 text-sm space-y-1">
+        <li><b>Calcium:</b> Milk, cheese, yogurt, leafy greens</li>
+        <li><b>Iron:</b> Spinach, red meat, lentils, jaggery</li>
+        <li><b>Zinc:</b> Nuts, seeds, whole grains</li>
+        <li><b>Magnesium:</b> Bananas, nuts, dark chocolate</li>
+        <li><b>Potassium:</b> Bananas, potatoes, oranges, coconut water</li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+  <!-- Sources -->
+  <div class="mb-6 flex flex-col md:flex-row gap-4 items-center md:items-start">
+    
+    <img src="/images/fruits.jpg" 
+         class="w-24 h-24 object-cover rounded-xl shadow-md flex-shrink-0">
+
+    <div>
+      <h3 class="text-lg font-semibold text-[#6AA84F] mb-2">🥗 Sources</h3>
+      <p class="text-gray-600 text-sm">
+        Fruits, vegetables, grains, nuts, dairy, and proteins provide essential micronutrients.
+      </p>
+    </div>
+  </div>
+
+  <!-- Deficiency -->
+  <div class="mb-6 flex flex-col md:flex-row gap-4 items-center md:items-start">
+    
+    <img src="https://images.unsplash.com/photo-1584515933487-779824d29309" 
+         class="w-24 h-24 object-cover rounded-xl shadow-md flex-shrink-0">
+
+    <div>
+      <h3 class="text-lg font-semibold text-[#6AA84F] mb-2">⚠️ Deficiency Effects</h3>
+      <p class="text-gray-600 text-sm">
+        Can cause fatigue, weak immunity, anemia, and poor bone health.
+      </p>
+    </div>
+  </div>
+
+  <!-- Diseases -->
+  <div class="mb-6">
+    <h3 class="text-lg font-semibold text-[#6AA84F] mb-4">🦠 Deficiency Diseases</h3>
+
+    <div class="flex flex-wrap gap-4">
+
+      <div class="flex items-center gap-3 bg-white shadow-md rounded-xl p-4 w-full md:w-[48%]">
+        <img src="/images/anemia.jpg" class="w-16 h-16 rounded-lg object-cover">
+        <p class="text-sm text-gray-700"><b>Anemia:</b> Due to Iron deficiency</p>
       </div>
 
-      <!-- Minerals -->
-      <div class="mb-6">
-        <h3 class="text-lg font-semibold text-[#6AA84F] mb-2">⛏️ Minerals</h3>
-        <p class="text-gray-600 text-sm">
-          Minerals are essential for body structure and function:
-        </p>
-        <ul class="list-disc ml-5 text-gray-600 text-sm mt-2">
-          <li><b>Calcium:</b> Strong bones</li>
-          <li><b>Iron:</b> Prevents anemia</li>
-          <li><b>Zinc:</b> Immunity</li>
-          <li><b>Magnesium:</b> Muscle function</li>
-          <li><b>Potassium:</b> Heart health</li>
-        </ul>
+      <div class="flex items-center gap-3 bg-white shadow-md rounded-xl p-4 w-full md:w-[48%]">
+        <img src="/images/scurvy.jpg" class="w-16 h-16 rounded-lg object-cover">
+        <p class="text-sm text-gray-700"><b>Scurvy:</b> Vitamin C deficiency</p>
       </div>
 
-      <!-- Sources -->
-      <div class="mb-6">
-        <h3 class="text-lg font-semibold text-[#6AA84F] mb-2">🥗 Sources</h3>
-        <p class="text-gray-600 text-sm">
-          Fruits, vegetables, grains, nuts, dairy, and proteins provide essential micronutrients.
-        </p>
+      <div class="flex items-center gap-3 bg-white shadow-md rounded-xl p-4 w-full md:w-[48%]">
+        <img src="/images/rickets.jpg" class="w-16 h-16 rounded-lg object-cover">
+        <p class="text-sm text-gray-700"><b>Rickets:</b> Vitamin D deficiency</p>
       </div>
 
-      <!-- Deficiency -->
-      <div class="mb-6">
-        <h3 class="text-lg font-semibold text-[#6AA84F] mb-2">⚠️ Deficiency Effects</h3>
-        <p class="text-gray-600 text-sm">
-          Can cause fatigue, weak immunity, anemia, and poor bone health.
-        </p>
-      </div>
-
-      <!-- Conclusion -->
-      <div class="mt-10 pt-6 border-t">
-        <p class="text-gray-700">
-          Micronutrients are essential for overall health and well-being.
-        </p>
-
-        <p class="mt-4 text-[#6AA84F] font-medium">
-          👉 Eat a colorful diet to stay healthy!
-        </p>
+      <div class="flex items-center gap-3 bg-white shadow-md rounded-xl p-4 w-full md:w-[48%]">
+        <img src="/images/nightblindness.jpg" class="w-16 h-16 rounded-lg object-cover">
+        <p class="text-sm text-gray-700"><b>Night Blindness:</b> Vitamin A deficiency</p>
       </div>
 
     </div>
+  </div>
 
+  <!-- Conclusion -->
+  <div class="mt-10 pt-6 border-t">
+    <p class="text-gray-700">
+      Micronutrients are essential for overall health and well-being.
+    </p>
+
+    <p class="mt-4 text-[#6AA84F] font-medium">
+      👉 Eat a colorful diet to stay healthy!
+    </p>
+  </div>
+
+</div>
   </div>
 
   <!-- Script -->
