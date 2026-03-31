@@ -10,17 +10,15 @@
 </head>
 <body>
 
-    <!-- HEADER (no animation changes, just sticky) -->
+<!-- HEADER -->
 <header class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
   <div class="max-w-7xl mx-auto px-5">
     <nav class="flex justify-between items-center py-4">
 
-      <!-- Logo (tiny pulse on hover) -->
       <a href="./index.html" class="transition-transform hover:scale-105 duration-200">
         <img src="/images/nutriexpertlogo.jpeg" loading="lazy" alt="NutriXpert Logo" class="h-[60px] cursor-pointer">
       </a>
 
-      <!-- Desktop Menu -->
       <ul class="hidden md:flex space-x-8 font-medium text-[#E67E22] items-center">
         <li><a href="./index.html" class="hover:text-[#6AA84F] transition-colors duration-200">Home</a></li>
         <li><a href="/index.html" class="hover:text-[#6AA84F] transition-colors">About</a></li>
@@ -29,7 +27,6 @@
         <li><a href="/experience.html" class="hover:text-[#6AA84F] transition-colors">Experience</a></li>
         <li><a href="#footer" class="hover:text-[#6AA84F] transition-colors">Contact</a></li>
 
-        <!-- Book Button (Desktop) -->
         <li>
           <a href="#contact"
             class="bg-[#6AA84F] text-white px-5 py-2 rounded-full hover:bg-transparent 
@@ -39,7 +36,6 @@
         </li>
       </ul>
 
-      <!-- Mobile Menu Button -->
       <button id="menuBtn" class="md:hidden text-3xl text-gray-800 transition-transform active:scale-90">
         ☰
       </button>
@@ -47,7 +43,6 @@
     </nav>
   </div>
 
-  <!-- Mobile Dropdown Menu (same) -->
   <div id="mobileMenu"
     class="md:hidden overflow-hidden max-h-0 bg-white transition-all duration-500 ease-in-out shadow-lg">
 
@@ -60,30 +55,28 @@
       <a href="#footer" class="mobile-link hover:translate-x-2">Contact</a>
 
       <a href="#contact"
-  class="mobile-link inline-block w-fit mx-auto px-6 py-2 text-sm font-semibold 
-         bg-[#E67E22] hover:bg-transparent hover:text-primary border-2 border-primary
-         text-white rounded-full 
-         shadow-md hover:shadow-lg 
-         hover:scale-105 
-         transition duration-300 ease-in-out">
-  Book Consultation
-</a>
+        class="mobile-link inline-block w-fit mx-auto px-6 py-2 text-sm font-semibold 
+        bg-[#E67E22] hover:bg-transparent hover:text-primary border-2 border-primary
+        text-white rounded-full 
+        shadow-md hover:shadow-lg 
+        hover:scale-105 
+        transition duration-300 ease-in-out">
+        Book Consultation
+      </a>
     </div>
   </div>
 </header>
 
-<!-- section start -->
+<!-- SECTION -->
 <section class="py-20 mt-10">
   <div class="max-w-5xl mx-auto px-6">
 
     <div class="bg-white rounded-2xl shadow-lg p-8">
 
-      <!-- Title -->
       <h1 class="text-3xl font-bold text-gray-900 mb-6">
         🧬 Micronutrients: Vitamins & Minerals Explained
       </h1>
 
-      <!-- Intro -->
       <p class="text-gray-700 mb-6 leading-relaxed">
         Micronutrients are essential nutrients required in small amounts but play a crucial role in maintaining 
         overall health. They include vitamins and minerals that support immunity, metabolism, and body functions.
@@ -94,114 +87,60 @@
         Ensuring a balanced diet helps meet these nutritional needs.
       </p>
 
- 
-    <!-- Button -->
-    <button onclick="toggleMicro(this)" 
-      class="mb-6 px-6 py-2 bg-[#6AA84F] text-white rounded-full hover:bg-green-700 transition">
-      Read More
-    </button>
+      <!-- CONTENT ALWAYS VISIBLE -->
+      <div id="microContent">
 
-    <!-- Hidden Content -->
-   <div id="microContent" class="hidden">
+        <!-- Vitamins -->
+        <div class="mb-6 flex flex-col md:flex-row gap-4 items-start">
+          <img src="/images/vitamins.jpg" class="w-24 h-24 object-cover rounded-xl shadow-md flex-shrink-0">
+          <div class="w-full">
+            <h3 class="text-lg font-semibold text-[#6AA84F] mb-2">🍊 Vitamins</h3>
+            <p class="text-gray-600 text-sm">
+              Vitamins are organic compounds that support different body functions:
+            </p>
 
-  <!-- Vitamins -->
- <div class="mb-6 flex flex-col md:flex-row gap-4 items-start">
-    
-  <img src="/images/vitamins.jpg" 
-      class="w-24 h-24 object-cover rounded-xl shadow-md flex-shrink-0">
+            <ul class="list-disc ml-5 text-gray-600 text-sm mt-2 space-y-1">
+              <li><b>Vitamin A:</b> Supports vision and immunity <br><span class="text-red-500 text-xs">Deficiency: Night blindness</span></li>
+              <li><b>Vitamin B complex:</b> Helps in energy production <br><span class="text-red-500 text-xs">Deficiency: Beriberi, anemia</span></li>
+              <li><b>Vitamin C:</b> Boosts immunity and skin health <br><span class="text-red-500 text-xs">Deficiency: Scurvy</span></li>
+              <li><b>Vitamin D:</b> Strengthens bones <br><span class="text-red-500 text-xs">Deficiency: Rickets, Osteomalacia</span></li>
+              <li><b>Vitamin E:</b> Antioxidant <br><span class="text-red-500 text-xs">Deficiency: Nerve & muscle damage</span></li>
+              <li><b>Vitamin K:</b> Blood clotting <br><span class="text-red-500 text-xs">Deficiency: Excessive bleeding</span></li>
+            </ul>
 
-  <div class="w-full">
-    <h3 class="text-lg font-semibold text-[#6AA84F] mb-2">🍊 Vitamins</h3>
-    
-    <p class="text-gray-600 text-sm">
-      Vitamins are organic compounds that support different body functions:
-    </p>
+            <div class="mt-5">
+              <h4 class="text-sm font-semibold text-[#6AA84F] mb-2">🥗 Sources of Vitamins:</h4>
+              <ul class="list-disc ml-5 text-gray-600 text-sm space-y-1">
+                <li><b>Vitamin A:</b> Carrots, spinach, sweet potatoes</li>
+                <li><b>Vitamin B complex:</b> Whole grains, eggs, meat, legumes</li>
+                <li><b>Vitamin C:</b> Citrus fruits, amla, tomatoes</li>
+                <li><b>Vitamin D:</b> Sunlight, milk, fish</li>
+                <li><b>Vitamin E:</b> Nuts, seeds, vegetable oils</li>
+                <li><b>Vitamin K:</b> Green leafy vegetables like spinach & broccoli</li>
+              </ul>
+            </div>
+          </div>
+        </div>
 
-    <!-- Vitamins List -->
-    <ul class="list-disc ml-5 text-gray-600 text-sm mt-2 space-y-1">
-      <li><b>Vitamin A:</b> Supports vision and immunity <br>
-          <span class="text-red-500 text-xs">Deficiency: Night blindness</span></li>
+        <!-- Minerals -->
+        <div class="mb-6 flex flex-col md:flex-row gap-4 items-center md:items-start">
+          <img src="/images/minerals.jpg" class="w-24 h-24 object-cover rounded-xl shadow-md flex-shrink-0">
+          <div>
+            <h3 class="text-lg font-semibold text-[#6AA84F] mb-2">⛏️ Minerals</h3>
+            <p class="text-gray-600 text-sm">
+              Minerals are essential for body structure and function:
+            </p>
 
-      <li><b>Vitamin B complex:</b> Helps in energy production <br>
-          <span class="text-red-500 text-xs">Deficiency: Beriberi, anemia</span></li>
-
-      <li><b>Vitamin C:</b> Boosts immunity and skin health <br>
-          <span class="text-red-500 text-xs">Deficiency: Scurvy</span></li>
-
-      <li><b>Vitamin D:</b> Strengthens bones <br>
-          <span class="text-red-500 text-xs">Deficiency: Rickets, Osteomalacia</span></li>
-
-      <li><b>Vitamin E:</b> Antioxidant <br>
-          <span class="text-red-500 text-xs">Deficiency: Nerve & muscle damage</span></li>
-
-      <li><b>Vitamin K:</b> Blood clotting <br>
-          <span class="text-red-500 text-xs">Deficiency: Excessive bleeding</span></li>
-    </ul>
-
-    <!-- Sources Section (No Images) -->
-    <div class="mt-5">
-      <h4 class="text-sm font-semibold text-[#6AA84F] mb-2">🥗 Sources of Vitamins:</h4>
-
-      <ul class="list-disc ml-5 text-gray-600 text-sm space-y-1">
-        <li><b>Vitamin A:</b> Carrots, spinach, sweet potatoes</li>
-        <li><b>Vitamin B complex:</b> Whole grains, eggs, meat, legumes</li>
-        <li><b>Vitamin C:</b> Citrus fruits, amla, tomatoes</li>
-        <li><b>Vitamin D:</b> Sunlight, milk, fish</li>
-        <li><b>Vitamin E:</b> Nuts, seeds, vegetable oils</li>
-        <li><b>Vitamin K:</b> Green leafy vegetables like spinach & broccoli</li>
-      </ul>
-    </div>
-
-  </div>
-</div>
-
-  <!-- Minerals -->
-<div class="mb-6 flex flex-col md:flex-row gap-4 items-center md:items-start">
-    
-  <img src="/images/minerals.jpg" 
-       class="w-24 h-24 object-cover rounded-xl shadow-md flex-shrink-0">
-
-  <div>
-    <h3 class="text-lg font-semibold text-[#6AA84F] mb-2">⛏️ Minerals</h3>
-    
-    <p class="text-gray-600 text-sm">
-      Minerals are essential for body structure and function:
-    </p>
-
-    <!-- Minerals List -->
-    <ul class="list-disc ml-5 text-gray-600 text-sm mt-2 space-y-1">
-      <li><b>Calcium:</b> Strong bones <br>
-          <span class="text-red-500 text-xs">Deficiency: Weak bones, osteoporosis</span></li>
-
-      <li><b>Iron:</b> Prevents anemia <br>
-          <span class="text-red-500 text-xs">Deficiency: Anemia, fatigue</span></li>
-
-      <li><b>Zinc:</b> Immunity <br>
-          <span class="text-red-500 text-xs">Deficiency: Weak immunity, slow wound healing</span></li>
-
-      <li><b>Magnesium:</b> Muscle function <br>
-          <span class="text-red-500 text-xs">Deficiency: Muscle cramps, weakness</span></li>
-
-      <li><b>Potassium:</b> Heart health <br>
-          <span class="text-red-500 text-xs">Deficiency: Muscle weakness, irregular heartbeat</span></li>
-    </ul>
-
-    <!-- Sources Section -->
-    <div class="mt-5">
-      <h4 class="text-sm font-semibold text-[#6AA84F] mb-2">🥗 Sources of Minerals:</h4>
-
-      <ul class="list-disc ml-5 text-gray-600 text-sm space-y-1">
-        <li><b>Calcium:</b> Milk, cheese, yogurt, leafy greens</li>
-        <li><b>Iron:</b> Spinach, red meat, lentils, jaggery</li>
-        <li><b>Zinc:</b> Nuts, seeds, whole grains</li>
-        <li><b>Magnesium:</b> Bananas, nuts, dark chocolate</li>
-        <li><b>Potassium:</b> Bananas, potatoes, oranges, coconut water</li>
-      </ul>
-    </div>
-
-  </div>
-</div>
-  <!-- Sources -->
+            <ul class="list-disc ml-5 text-gray-600 text-sm mt-2 space-y-1">
+              <li><b>Calcium:</b> Strong bones <br><span class="text-red-500 text-xs">Deficiency: Weak bones, osteoporosis</span></li>
+              <li><b>Iron:</b> Prevents anemia <br><span class="text-red-500 text-xs">Deficiency: Anemia, fatigue</span></li>
+              <li><b>Zinc:</b> Immunity <br><span class="text-red-500 text-xs">Deficiency: Weak immunity</span></li>
+              <li><b>Magnesium:</b> Muscle function <br><span class="text-red-500 text-xs">Deficiency: Muscle cramps</span></li>
+              <li><b>Potassium:</b> Heart health <br><span class="text-red-500 text-xs">Deficiency: Irregular heartbeat</span></li>
+            </ul>
+          </div>
+        </div>
+         <!-- Sources -->
   <div class="mb-6 flex flex-col md:flex-row gap-4 items-center md:items-start">
     
     <img src="/images/fruits.jpg" 
@@ -258,109 +197,45 @@
     </div>
   </div>
 
-  <!-- Conclusion -->
-  <div class="mt-10 pt-6 border-t">
-    <p class="text-gray-700">
-      Micronutrients are essential for overall health and well-being.
-    </p>
 
-    <p class="mt-4 text-[#6AA84F] font-medium">
-      👉 Eat a colorful diet to stay healthy!
-    </p>
-  </div>
+        <!-- Conclusion -->
+        <div class="mt-10 pt-6 border-t">
+          <p class="text-gray-700">
+            Micronutrients are essential for overall health and well-being.
+          </p>
+          <p class="mt-4 text-[#6AA84F] font-medium">
+            👉 Eat a colorful diet to stay healthy!
+          </p>
+        </div>
 
-</div>
-  </div>
-
-  <!-- Script -->
-  <script>
-    function toggleMicro(btn) {
-      const content = document.getElementById("microContent");
-
-      if (content.classList.contains("hidden")) {
-        content.classList.remove("hidden");
-        btn.innerText = "Show Less";
-      } else {
-        content.classList.add("hidden");
-        btn.innerText = "Read More";
-      }
-    }
-  </script>
+      </div>
 
     </div>
 
   </div>
 </section>
 
-    <!-- FOOTER (with icons animation) -->
+<!-- FOOTER -->
 <footer id="footer" class="text-white py-16 bg-gray-50">
   <div class="max-w-7xl mx-auto px-5 grid md:grid-cols-3 gap-10">
-    <div data-aos="fade-right">
-      <a href="#top">
-        <img src="/images/nutriexpertlogo.jpeg" loading="lazy" alt="NutriXpert Logo" class="h-20 mb-4 cursor-pointer transition-transform hover:scale-110">
-      </a>
+    <div>
+      <img src="/images/nutriexpertlogo.jpeg" class="h-20 mb-4">
       <p class="text-gray-700">Evidence-based personalized nutrition therapy.</p>
     </div>
-    <div data-aos="fade-up">
-      <h4 class="font-semibold mb-4 text-orange-400">Quick Links</h4>
-      <ul class="space-y-2 text-[#6AA84F]">
-        <li><a href="#home" class="hover:text-orange-400 transition flex items-center gap-2"><i class="fas fa-chevron-right text-xs"></i>Home</a></li>
-        <li><a href="#about" class="hover:text-orange-400 transition flex items-center gap-2"><i class="fas fa-chevron-right text-xs"></i>About</a></li>
-        <li><a href="#services" class="hover:text-orange-400 transition flex items-center gap-2"><i class="fas fa-chevron-right text-xs"></i>Services</a></li>
-      </ul>
-    </div>
-    <div class="text-[#6AA84F]" data-aos="fade-left">
-      <h4 class="font-semibold mb-4 text-orange-400">Contact</h4>
-      <p>Thane, Maharashtra</p>
-      <p><a href="https://wa.me/919834809686" target="_blank" class="hover:text-orange-400 transition inline-flex items-center gap-2"><i class="fab fa-whatsapp"></i> 9834809686</a></p>
-      <a href="mailto:care.nutrixpert@gmail.com" class="hover:text-orange-400 transition inline-flex items-center gap-2"><i class="far fa-envelope"></i> care.nutrixpert@gmail.com</a>
-    </div>
-  </div>
-  <div class="text-center mt-10 border-t border-white/20 pt-6 text-sm text-gray-600">
-    © 2025 Nutri-Xpert. All rights reserved.
   </div>
 </footer>
 
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
-  AOS.init({
-    duration: 800,
-    once: false,
-    mirror: true,
-    offset: 40
-  });
-
-  // Mobile menu logic (unchanged)
-  const menuBtn = document.getElementById("menuBtn");
+const menuBtn = document.getElementById("menuBtn");
 const mobileMenu = document.getElementById("mobileMenu");
 
 let isOpen = false;
 
-function openMenu() {
-  mobileMenu.style.maxHeight = mobileMenu.scrollHeight + "px";
-  isOpen = true;
-}
-
-function closeMenu() {
-  mobileMenu.style.maxHeight = "0px";
-  isOpen = false;
-}
-
 menuBtn.addEventListener("click", () => {
-  if (isOpen) {
-    closeMenu();
-  } else {
-    openMenu();
-  }
+  mobileMenu.style.maxHeight = isOpen ? "0px" : mobileMenu.scrollHeight + "px";
+  isOpen = !isOpen;
 });
-
-document.querySelectorAll(".mobile-link").forEach(link => {
-  link.addEventListener("click", closeMenu);
-});
-  window.addEventListener("scroll", () => {
-    if (window.innerWidth < 768 && isOpen) closeMenu();
-  });
 </script>
-    
+
 </body>
 </html>

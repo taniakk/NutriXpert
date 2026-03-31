@@ -9,17 +9,16 @@
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
-    <!-- HEADER (no animation changes, just sticky) -->
+
+<!-- HEADER -->
 <header class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
   <div class="max-w-7xl mx-auto px-5">
     <nav class="flex justify-between items-center py-4">
 
-      <!-- Logo (tiny pulse on hover) -->
       <a href="./index.html" class="transition-transform hover:scale-105 duration-200">
         <img src="/images/nutriexpertlogo.jpeg" loading="lazy" alt="NutriXpert Logo" class="h-[60px] cursor-pointer">
       </a>
 
-      <!-- Desktop Menu -->
       <ul class="hidden md:flex space-x-8 font-medium text-[#E67E22] items-center">
         <li><a href="./index.html" class="hover:text-[#6AA84F] transition-colors duration-200">Home</a></li>
         <li><a href="/index.html" class="hover:text-[#6AA84F] transition-colors">About</a></li>
@@ -28,7 +27,6 @@
         <li><a href="/experience.html" class="hover:text-[#6AA84F] transition-colors">Experience</a></li>
         <li><a href="#footer" class="hover:text-[#6AA84F] transition-colors">Contact</a></li>
 
-        <!-- Book Button (Desktop) -->
         <li>
           <a href="#contact"
             class="bg-[#6AA84F] text-white px-5 py-2 rounded-full hover:bg-transparent 
@@ -38,7 +36,6 @@
         </li>
       </ul>
 
-      <!-- Mobile Menu Button -->
       <button id="menuBtn" class="md:hidden text-3xl text-gray-800 transition-transform active:scale-90">
         ☰
       </button>
@@ -46,7 +43,6 @@
     </nav>
   </div>
 
-  <!-- Mobile Dropdown Menu (same) -->
   <div id="mobileMenu"
     class="md:hidden overflow-hidden max-h-0 bg-white transition-all duration-500 ease-in-out shadow-lg">
 
@@ -71,18 +67,16 @@
   </div>
 </header>
 
-<!-- section start -->
+<!-- SECTION -->
 <section class="py-20 mt-10">
   <div class="max-w-5xl mx-auto px-6">
 
     <div class="bg-white rounded-2xl shadow-lg p-8">
 
-      <!-- Title -->
       <h1 class="text-3xl font-bold text-gray-900 mb-6">
         🛒 Grocery Shopping Guide for Healthy Eating
       </h1>
 
-      <!-- Intro -->
       <p class="text-gray-700 mb-6 leading-relaxed">
         Healthy eating starts at the grocery store. Making smart choices while shopping 
         ensures that you bring home nutritious ingredients that support your health goals.
@@ -93,189 +87,98 @@
         and build a balanced diet effortlessly.
       </p>
 
-      <!-- Section 1 -->
-       <!-- Button -->
-    <button onclick="toggleTips(this)" 
-      class="mb-6 px-6 py-2 bg-[#6AA84F] text-white rounded-full hover:bg-green-700 transition">
-      Read More
-    </button>
-
-    <!-- Hidden Content -->
-<div id="tipsContent" class="hidden space-y-6">
+      <!-- CONTENT (always visible now) -->
+      <div id="tipsContent" class="space-y-6">
 
   <div class="flex flex-col md:flex-row gap-4 items-center mb-6">
-    <img src="/images/wholegrains.jpg" 
-         class="w-full md:w-[180px] h-[130px] object-cover rounded-lg flex-shrink-0">
+    <img src="/images/wholegrains.jpg" class="w-full md:w-[180px] h-[130px] object-cover rounded-lg flex-shrink-0">
     <div>
       <h3 class="text-lg font-semibold text-[#6AA84F] mb-2">🥦 Choose Fresh & Whole Foods</h3>
-      <p class="text-gray-600 text-sm">
-        Focus on fresh fruits, vegetables, and whole grains instead of processed foods.
-      </p>
+      <p class="text-gray-600 text-sm">Focus on fresh fruits, vegetables, and whole grains instead of processed foods.</p>
     </div>
   </div>
 
   <div class="flex flex-col md:flex-row gap-4 items-center mb-6">
-    <img src="/images/leanprotein.jpg" 
-         class="w-full md:w-[180px] h-[130px] object-cover rounded-lg flex-shrink-0">
+    <img src="/images/leanprotein.jpg" class="w-full md:w-[180px] h-[130px] object-cover rounded-lg flex-shrink-0">
     <div>
       <h3 class="text-lg font-semibold text-[#6AA84F] mb-2">🍗 Pick Lean Proteins</h3>
-      <p class="text-gray-600 text-sm">
-        Include pulses, eggs, dairy, and lean meats for muscle repair and satiety.
-      </p>
+      <p class="text-gray-600 text-sm">Include pulses, eggs, dairy, and lean meats for muscle repair and satiety.</p>
     </div>
   </div>
 
   <div class="flex flex-col md:flex-row gap-4 items-center mb-6">
-    <img src="/images/nuts.jpg" 
-         class="w-full md:w-[180px] h-[130px] object-cover rounded-lg flex-shrink-0">
+    <img src="/images/nuts.jpg" class="w-full md:w-[180px] h-[130px] object-cover rounded-lg flex-shrink-0">
     <div>
       <h3 class="text-lg font-semibold text-[#6AA84F] mb-2">🥑 Include Healthy Fats</h3>
-      <p class="text-gray-600 text-sm">
-        Choose nuts, seeds, and healthy oils for heart health.
-      </p>
+      <p class="text-gray-600 text-sm">Choose nuts, seeds, and healthy oils for heart health.</p>
     </div>
   </div>
 
   <div class="flex flex-col md:flex-row gap-4 items-center mb-6">
-    <img src="/images/maggie.jpg" 
-         class="w-full md:w-[180px] h-[130px] object-cover rounded-lg flex-shrink-0">
+    <img src="/images/maggie.jpg" class="w-full md:w-[180px] h-[130px] object-cover rounded-lg flex-shrink-0">
     <div>
       <h3 class="text-lg font-semibold text-[#6AA84F] mb-2">📦 Read Food Labels</h3>
-      <p class="text-gray-600 text-sm">
-        Check ingredients and avoid excess sugar and preservatives.
-      </p>
+      <p class="text-gray-600 text-sm">Check ingredients and avoid excess sugar and preservatives.</p>
     </div>
-</div>
+  </div>
 
   <div class="flex flex-col md:flex-row gap-4 items-center mb-6">
-    <img src="/images/plan.jpg" 
-         class="w-full md:w-[180px] h-[130px] object-cover rounded-lg flex-shrink-0">
+    <img src="/images/plan.jpg" class="w-full md:w-[180px] h-[130px] object-cover rounded-lg flex-shrink-0">
     <div>
       <h3 class="text-lg font-semibold text-[#6AA84F] mb-2">📝 Plan Before You Shop</h3>
-      <p class="text-gray-600 text-sm">
-        Create a grocery list to avoid impulse buying.
-      </p>
+      <p class="text-gray-600 text-sm">Create a grocery list to avoid impulse buying.</p>
     </div>
   </div>
 
   <div class="flex flex-col md:flex-row gap-4 items-center mb-6">
-    <img src="/images/processedfood.jpg" 
-         class="w-full md:w-[180px] h-[130px] object-cover rounded-lg flex-shrink-0">
+    <img src="/images/processedfood.jpg" class="w-full md:w-[180px] h-[130px] object-cover rounded-lg flex-shrink-0">
     <div>
       <h3 class="text-lg font-semibold text-[#6AA84F] mb-2">🚫 Limit Processed Foods</h3>
-      <p class="text-gray-600 text-sm">
-        Reduce packaged snacks and sugary drinks for better health.
-      </p>
+      <p class="text-gray-600 text-sm">Reduce packaged snacks and sugary drinks for better health.</p>
     </div>
   </div>
 
-  <!-- Conclusion -->
   <div class="mt-10 pt-6 border-t">
-    <p class="text-gray-700">
-      Smart grocery shopping is the first step toward a healthier lifestyle.
-    </p>
-
-    <p class="mt-4 text-[#6AA84F] font-medium">
-      👉 Eat healthy, shop smart, and stay fit!
-    </p>
+    <p class="text-gray-700">Smart grocery shopping is the first step toward a healthier lifestyle.</p>
+    <p class="mt-4 text-[#6AA84F] font-medium">👉 Eat healthy, shop smart, and stay fit!</p>
   </div>
 
 </div>
-
-  </div>
-
-  <!-- Script -->
-  <script>
-    function toggleTips(btn) {
-      const content = document.getElementById("tipsContent");
-
-      if (content.classList.contains("hidden")) {
-        content.classList.remove("hidden");
-        btn.innerText = "Show Less";
-      } else {
-        content.classList.add("hidden");
-        btn.innerText = "Read More";
-      }
-    }
-  </script>
-
 
     </div>
 
   </div>
 </section>
 
-
-
-<!-- FOOTER (with icons animation) -->
+<!-- FOOTER -->
 <footer id="footer" class="text-white py-16 bg-gray-50">
   <div class="max-w-7xl mx-auto px-5 grid md:grid-cols-3 gap-10">
-    <div data-aos="fade-right">
-      <a href="#top">
-        <img src="/images/nutriexpertlogo.jpeg" loading="lazy" alt="NutriXpert Logo" class="h-20 mb-4 cursor-pointer transition-transform hover:scale-110">
-      </a>
+    <div>
+      <img src="/images/nutriexpertlogo.jpeg" class="h-20 mb-4">
       <p class="text-gray-700">Evidence-based personalized nutrition therapy.</p>
     </div>
-    <div data-aos="fade-up">
-      <h4 class="font-semibold mb-4 text-orange-400">Quick Links</h4>
-      <ul class="space-y-2 text-[#6AA84F]">
-        <li><a href="#home" class="hover:text-orange-400 transition flex items-center gap-2"><i class="fas fa-chevron-right text-xs"></i>Home</a></li>
-        <li><a href="#about" class="hover:text-orange-400 transition flex items-center gap-2"><i class="fas fa-chevron-right text-xs"></i>About</a></li>
-        <li><a href="#services" class="hover:text-orange-400 transition flex items-center gap-2"><i class="fas fa-chevron-right text-xs"></i>Services</a></li>
+
+    <div>
+      <h4 class="text-orange-400 mb-4">Quick Links</h4>
+      <ul class="text-[#6AA84F]">
+        <li>Home</li>
+        <li>About</li>
+        <li>Services</li>
       </ul>
     </div>
-    <div class="text-[#6AA84F]" data-aos="fade-left">
-      <h4 class="font-semibold mb-4 text-orange-400">Contact</h4>
+
+    <div class="text-[#6AA84F]">
+      <h4 class="text-orange-400 mb-4">Contact</h4>
       <p>Thane, Maharashtra</p>
-      <p><a href="https://wa.me/919834809686" target="_blank" class="hover:text-orange-400 transition inline-flex items-center gap-2"><i class="fab fa-whatsapp"></i> 9834809686</a></p>
-      <a href="mailto:care.nutrixpert@gmail.com" class="hover:text-orange-400 transition inline-flex items-center gap-2"><i class="far fa-envelope"></i> care.nutrixpert@gmail.com</a>
+      <p>9834809686</p>
+      <p>care.nutrixpert@gmail.com</p>
     </div>
   </div>
-  <div class="text-center mt-10 border-t border-white/20 pt-6 text-sm text-gray-600">
-    © 2025 Nutri-Xpert. All rights reserved.
+
+  <div class="text-center mt-10 text-gray-600">
+    © 2025 Nutri-Xpert
   </div>
 </footer>
 
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init({
-    duration: 800,
-    once: false,
-    mirror: true,
-    offset: 40
-  });
-
-  // Mobile menu logic (unchanged)
-  const menuBtn = document.getElementById("menuBtn");
-const mobileMenu = document.getElementById("mobileMenu");
-
-let isOpen = false;
-
-function openMenu() {
-  mobileMenu.style.maxHeight = mobileMenu.scrollHeight + "px";
-  isOpen = true;
-}
-
-function closeMenu() {
-  mobileMenu.style.maxHeight = "0px";
-  isOpen = false;
-}
-
-menuBtn.addEventListener("click", () => {
-  if (isOpen) {
-    closeMenu();
-  } else {
-    openMenu();
-  }
-});
-
-document.querySelectorAll(".mobile-link").forEach(link => {
-  link.addEventListener("click", closeMenu);
-});
-  window.addEventListener("scroll", () => {
-    if (window.innerWidth < 768 && isOpen) closeMenu();
-  });
-</script>
-    
 </body>
 </html>

@@ -10,17 +10,15 @@
 </head>
 <body>
 
-    <!-- HEADER (no animation changes, just sticky) -->
+<!-- HEADER -->
 <header class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
   <div class="max-w-7xl mx-auto px-5">
     <nav class="flex justify-between items-center py-4">
 
-      <!-- Logo (tiny pulse on hover) -->
       <a href="./index.html" class="transition-transform hover:scale-105 duration-200">
         <img src="/images/nutriexpertlogo.jpeg" loading="lazy" alt="NutriXpert Logo" class="h-[60px] cursor-pointer">
       </a>
 
-      <!-- Desktop Menu -->
       <ul class="hidden md:flex space-x-8 font-medium text-[#E67E22] items-center">
         <li><a href="./index.html" class="hover:text-[#6AA84F] transition-colors duration-200">Home</a></li>
         <li><a href="/index.html" class="hover:text-[#6AA84F] transition-colors">About</a></li>
@@ -29,7 +27,6 @@
         <li><a href="/experience.html" class="hover:text-[#6AA84F] transition-colors">Experience</a></li>
         <li><a href="#footer" class="hover:text-[#6AA84F] transition-colors">Contact</a></li>
 
-        <!-- Book Button (Desktop) -->
         <li>
           <a href="#contact"
             class="bg-[#6AA84F] text-white px-5 py-2 rounded-full hover:bg-transparent 
@@ -39,7 +36,6 @@
         </li>
       </ul>
 
-      <!-- Mobile Menu Button -->
       <button id="menuBtn" class="md:hidden text-3xl text-gray-800 transition-transform active:scale-90">
         ☰
       </button>
@@ -47,7 +43,6 @@
     </nav>
   </div>
 
-  <!-- Mobile Dropdown Menu (same) -->
   <div id="mobileMenu"
     class="md:hidden overflow-hidden max-h-0 bg-white transition-all duration-500 ease-in-out shadow-lg">
 
@@ -60,30 +55,28 @@
       <a href="#footer" class="mobile-link hover:translate-x-2">Contact</a>
 
       <a href="#contact"
-  class="mobile-link inline-block w-fit mx-auto px-6 py-2 text-sm font-semibold 
-         bg-[#E67E22] hover:bg-transparent hover:text-primary border-2 border-primary
-         text-white rounded-full 
-         shadow-md hover:shadow-lg 
-         hover:scale-105 
-         transition duration-300 ease-in-out">
-  Book Consultation
-</a>
+        class="mobile-link inline-block w-fit mx-auto px-6 py-2 text-sm font-semibold 
+        bg-[#E67E22] hover:bg-transparent hover:text-primary border-2 border-primary
+        text-white rounded-full 
+        shadow-md hover:shadow-lg 
+        hover:scale-105 
+        transition duration-300 ease-in-out">
+        Book Consultation
+      </a>
     </div>
   </div>
 </header>
 
-<!-- <section start -->
+<!-- SECTION -->
 <section class="py-20 mt-10">
   <div class="max-w-5xl mx-auto px-6">
 
     <div class="bg-white rounded-2xl shadow-lg p-8">
 
-      <!-- Title -->
       <h1 class="text-3xl font-bold text-gray-900 mb-6">
         🔥 Understanding Calories, Protein, Carbs & Fats
       </h1>
 
-      <!-- Intro -->
       <p class="text-gray-700 mb-6 leading-relaxed">
         To maintain a healthy lifestyle, it’s important to understand how your body gets and uses energy. 
         Calories and macronutrients—protein, carbohydrates, and fats—are the building blocks of your diet.
@@ -93,164 +86,95 @@
         Each nutrient has a unique role in supporting body functions, growth, and overall well-being.
       </p>
 
-      <!-- Button -->
-    <button onclick="toggleMacro(this)" 
-      class="mb-6 px-6 py-2 bg-[#6AA84F] text-white rounded-full hover:bg-green-700 transition">
-      Read More
-    </button>
+      <!-- CONTENT ALWAYS VISIBLE -->
+      <div id="macroContent">
 
-    <!-- Hidden Content -->
-   <div id="macroContent" class="hidden">
+        <div class="mb-6 flex flex-col md:flex-row gap-4 items-center md:items-start">
+          <img src="/images/calories.jpg" class="w-24 h-24 object-cover rounded-xl shadow-md flex-shrink-0">
+          <div>
+            <h3 class="text-lg font-semibold text-[#6AA84F] mb-2">🔥 What Are Calories?</h3>
+            <p class="text-gray-600 text-sm">
+              Calories are units of energy your body uses for daily activities like breathing and movement.
+            </p>
+          </div>
+        </div>
 
-  <!-- Calories -->
-  <div class="mb-6 flex flex-col md:flex-row gap-4 items-center md:items-start">
-    
-    <img src="/images/calories.jpg" 
-         loading="lazy"
-         class="w-24 h-24 object-cover rounded-xl shadow-md flex-shrink-0">
+        <div class="mb-6 flex flex-col md:flex-row gap-4 items-center md:items-start">
+          <img src="/images/protien.jpg" class="w-24 h-24 object-cover rounded-xl shadow-md flex-shrink-0">
+          <div>
+            <h3 class="text-lg font-semibold text-[#6AA84F] mb-2">💪 Protein</h3>
+            <p class="text-gray-600 text-sm">
+              Protein helps in building and repairing tissues and supports immunity.
+            </p>
+          </div>
+        </div>
 
-    <div>
-      <h3 class="text-lg font-semibold text-[#6AA84F] mb-2">🔥 What Are Calories?</h3>
-      <p class="text-gray-600 text-sm">
-        Calories are units of energy your body uses for daily activities like breathing and movement.
-      </p>
+        <div class="mb-6 flex flex-col md:flex-row gap-4 items-center md:items-start">
+          <img src="/images/carbohydrates.jpg" class="w-24 h-24 object-cover rounded-xl shadow-md flex-shrink-0">
+          <div>
+            <h3 class="text-lg font-semibold text-[#6AA84F] mb-2">🍞 Carbohydrates</h3>
+            <p class="text-gray-600 text-sm">
+              Carbohydrates are the main energy source. Choose whole grains and fruits.
+            </p>
+          </div>
+        </div>
+
+        <div class="mb-6 flex flex-col md:flex-row gap-4 items-center md:items-start">
+          <img src="/images/fats.jpg" class="w-24 h-24 object-cover rounded-xl shadow-md flex-shrink-0">
+          <div>
+            <h3 class="text-lg font-semibold text-[#6AA84F] mb-2">🥑 Fats</h3>
+            <p class="text-gray-600 text-sm">
+              Healthy fats support brain and hormone function.
+            </p>
+          </div>
+        </div>
+
+        <div class="mb-6 flex flex-col md:flex-row gap-4 items-center md:items-start">
+          <img src="/images/balancediet.jpg" class="w-24 h-24 object-cover rounded-xl shadow-md flex-shrink-0">
+          <div>
+            <h3 class="text-lg font-semibold text-[#6AA84F] mb-2">⚖️ Importance of Balance</h3>
+            <p class="text-gray-600 text-sm">
+              A balanced diet includes proper proportions of all nutrients.
+            </p>
+          </div>
+        </div>
+
+        <div class="mt-10 pt-6 border-t">
+          <p class="text-gray-700">
+            Understanding macronutrients helps you make better food choices.
+          </p>
+
+          <p class="mt-4 text-[#6AA84F] font-medium">
+            👉 Balance your plate for better health!
+          </p>
+        </div>
+
+      </div>
+
     </div>
-  </div>
-
-  <!-- Protein -->
-  <div class="mb-6 flex flex-col md:flex-row gap-4 items-center md:items-start">
-    
-    <img src="/images/protien.jpg" 
-         loading="lazy"
-         class="w-24 h-24 object-cover rounded-xl shadow-md flex-shrink-0">
-
-    <div>
-      <h3 class="text-lg font-semibold text-[#6AA84F] mb-2">💪 Protein</h3>
-      <p class="text-gray-600 text-sm">
-        Protein helps in building and repairing tissues and supports immunity.
-      </p>
-    </div>
-  </div>
-
-  <!-- Carbohydrates -->
-  <div class="mb-6 flex flex-col md:flex-row gap-4 items-center md:items-start">
-    
-    <img src="/images/carbohydrates.jpg" 
-         loading="lazy"
-         class="w-24 h-24 object-cover rounded-xl shadow-md flex-shrink-0">
-
-    <div>
-      <h3 class="text-lg font-semibold text-[#6AA84F] mb-2">🍞 Carbohydrates</h3>
-      <p class="text-gray-600 text-sm">
-        Carbohydrates are the main energy source. Choose whole grains and fruits.
-      </p>
-    </div>
-  </div>
-
-  <!-- Fats -->
-  <div class="mb-6 flex flex-col md:flex-row gap-4 items-center md:items-start">
-    
-    <img src="/images/fats.jpg" 
-         loading="lazy"
-         class="w-24 h-24 object-cover rounded-xl shadow-md flex-shrink-0">
-
-    <div>
-      <h3 class="text-lg font-semibold text-[#6AA84F] mb-2">🥑 Fats</h3>
-      <p class="text-gray-600 text-sm">
-        Healthy fats support brain and hormone function.
-      </p>
-    </div>
-  </div>
-
-  <!-- Balance -->
-  <div class="mb-6 flex flex-col md:flex-row gap-4 items-center md:items-start">
-    
-    <img src="/images/balancediet.jpg" 
-         loading="lazy"
-         class="w-24 h-24 object-cover rounded-xl shadow-md flex-shrink-0">
-
-    <div>
-      <h3 class="text-lg font-semibold text-[#6AA84F] mb-2">⚖️ Importance of Balance</h3>
-      <p class="text-gray-600 text-sm">
-        A balanced diet includes proper proportions of all nutrients.
-      </p>
-    </div>
-  </div>
-
-  <!-- Conclusion -->
-  <div class="mt-10 pt-6 border-t">
-    <p class="text-gray-700">
-      Understanding macronutrients helps you make better food choices.
-    </p>
-
-    <p class="mt-4 text-[#6AA84F] font-medium">
-      👉 Balance your plate for better health!
-    </p>
-  </div>
-
-</div>
-
-  </div>
-
-  <!-- Script -->
-  <script>
-    function toggleMacro(btn) {
-      const content = document.getElementById("macroContent");
-
-      if (content.classList.contains("hidden")) {
-        content.classList.remove("hidden");
-        btn.innerText = "Show Less";
-      } else {
-        content.classList.add("hidden");
-        btn.innerText = "Read More";
-      }
-    }
-  </script>
-
-
   </div>
 </section>
-    
-    <!-- FOOTER (with icons animation) -->
+
+<!-- FOOTER -->
 <footer id="footer" class="text-white py-16 bg-gray-50">
   <div class="max-w-7xl mx-auto px-5 grid md:grid-cols-3 gap-10">
     <div data-aos="fade-right">
-      <a href="#top">
-        <img src="/images/nutriexpertlogo.jpeg" loading="lazy" alt="NutriXpert Logo" class="h-20 mb-4 cursor-pointer transition-transform hover:scale-110">
-      </a>
+      <img src="/images/nutriexpertlogo.jpeg" class="h-20 mb-4">
       <p class="text-gray-700">Evidence-based personalized nutrition therapy.</p>
     </div>
-    <div data-aos="fade-up">
-      <h4 class="font-semibold mb-4 text-orange-400">Quick Links</h4>
-      <ul class="space-y-2 text-[#6AA84F]">
-        <li><a href="#home" class="hover:text-orange-400 transition flex items-center gap-2"><i class="fas fa-chevron-right text-xs"></i>Home</a></li>
-        <li><a href="#about" class="hover:text-orange-400 transition flex items-center gap-2"><i class="fas fa-chevron-right text-xs"></i>About</a></li>
-        <li><a href="#services" class="hover:text-orange-400 transition flex items-center gap-2"><i class="fas fa-chevron-right text-xs"></i>Services</a></li>
-      </ul>
-    </div>
-    <div class="text-[#6AA84F]" data-aos="fade-left">
-      <h4 class="font-semibold mb-4 text-orange-400">Contact</h4>
-      <p>Thane, Maharashtra</p>
-      <p><a href="https://wa.me/919834809686" target="_blank" class="hover:text-orange-400 transition inline-flex items-center gap-2"><i class="fab fa-whatsapp"></i> 9834809686</a></p>
-      <a href="mailto:care.nutrixpert@gmail.com" class="hover:text-orange-400 transition inline-flex items-center gap-2"><i class="far fa-envelope"></i> care.nutrixpert@gmail.com</a>
-    </div>
-  </div>
-  <div class="text-center mt-10 border-t border-white/20 pt-6 text-sm text-gray-600">
-    © 2025 Nutri-Xpert. All rights reserved.
   </div>
 </footer>
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
-  AOS.init({
-    duration: 800,
-    once: false,
-    mirror: true,
-    offset: 40
-  });
+AOS.init({
+  duration: 800,
+  once: false,
+  mirror: true,
+  offset: 40
+});
 
-  // Mobile menu logic (unchanged)
-  const menuBtn = document.getElementById("menuBtn");
+const menuBtn = document.getElementById("menuBtn");
 const mobileMenu = document.getElementById("mobileMenu");
 
 let isOpen = false;
@@ -276,9 +200,11 @@ menuBtn.addEventListener("click", () => {
 document.querySelectorAll(".mobile-link").forEach(link => {
   link.addEventListener("click", closeMenu);
 });
-  window.addEventListener("scroll", () => {
-    if (window.innerWidth < 768 && isOpen) closeMenu();
-  });
+
+window.addEventListener("scroll", () => {
+  if (window.innerWidth < 768 && isOpen) closeMenu();
+});
 </script>
+
 </body>
 </html>

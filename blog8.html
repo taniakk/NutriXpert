@@ -7,17 +7,16 @@
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
- <!-- HEADER (no animation changes, just sticky) -->
+
+<!-- HEADER (no animation changes, just sticky) -->
 <header class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
   <div class="max-w-7xl mx-auto px-5">
     <nav class="flex justify-between items-center py-4">
 
-      <!-- Logo (tiny pulse on hover) -->
       <a href="./index.html" class="transition-transform hover:scale-105 duration-200">
         <img src="/images/nutriexpertlogo.jpeg" loading="lazy" alt="NutriXpert Logo" class="h-[60px] cursor-pointer">
       </a>
 
-      <!-- Desktop Menu -->
       <ul class="hidden md:flex space-x-8 font-medium text-[#E67E22] items-center">
         <li><a href="./index.html" class="hover:text-[#6AA84F] transition-colors duration-200">Home</a></li>
         <li><a href="/index.html" class="hover:text-[#6AA84F] transition-colors">About</a></li>
@@ -26,7 +25,6 @@
         <li><a href="/experience.html" class="hover:text-[#6AA84F] transition-colors">Experience</a></li>
         <li><a href="#footer" class="hover:text-[#6AA84F] transition-colors">Contact</a></li>
 
-        <!-- Book Button (Desktop) -->
         <li>
           <a href="#contact"
             class="bg-[#6AA84F] text-white px-5 py-2 rounded-full hover:bg-transparent 
@@ -36,7 +34,6 @@
         </li>
       </ul>
 
-      <!-- Mobile Menu Button -->
       <button id="menuBtn" class="md:hidden text-3xl text-gray-800 transition-transform active:scale-90">
         ☰
       </button>
@@ -44,7 +41,6 @@
     </nav>
   </div>
 
-  <!-- Mobile Dropdown Menu (same) -->
   <div id="mobileMenu"
     class="md:hidden overflow-hidden max-h-0 bg-white transition-all duration-500 ease-in-out shadow-lg">
 
@@ -76,12 +72,10 @@
 
     <div class="bg-white rounded-2xl shadow-lg p-8">
 
-      <!-- Title -->
       <h1 class="text-3xl font-bold text-gray-900 mb-6">
         💧 Importance of Hydration
       </h1>
 
-      <!-- Intro -->
       <p class="text-gray-700 mb-6 leading-relaxed">
         Water is one of the most essential nutrients for the human body. Staying hydrated 
         plays a crucial role in maintaining overall health, supporting bodily functions, 
@@ -93,228 +87,126 @@
         Making hydration a daily habit is key to a healthy lifestyle.
       </p>
 
-   <!-- Button -->
-    <button onclick="toggleHydration(this)" 
-      class="mb-6 px-6 py-2 bg-[#6AA84F] text-white rounded-full hover:bg-green-700 transition">
-      Read More
-    </button>
+      <!-- Content always visible -->
+      <div id="hydrationContent">
 
-    <!-- Hidden Content -->
-  <div id="hydrationContent" class="hidden">
+        <div class="mb-6 flex flex-col md:flex-row gap-4 items-center md:items-start">
+          <img src="/images/boostenergy.jpg" loading="lazy"
+               class="w-24 h-24 object-cover rounded-xl shadow-md flex-shrink-0">
+          <div>
+            <h3 class="text-lg font-semibold text-[#6AA84F] mb-2">⚡ Boosts Energy Levels</h3>
+            <p class="text-gray-600 text-sm">
+              Proper hydration helps maintain energy and prevents fatigue.
+            </p>
+          </div>
+        </div>
 
-  <!-- Section 1 -->
-  <div class="mb-6 flex flex-col md:flex-row gap-4 items-center md:items-start">
-    
-    <img src="/images/boostenergy.jpg" 
-         loading="lazy"
-         class="w-24 h-24 object-cover rounded-xl shadow-md flex-shrink-0">
+        <div class="mb-6 flex flex-col md:flex-row gap-4 items-center md:items-start">
+          <img src="/images/acidity.jpg" loading="lazy"
+               class="w-24 h-24 object-cover rounded-xl shadow-md flex-shrink-0">
+          <div>
+            <h3 class="text-lg font-semibold text-[#6AA84F] mb-2">🍽️ Supports Digestion</h3>
+            <p class="text-gray-600 text-sm">
+              Water aids digestion and prevents constipation and acidity.
+            </p>
+          </div>
+        </div>
 
-    <div>
-      <h3 class="text-lg font-semibold text-[#6AA84F] mb-2">⚡ Boosts Energy Levels</h3>
-      <p class="text-gray-600 text-sm">
-        Proper hydration helps maintain energy and prevents fatigue.
-      </p>
-    </div>
-  </div>
+        <div class="mb-6 flex flex-col md:flex-row gap-4 items-center md:items-start">
+          <img src="/images/heat.jpg" loading="lazy"
+               class="w-24 h-24 object-cover rounded-xl shadow-md flex-shrink-0">
+          <div>
+            <h3 class="text-lg font-semibold text-[#6AA84F] mb-2">🌡️ Regulates Body Temperature</h3>
+            <p class="text-gray-600 text-sm">
+              Helps control body temperature during activity and heat.
+            </p>
+          </div>
+        </div>
 
-  <!-- Section 2 -->
-  <div class="mb-6 flex flex-col md:flex-row gap-4 items-center md:items-start">
-    
-    <img src="/images/acidity.jpg" 
-         loading="lazy"
-         class="w-24 h-24 object-cover rounded-xl shadow-md flex-shrink-0">
+        <div class="mb-6 flex flex-col md:flex-row gap-4 items-center md:items-start">
+          <img src="/images/mentalhealth.jpg" loading="lazy"
+               class="w-24 h-24 object-cover rounded-xl shadow-md flex-shrink-0">
+          <div>
+            <h3 class="text-lg font-semibold text-[#6AA84F] mb-2">🧠 Improves Mental Performance</h3>
+            <p class="text-gray-600 text-sm">
+              Improves focus, concentration, and cognitive function.
+            </p>
+          </div>
+        </div>
 
-    <div>
-      <h3 class="text-lg font-semibold text-[#6AA84F] mb-2">🍽️ Supports Digestion</h3>
-      <p class="text-gray-600 text-sm">
-        Water aids digestion and prevents constipation and acidity.
-      </p>
-    </div>
-  </div>
+        <div class="mb-6 flex flex-col md:flex-row gap-4 items-center md:items-start">
+          <img src="/images/cramps.jpg" loading="lazy"
+               class="w-24 h-24 object-cover rounded-xl shadow-md flex-shrink-0">
+          <div>
+            <h3 class="text-lg font-semibold text-[#6AA84F] mb-2">💪 Supports Physical Performance</h3>
+            <p class="text-gray-600 text-sm">
+              Enhances endurance and reduces fatigue and cramps.
+            </p>
+          </div>
+        </div>
 
-  <!-- Section 3 -->
-  <div class="mb-6 flex flex-col md:flex-row gap-4 items-center md:items-start">
-    
-    <img src="/images/heat.jpg" 
-         loading="lazy"
-         class="w-24 h-24 object-cover rounded-xl shadow-md flex-shrink-0">
+        <div class="mb-6 flex flex-col md:flex-row gap-4 items-center md:items-start">
+          <img src="/images/healthyskin.jpg" loading="lazy"
+               class="w-24 h-24 object-cover rounded-xl shadow-md flex-shrink-0">
+          <div>
+            <h3 class="text-lg font-semibold text-[#6AA84F] mb-2">✨ Promotes Healthy Skin</h3>
+            <p class="text-gray-600 text-sm">
+              Keeps skin hydrated and improves natural glow.
+            </p>
+          </div>
+        </div>
 
-    <div>
-      <h3 class="text-lg font-semibold text-[#6AA84F] mb-2">🌡️ Regulates Body Temperature</h3>
-      <p class="text-gray-600 text-sm">
-        Helps control body temperature during activity and heat.
-      </p>
-    </div>
-  </div>
+        <div class="mb-6 flex flex-col md:flex-row gap-4 items-center md:items-start">
+          <img src="https://images.unsplash.com/photo-1523362628745-0c100150b504" loading="lazy"
+               class="w-24 h-24 object-cover rounded-xl shadow-md flex-shrink-0">
+          <div>
+            <h3 class="text-lg font-semibold text-[#6AA84F] mb-2">💡 Hydration Tips</h3>
+            <ul class="list-disc ml-5 text-gray-600 text-sm">
+              <li>Drink 7–8 glasses of water daily</li>
+              <li>Carry a water bottle</li>
+              <li>Eat water-rich fruits</li>
+              <li>Increase intake during heat/exercise</li>
+            </ul>
+          </div>
+        </div>
 
-  <!-- Section 4 -->
-  <div class="mb-6 flex flex-col md:flex-row gap-4 items-center md:items-start">
-    
-    <img src="/images/mentalhealth.jpg" 
-         loading="lazy"
-         class="w-24 h-24 object-cover rounded-xl shadow-md flex-shrink-0">
+        <div class="mt-10 pt-6 border-t">
+          <p class="text-gray-700">
+            Staying hydrated is a simple yet powerful way to maintain health.
+          </p>
 
-    <div>
-      <h3 class="text-lg font-semibold text-[#6AA84F] mb-2">🧠 Improves Mental Performance</h3>
-      <p class="text-gray-600 text-sm">
-        Improves focus, concentration, and cognitive function.
-      </p>
-    </div>
-  </div>
+          <p class="mt-4 text-[#6AA84F] font-medium">
+            👉 Stay hydrated, stay healthy!
+          </p>
+        </div>
 
-  <!-- Section 5 -->
-  <div class="mb-6 flex flex-col md:flex-row gap-4 items-center md:items-start">
-    
-    <img src="/images/cramps.jpg" 
-         loading="lazy"
-         class="w-24 h-24 object-cover rounded-xl shadow-md flex-shrink-0">
-
-    <div>
-      <h3 class="text-lg font-semibold text-[#6AA84F] mb-2">💪 Supports Physical Performance</h3>
-      <p class="text-gray-600 text-sm">
-        Enhances endurance and reduces fatigue and cramps.
-      </p>
-    </div>
-  </div>
-
-  <!-- Section 6 -->
-  <div class="mb-6 flex flex-col md:flex-row gap-4 items-center md:items-start">
-    
-    <img src="/images/healthyskin.jpg" 
-         loading="lazy"
-         class="w-24 h-24 object-cover rounded-xl shadow-md flex-shrink-0">
-
-    <div>
-      <h3 class="text-lg font-semibold text-[#6AA84F] mb-2">✨ Promotes Healthy Skin</h3>
-      <p class="text-gray-600 text-sm">
-        Keeps skin hydrated and improves natural glow.
-      </p>
-    </div>
-  </div>
-
-  <!-- Tips -->
-  <div class="mb-6 flex flex-col md:flex-row gap-4 items-center md:items-start">
-    
-    <img src="https://images.unsplash.com/photo-1523362628745-0c100150b504" 
-         loading="lazy"
-         class="w-24 h-24 object-cover rounded-xl shadow-md flex-shrink-0">
-
-    <div>
-      <h3 class="text-lg font-semibold text-[#6AA84F] mb-2">💡 Hydration Tips</h3>
-      <ul class="list-disc ml-5 text-gray-600 text-sm">
-        <li>Drink 7–8 glasses of water daily</li>
-        <li>Carry a water bottle</li>
-        <li>Eat water-rich fruits</li>
-        <li>Increase intake during heat/exercise</li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- Conclusion -->
-  <div class="mt-10 pt-6 border-t">
-    <p class="text-gray-700">
-      Staying hydrated is a simple yet powerful way to maintain health.
-    </p>
-
-    <p class="mt-4 text-[#6AA84F] font-medium">
-      👉 Stay hydrated, stay healthy!
-    </p>
-  </div>
-
-</div>
-
-  </div>
-
-  <!-- Script -->
-  <script>
-    function toggleHydration(btn) {
-      const content = document.getElementById("hydrationContent");
-
-      if (content.classList.contains("hidden")) {
-        content.classList.remove("hidden");
-        btn.innerText = "Show Less";
-      } else {
-        content.classList.add("hidden");
-        btn.innerText = "Read More";
-      }
-    }
-  </script>
+      </div>
 
     </div>
-
   </div>
 </section>
 
-
-
-<!-- FOOTER (with icons animation) -->
+<!-- FOOTER -->
 <footer id="footer" class="text-white py-16 bg-gray-50">
   <div class="max-w-7xl mx-auto px-5 grid md:grid-cols-3 gap-10">
-    <div data-aos="fade-right">
-      <a href="#top">
-        <img src="/images/nutriexpertlogo.jpeg" loading="lazy" alt="NutriXpert Logo" class="h-20 mb-4 cursor-pointer transition-transform hover:scale-110">
-      </a>
+    <div>
+      <img src="/images/nutriexpertlogo.jpeg" class="h-20 mb-4">
       <p class="text-gray-700">Evidence-based personalized nutrition therapy.</p>
     </div>
-    <div data-aos="fade-up">
-      <h4 class="font-semibold mb-4 text-orange-400">Quick Links</h4>
-      <ul class="space-y-2 text-[#6AA84F]">
-        <li><a href="#home" class="hover:text-orange-400 transition flex items-center gap-2"><i class="fas fa-chevron-right text-xs"></i>Home</a></li>
-        <li><a href="#about" class="hover:text-orange-400 transition flex items-center gap-2"><i class="fas fa-chevron-right text-xs"></i>About</a></li>
-        <li><a href="#services" class="hover:text-orange-400 transition flex items-center gap-2"><i class="fas fa-chevron-right text-xs"></i>Services</a></li>
-      </ul>
-    </div>
-    <div class="text-[#6AA84F]" data-aos="fade-left">
-      <h4 class="font-semibold mb-4 text-orange-400">Contact</h4>
-      <p>Thane, Maharashtra</p>
-      <p><a href="https://wa.me/919834809686" target="_blank" class="hover:text-orange-400 transition inline-flex items-center gap-2"><i class="fab fa-whatsapp"></i> 9834809686</a></p>
-      <a href="mailto:care.nutrixpert@gmail.com" class="hover:text-orange-400 transition inline-flex items-center gap-2"><i class="far fa-envelope"></i> care.nutrixpert@gmail.com</a>
-    </div>
-  </div>
-  <div class="text-center mt-10 border-t border-white/20 pt-6 text-sm text-gray-600">
-    © 2025 Nutri-Xpert. All rights reserved.
   </div>
 </footer>
 
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
-  AOS.init({
-    duration: 800,
-    once: false,
-    mirror: true,
-    offset: 40
-  });
-
-  // Mobile menu logic (unchanged)
-  const menuBtn = document.getElementById("menuBtn");
+const menuBtn = document.getElementById("menuBtn");
 const mobileMenu = document.getElementById("mobileMenu");
 
 let isOpen = false;
 
-function openMenu() {
-  mobileMenu.style.maxHeight = mobileMenu.scrollHeight + "px";
-  isOpen = true;
-}
-
-function closeMenu() {
-  mobileMenu.style.maxHeight = "0px";
-  isOpen = false;
-}
-
 menuBtn.addEventListener("click", () => {
-  if (isOpen) {
-    closeMenu();
-  } else {
-    openMenu();
-  }
+  mobileMenu.style.maxHeight = isOpen ? "0px" : mobileMenu.scrollHeight + "px";
+  isOpen = !isOpen;
 });
-
-document.querySelectorAll(".mobile-link").forEach(link => {
-  link.addEventListener("click", closeMenu);
-});
-  window.addEventListener("scroll", () => {
-    if (window.innerWidth < 768 && isOpen) closeMenu();
-  });
 </script>
+
 </body>
 </html>
